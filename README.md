@@ -1,3 +1,4 @@
+
 # SarcoOS Project – Modular RTOS for Embedded Robotics & IoT
 
 **SarcoOS** is a modular RTOS project combining real-time performance with flexibility for robotics, IoT, and embedded applications. Designed to run across multiple platforms—from STM32 to ESP32 to Raspberry Pi 4—SarcoOS is ideal for engineers seeking control, performance, and a deeper understanding of system internals.
@@ -73,7 +74,7 @@ SarcoOS is an educational RTOS written in C for bare-metal embedded systems. It 
   ```bash
   make TARGET=stm32
   make flash
-````
+
 
 * For **ESP32 (ESP-IDF)**:
 
