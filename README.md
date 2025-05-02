@@ -1,4 +1,3 @@
-````markdown
 # SarcoOS Project – Minimal RTOS for Embedded Systems
 
 A modular and educational real-time operating system (RTOS) kernel written in C, built from scratch for learning and experimentation with low-level embedded systems concepts such as context switching, scheduling, tasks, synchronization, and memory management.
