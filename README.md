@@ -1,138 +1,107 @@
-# SarcoOS Project – Minimal RTOS for Embedded Systems
+# SarcoOS Project – Modular RTOS for Embedded Robotics & IoT
 
-A modular and educational real-time operating system (RTOS) kernel written in C, built from scratch for learning and experimentation with low-level embedded systems concepts such as context switching, scheduling, tasks, synchronization, and memory management.
+**SarcoOS** is a modular RTOS project combining real-time performance with flexibility for robotics, IoT, and embedded applications. Designed to run across multiple platforms—from STM32 to ESP32 to Raspberry Pi 4—SarcoOS is ideal for engineers seeking control, performance, and a deeper understanding of system internals.
+
+---
+
+## 🚀 Use Case Highlights
+
+This project is used in a real-world robotics system with the following structure:
+
+- 🤖 **Raspberry Pi 4 Model B**  
+  - Handles main robot logic, Computer Vision (OpenCV), and IoT interface
+  - Communicates with microcontrollers over UART/Wi-Fi
+
+- ⚙️ **STM32F405RGT6 + NodeMCU ESP32S**  
+  - Runs SarcoOS kernel with real-time control logic  
+  - Wi-Fi handled via ESP32S module using custom protocol
+
+- 🌐 **ESP32 (Standalone)**  
+  - Used as a smart SUIT node for additional offloaded processing
 
 ---
 
 ## 🔍 Overview
 
-**SarcoOS** is a lightweight RTOS tailored for embedded developers and engineering students seeking deep understanding of:
+SarcoOS is an educational RTOS written in C for bare-metal embedded systems. It includes:
 
-- Context Switching  
-- Cooperative & Preemptive Scheduling  
-- Stack Management & Thread Isolation  
-- Basic Inter-process Communication  
-- System Timer Interrupt Handling
-
-The architecture is fully modular to allow step-by-step development, testing, and scaling.
+- Manual context switching
+- Stack-separated task creation
+- Cooperative scheduling
+- Modular ISR handling
+- Cross-platform build targeting Cortex-M4, Xtensa, and Linux AArch64
 
 ---
 
-## 📁 Project Structure
+## 🧠 Key Goals
 
-| Folder/File       | Description                                       |
-|-------------------|---------------------------------------------------|
-| `kernel/`         | Core RTOS source (scheduling, threading, ISR)    |
-| `hal/`            | Hardware Abstraction Layer (ARM Cortex-M, STM32) |
-| `examples/`       | Demo tasks to validate scheduler and task switching |
-| `startup/`        | Assembly startup code for STM32F4                 |
-| `include/`        | Header files (OS API, structs, macros)           |
-| `Makefile`        | Compiles kernel using GCC and STM32 toolchain    |
-| `linker.ld`       | Linker script for STM32F401 target board         |
+- Understand low-level architecture (ARM Cortex-M, Xtensa, AArch64)  
+- Enable flexible task scheduling across MCUs  
+- Integrate MCU logic with higher-level Linux-based coordination  
+- Provide networking with ESP32 over UART and native Wi-Fi stack  
 
 ---
 
-## 🔧 Toolchain
+## 🛠️ Target Hardware Platforms
 
-- `arm-none-eabi-gcc` (GNU Arm Embedded Toolchain)  
-- STM32F401 + STM32Cube Programmer  
-- OpenOCD or ST-Link utility  
-- VSCode + Cortex-Debug extension
+| Platform                | Role                         |
+|-------------------------|------------------------------|
+| Raspberry Pi 4 Model B  | Main brain, CV, coordinator  |
+| STM32F405RGT6           | Real-time control core       |
+| NodeMCU ESP32S          | Wi-Fi gateway for STM32      |
+| ESP32 DevKit (Standalone)| Offloaded suit features      |
 
 ---
 
-## 🚀 Getting Started
+## ⚙️ Features (In Progress)
 
-### 🔨 Build the Project
+- [x] Cooperative RTOS kernel (STM32)  
+- [x] UART communication layer (Pi ↔ STM32)  
+- [x] Task scheduler (basic round-robin)  
+- [x] Inline ARM assembly context switch  
+- [x] Basic interrupt handling  
+- [ ] Preemptive scheduling (Coming)  
+- [ ] ESP32 messaging stack  
+- [ ] Computer Vision task dispatcher (Pi side)  
+- [ ] OTA support for ESP-based nodes  
 
-```bash
-make clean && make all
+---
+
+## 🧪 How to Build & Run
+
+- For **STM32F405RGT6**:
+  ```bash
+  make TARGET=stm32
+  make flash
 ````
 
-### 🧪 Flash to Target Board
+* For **ESP32 (ESP-IDF)**:
 
-Ensure the board is connected, then:
+  * Use `idf.py build && idf.py flash` inside the ESP32 component folder
 
-```bash
-make flash
-```
+* For **Raspberry Pi 4**:
 
----
-
-## ⚙️ Features
-
-* [x] Task creation with stack isolation
-* [x] Round-robin scheduler (cooperative)
-* [x] Cortex-M SVC (Supervisor Call) based context switching
-* [x] SysTick-based scheduling
-* [ ] Mutex/Semaphore (planned)
-* [ ] Preemptive scheduling (coming)
-* [ ] Priority queue for task execution
+  * Native Python/C++ code (OpenCV + MQTT + Serial Parser)
 
 ---
 
-## 🧾 Example Demos
+## 🧩 Project Structure
 
-Located in `examples/`:
-
-* Two simple tasks switching using SysTick interrupts
-* Context switch handling via SVC and PendSV
-* UART logging enabled (if connected)
-
----
-
-## 📦 Supported Hardware
-
-| Board Name               | Status                  |
-| ------------------------ | ----------------------- |
-| STM32F401RE (Nucleo)     | ✅ Fully supported       |
-| STM32F103C8T6 (Bluepill) | ⚠️ Minor edits required |
+| Folder      | Description                         |
+| ----------- | ----------------------------------- |
+| `kernel/`   | Core SarcoOS scheduler & syscall    |
+| `hal/`      | Hardware abstraction (STM32, ESP32) |
+| `rpi/`      | High-level control scripts for RPi4 |
+| `wifi/`     | ESP32 communication interface       |
+| `examples/` | Task demos & use cases              |
+| `Makefile`  | Target-specific build instructions  |
 
 ---
 
-## 🎯 Educational Goals
+## 🧑‍💻 Maintainer
 
-This project helps embedded engineers:
-
-* Understand ARM Cortex-M processor modes & stack usage
-* Learn how real RTOS context switching works
-* Debug memory, ISR nesting, and scheduling behavior
-* Build a functioning RTOS core without third-party dependencies
-
----
-
-## 🧠 Inspiration
-
-* ARM Cortex-M Architecture Manual
-* FreeRTOS & CMSIS-RTOS designs
-* Embedded OSDev tutorials
-* Personal learning journey in low-level development
-
----
-
-## 📎 Resources
-
-* [STM32F4 Reference Manual](https://www.st.com/resource/en/reference_manual/dm00031020.pdf)
-* [ARM Cortex-M Architecture](https://developer.arm.com/documentation/ddi0403/latest/)
-* [GNU Arm Toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm)
-* [OpenOCD](http://openocd.org/)
-
----
-
-## 🤝 Contributing
-
-Pull requests and feedback are welcome — feel free to fork, test, and suggest:
-
-* Scheduler improvements (priority/EDF)
-* Synchronization primitives
-* Porting to new STM32 boards
-
----
-
-## 👤 Maintainer
-
-**Ziad Mohammed Fathy**
-GitHub: [https://github.com/ziadmohamed0](https://github.com/ziadmohamed0)
+Developed by **Ziad Mohammed Fathy**
+🔗 GitHub: [https://github.com/ziadmohamed0](https://github.com/ziadmohamed0)
 
 ---
 
@@ -140,4 +109,4 @@ GitHub: [https://github.com/ziadmohamed0](https://github.com/ziadmohamed0)
 
 MIT License
 
-> “Building an RTOS from scratch teaches you not only how systems work — but why they fail.”
+> "RTOS development isn't just about multitasking—it's about mastering control."
