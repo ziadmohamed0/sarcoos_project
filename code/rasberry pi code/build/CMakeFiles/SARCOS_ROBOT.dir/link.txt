@@ -1,0 +1,1 @@
+/usr/bin/c++ -I/snap/webots/27/usr/share/webots/include/controller/c -L/snap/webots/27/usr/share/webots/lib/controller -lController CMakeFiles/SARCOS_ROBOT.dir/src/main.cpp.o -o SARCOS_ROBOT

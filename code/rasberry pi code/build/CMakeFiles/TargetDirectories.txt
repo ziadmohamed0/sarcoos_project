@@ -1,0 +1,3 @@
+/home/ziad/Ziad_WS/sarcoos_project/code/rasberry pi code/build/CMakeFiles/SARCOS_ROBOT.dir
+/home/ziad/Ziad_WS/sarcoos_project/code/rasberry pi code/build/CMakeFiles/edit_cache.dir
+/home/ziad/Ziad_WS/sarcoos_project/code/rasberry pi code/build/CMakeFiles/rebuild_cache.dir
