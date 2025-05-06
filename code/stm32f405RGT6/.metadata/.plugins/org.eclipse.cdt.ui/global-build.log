@@ -1,16 +1,41 @@
-07:23:47 **** Incremental Build of configuration Debug for project stm32f405rgt6 ****
+14:57:52 **** Incremental Build of configuration Debug for project stm32f405rgt6 ****
 make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-g++ -o "stm32f405rgt6.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ziad/Ziad_WS/sarcoos_project/code/stm32f405RGT6/stm32f405rgt6/STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f405rgt6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
+Finished building target: stm32f405rgt6.elf
+ 
+arm-none-eabi-size   stm32f405rgt6.elf 
+arm-none-eabi-objdump -h -S  stm32f405rgt6.elf  > "stm32f405rgt6.list"
+arm-none-eabi-objcopy  -O ihex  stm32f405rgt6.elf  "stm32f405rgt6.hex"
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1644	  10452	   28d4	stm32f405rgt6.elf
+Finished building: default.size.stdout
+ 
+Finished building: stm32f405rgt6.hex
+ 
+Finished building: stm32f405rgt6.list
+ 
+14:58:05 **** Incremental Build of configuration Debug for project stm32f405rgt6 ****
+make -j4 all 
+arm-none-eabi-size   stm32f405rgt6.elf 
+   text	   data	    bss	    dec	    hex	filename
+   8788	     20	   1644	  10452	   28d4	stm32f405rgt6.elf
+Finished building: default.size.stdout
+ 
+15:00:11 **** Incremental Build of configuration Debug for project stm32f405rgt6 ****
+make -j4 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F405xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
 arm-none-eabi-g++ -o "stm32f405rgt6.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/ziad/Ziad_WS/sarcoos_project/code/stm32f405RGT6/stm32f405rgt6/STM32F405RGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="stm32f405rgt6.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
 Finished building target: stm32f405rgt6.elf
  
 arm-none-eabi-size   stm32f405rgt6.elf 
 arm-none-eabi-objdump -h -S  stm32f405rgt6.elf  > "stm32f405rgt6.list"
    text	   data	    bss	    dec	    hex	filename
-   4748	     20	   1572	   6340	   18c4	stm32f405rgt6.elf
-arm-none-eabi-objcopy  -O ihex  stm32f405rgt6.elf  "stm32f405rgt6.hex"
+   8908	     20	   1644	  10572	   294c	stm32f405rgt6.elf
 Finished building: default.size.stdout
+arm-none-eabi-objcopy  -O ihex  stm32f405rgt6.elf  "stm32f405rgt6.hex"
  
-Finished building: stm32f405rgt6.list
 Finished building: stm32f405rgt6.hex
  
+Finished building: stm32f405rgt6.list
  

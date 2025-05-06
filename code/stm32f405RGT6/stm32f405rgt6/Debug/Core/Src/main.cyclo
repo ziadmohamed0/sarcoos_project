@@ -1,4 +1,5 @@
-main.cpp:64:5:int main()	1
-main.cpp:107:6:void SystemClock_Config()	3
-main.cpp:149:13:void MX_GPIO_Init()	1
-main.cpp:169:6:void Error_Handler()	1
+main.c:69:5:main	7
+main.c:156:6:SystemClock_Config	3
+main.c:203:13:MX_USART2_UART_Init	2
+main.c:236:13:MX_GPIO_Init	1
+main.c:268:6:Error_Handler	1
