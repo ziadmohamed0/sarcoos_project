@@ -3,104 +3,126 @@
 #include <vector>
 #include <pigpio.h>
 #include <mosquitto.h>
+#include <json/json.h> // تحتاج لتثبيت مكتبة jsoncpp
 
-// إعدادات GPIO للسيرفو موتورز
 #define SERVO1_PIN 18
 #define SERVO2_PIN 19
-
-// إعدادات MQTT
 #define MQTT_HOST "localhost"
 #define MQTT_PORT 1883
 #define MQTT_TOPIC "arms_suit/potentiometers"
+#define MQTT_QOS 1 // ضمان وصول الرسائل
 
-// هيكل لحالة المواتير
 struct MotorState {
     int angle1;
     int angle2;
 };
 
-// دالة لتحريك السيرفو موتور
 void setServoAngle(int pin, int angle) {
-    if (angle < 0) angle = 0;
-    if (angle > 180) angle = 180;
-    
-    int pulseWidth = 500 + (angle * 2000 / 180); // 500-2500μs
-    gpioServo(pin, pulseWidth);
+    angle = std::max(0, std::min(180, angle));
+    int pulseWidth = 500 + (angle * 2000 / 180);
+    if (gpioServo(pin, pulseWidth) != 0) {
+        std::cerr << "Error setting servo on GPIO " << pin << std::endl;
+    }
 }
 
-// دالة معالجة الرسائل الواردة من MQTT
-void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *message) {
+void on_message(struct mosquitto *mosq, void *obj, const struct mosquitto_message *msg) {
     MotorState *state = (MotorState *)obj;
     
+    if (!msg->payload || msg->payloadlen == 0) {
+        std::cerr << "Empty message received" << std::endl;
+        return;
+    }
+
     try {
-        std::string payload((char *)message->payload, message->payloadlen);
-        size_t comma_pos = payload.find(',');
+        std::string payload(static_cast<char*>(msg->payload), msg->payloadlen);
+        Json::Value root;
+        Json::CharReaderBuilder builder;
+        std::istringstream iss(payload);
+        std::string parseErrors;
         
-        if (comma_pos != std::string::npos) {
-            int pot50k = std::stoi(payload.substr(0, comma_pos));
-            int pot100k = std::stoi(payload.substr(comma_pos + 1));
-            
-            // تحويل القيم إلى زوايا (0-180)
-            state->angle1 = (pot50k * 180) / 4095;  // ESP32 ADC 12-bit (0-4095)
-            state->angle2 = (pot100k * 180) / 4095;
-            
-            // تحريك المواتير
-            setServoAngle(SERVO1_PIN, state->angle1);
-            setServoAngle(SERVO2_PIN, state->angle2);
-            
-            std::cout << "Motor1: " << state->angle1 << "°, Motor2: " << state->angle2 << "°" << std::endl;
+        if (!Json::parseFromStream(builder, iss, &root, &parseErrors)) {
+            throw std::runtime_error("JSON parse error: " + parseErrors);
         }
-    } catch (...) {
-        std::cerr << "Error processing message" << std::endl;
+
+        // التحقق من وجود الحقول المطلوبة
+        if (!root.isMember("pot50k") || !root.isMember("pot100k")) {
+            throw std::runtime_error("Missing required fields in JSON");
+        }
+
+        int pot50k = root["pot50k"].asInt();
+        int pot100k = root["pot100k"].asInt();
+
+        state->angle1 = (pot50k * 180) / 4095;
+        state->angle2 = (pot100k * 180) / 4095;
+
+        setServoAngle(SERVO1_PIN, state->angle1);
+        setServoAngle(SERVO2_PIN, state->angle2);
+
+        std::cout << "Motor Angles - 50k: " << state->angle1 
+                  << "°, 100k: " << state->angle2 << "°" << std::endl;
+
+    } catch (const std::exception &e) {
+        std::cerr << "Message processing error: " << e.what() 
+                  << " | Raw payload: " 
+                  << std::string(static_cast<char*>(msg->payload), msg->payloadlen)
+                  << std::endl;
     }
 }
 
 int main() {
-    // إعداد pigpio
     if (gpioInitialise() < 0) {
-        std::cerr << "Failed to initialize pigpio" << std::endl;
+        std::cerr << "GPIO initialization failed" << std::endl;
         return 1;
     }
 
-    // إعداد MQTT
     mosquitto_lib_init();
     struct mosquitto *mosq = mosquitto_new("rpi_controller", true, nullptr);
     
     if (!mosq) {
-        std::cerr << "Failed to create MQTT client" << std::endl;
+        std::cerr << "MQTT client creation failed" << std::endl;
         gpioTerminate();
         return 1;
     }
 
-    MotorState state = {90, 90}; // حالة ابتدائية (90 درجة)
-    mosquitto_userdata_set(mosq, &state);
+    MotorState state = {90, 90};
+    mosquitto_user_data_set(mosq, &state);
     mosquitto_message_callback_set(mosq, on_message);
+    mosquitto_max_inflight_messages_set(mosq, 10); // تحسين أداء MQTT
 
-    if (mosquitto_connect(mosq, MQTT_HOST, MQTT_PORT, 60) != MOSQ_ERR_SUCCESS) {
-        std::cerr << "Failed to connect to MQTT broker" << std::endl;
-        mosquitto_destroy(mosq);
-        gpioTerminate();
-        return 1;
-    }
-
-    if (mosquitto_subscribe(mosq, nullptr, MQTT_TOPIC, 0) != MOSQ_ERR_SUCCESS) {
-        std::cerr << "Failed to subscribe to topic" << std::endl;
-        mosquitto_destroy(mosq);
-        gpioTerminate();
-        return 1;
-    }
-
-    std::cout << "Controller started. Waiting for messages..." << std::endl;
-
-    // الحلقة الرئيسية
+    // إعداد اتصال آمن (اختياري)
+    mosquitto_tls_opts_set(mosq, 1, NULL, NULL);
+    
+    int connection_timeout = 10; // ثواني
     while (true) {
-        int rc = mosquitto_loop(mosq, -1, 1);
-        if (rc) {
-            mosquitto_reconnect(mosq);
-        }
+        int rc = mosquitto_connect(mosq, MQTT_HOST, MQTT_PORT, connection_timeout);
+        if (rc == MOSQ_ERR_SUCCESS) break;
+        
+        std::cerr << "Connection failed: " << mosquitto_strerror(rc) 
+                  << ". Retrying in 5 seconds..." << std::endl;
+        sleep(5);
     }
 
-    // التنظيف (لن يتم تنفيذها عادةً)
+    if (mosquitto_subscribe(mosq, NULL, MQTT_TOPIC, MQTT_QOS) != MOSQ_ERR_SUCCESS) {
+        std::cerr << "Subscription failed" << std::endl;
+        mosquitto_destroy(mosq);
+        gpioTerminate();
+        return 1;
+    }
+
+    std::cout << "Successfully connected to MQTT broker and subscribed to topic" << std::endl;
+
+    try {
+        while (true) {
+            int rc = mosquitto_loop(mosq, 1000, 1);
+            if (rc) {
+                std::cerr << "Connection error: " << mosquitto_strerror(rc) << std::endl;
+                mosquitto_reconnect(mosq);
+            }
+        }
+    } catch (const std::exception &e) {
+        std::cerr << "Fatal error: " << e.what() << std::endl;
+    }
+
     mosquitto_destroy(mosq);
     mosquitto_lib_cleanup();
     gpioTerminate();
