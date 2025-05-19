@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/arms_suit.dir/main.cpp.o CMakeFiles/arms_suit.dir/src/servo.cpp.o CMakeFiles/arms_suit.dir/src/mqtt_client.cpp.o -o arms_suit  -Wl,-rpath,/usr/local/lib /usr/local/lib/libpaho-mqttpp3.so /usr/lib/aarch64-linux-gnu/libpaho-mqtt3as.so -lpigpio -lrt 
