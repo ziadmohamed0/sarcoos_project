@@ -1,0 +1,2 @@
+source /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/gdbinit/symbols
+source /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/gdbinit/connect
