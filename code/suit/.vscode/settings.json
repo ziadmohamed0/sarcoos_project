@@ -57,6 +57,13 @@
         "cinttypes": "cpp",
         "typeindex": "cpp",
         "typeinfo": "cpp",
-        "format": "cpp"
+        "format": "cpp",
+        "clocale": "cpp",
+        "cwchar": "cpp",
+        "optional": "cpp",
+        "string_view": "cpp",
+        "numbers": "cpp",
+        "ranges": "cpp",
+        "streambuf": "cpp"
     }
 }

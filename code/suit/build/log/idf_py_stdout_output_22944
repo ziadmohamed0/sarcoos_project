@@ -1,0 +1,38 @@
+Command: ninja all
+[1/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/potentiometer.cpp.obj
+In file included from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/../inc/potentiometer.h:15,
+                 from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/potentiometer.cpp:1:
+/home/ziad/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/potentiometer.cpp: In constructor 'potentiometer::potentiometer(adc1_channel_t)':
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/potentiometer.cpp:6:50: warning: 'ADC_ATTEN_DB_11' is deprecated [-Wdeprecated-declarations]
+    6 |     adc1_config_channel_atten(this->pot_channel, ADC_ATTEN_DB_11);
+      |                                                  ^~~~~~~~~~~~~~~
+In file included from /home/ziad/esp-idf/components/driver/deprecated/driver/adc_types_legacy.h:8,
+                 from /home/ziad/esp-idf/components/driver/deprecated/driver/adc.h:15:
+/home/ziad/esp-idf/components/hal/include/hal/adc_types.h:51:5: note: declared here
+   51 |     ADC_ATTEN_DB_11 __attribute__((deprecated)) = ADC_ATTEN_DB_12,  ///<This is deprecated, it behaves the same as `ADC_ATTEN_DB_12`
+      |     ^~~~~~~~~~~~~~~
+[2/10] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[3/10] No install step for 'bootloader'
+[4/10] Completed 'bootloader'
+[5/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/inc/potentiometer.h:15,
+                 from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/main.cpp:2:
+/home/ziad/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+[6/10] Linking C static library esp-idf/main/libmain.a
+[7/10] Generating ld/sections.ld
+[8/10] Linking CXX executable suit.elf
+[9/10] Generating binary image from built executable
+esptool.py v4.9.dev6
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+[10/10] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/partition_table/partition-table.bin /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+suit.bin binary size 0xd8990 bytes. Smallest app partition is 0x100000 bytes. 0x27670 bytes (15%) free.

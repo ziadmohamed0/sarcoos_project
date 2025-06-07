@@ -1,0 +1,28 @@
+Command: ninja flash
+[1/5] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/partition_table/partition-table.bin /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+suit.bin binary size 0xd8760 bytes. Smallest app partition is 0x100000 bytes. 0x278a0 bytes (15%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/ziad/esp-idf/components/esptool_py && /home/ziad/.espressif/tools/cmake/3.30.2/bin/cmake -D IDF_PATH=/home/ziad/esp-idf -D "SERIAL_TOOL=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/ziad/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ziad/Ziad_WS/sarcoos_project/code/suit/build -P /home/ziad/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 suit.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev6
+Serial port /dev/ttyUSB0
+Connecting........................
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+WARNING: Detected crystal freq 15.67MHz is quite different to normalized freq 26MHz. Unsupported crystal in use?
+Crystal is 26MHz
+MAC: ac:15:18:d5:24:78
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+
+A fatal error occurred: Unable to verify flash chip connection (No serial data received.).
+FAILED: CMakeFiles/flash /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/CMakeFiles/flash 
+cd /home/ziad/esp-idf/components/esptool_py && /home/ziad/.espressif/tools/cmake/3.30.2/bin/cmake -D IDF_PATH=/home/ziad/esp-idf -D "SERIAL_TOOL=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/ziad/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ziad/Ziad_WS/sarcoos_project/code/suit/build -P /home/ziad/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

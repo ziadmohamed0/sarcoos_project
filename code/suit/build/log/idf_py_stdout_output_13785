@@ -1,0 +1,91 @@
+Command: ninja flash
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/inc/potentiometer.h:15,
+                 from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/main.cpp:2:
+/home/ziad/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+[5/10] Linking C static library esp-idf/main/libmain.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable suit.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.9.dev6
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+[9/10] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/partition_table/partition-table.bin /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+suit.bin binary size 0xd7640 bytes. Smallest app partition is 0x100000 bytes. 0x289c0 bytes (16%) free.
+[9/10] cd /home/ziad/esp-idf/components/esptool_py && /home/ziad/.espressif/tools/cmake/3.30.2/bin/cmake -D IDF_PATH=/home/ziad/esp-idf -D "SERIAL_TOOL=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/ziad/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ziad/Ziad_WS/sarcoos_project/code/suit/build -P /home/ziad/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 suit.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev6
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: ac:15:18:d5:24:78
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e7fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26112 bytes to 16455...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000759a... (100 %)
+Wrote 26112 bytes (16455 compressed) at 0x00001000 in 0.8 seconds (effective 272.6 kbit/s)...
+Hash of data verified.
+Compressed 882240 bytes to 556037...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d110... (5 %)
+Writing at 0x00026554... (8 %)
+Writing at 0x00030f1d... (11 %)
+Writing at 0x000366d0... (14 %)
+Writing at 0x0003c5d8... (17 %)
+Writing at 0x000422c9... (20 %)
+Writing at 0x000481ba... (23 %)
+Writing at 0x0004dcbf... (26 %)
+Writing at 0x00053df8... (29 %)
+Writing at 0x0005a28a... (32 %)
+Writing at 0x00060133... (35 %)
+Writing at 0x00065aad... (38 %)
+Writing at 0x0006abdb... (41 %)
+Writing at 0x000700a6... (44 %)
+Writing at 0x000754b3... (47 %)
+Writing at 0x0007a97a... (50 %)
+Writing at 0x0007ffa2... (52 %)
+Writing at 0x000857db... (55 %)
+Writing at 0x0008b590... (58 %)
+Writing at 0x00090f76... (61 %)
+Writing at 0x00096a6b... (64 %)
+Writing at 0x0009c89b... (67 %)
+Writing at 0x000a22a7... (70 %)
+Writing at 0x000a7cbd... (73 %)
+Writing at 0x000ada57... (76 %)
+Writing at 0x000b357a... (79 %)
+Writing at 0x000b8fac... (82 %)
+Writing at 0x000c375f... (85 %)
+Writing at 0x000c9bc6... (88 %)
+Writing at 0x000d0fa1... (91 %)
+Writing at 0x000d6a86... (94 %)
+Writing at 0x000dca5f... (97 %)
+Writing at 0x000e227d... (100 %)
+Wrote 882240 bytes (556037 compressed) at 0x00010000 in 13.4 seconds (effective 525.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 514.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

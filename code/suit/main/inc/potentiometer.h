@@ -35,9 +35,11 @@ class potentiometer {
          * 
          * @return float 
          */
-        float getVoltage();
+        float getAngle();
     private:
         adc1_channel_t pot_channel;
+        float prev_angle = 0.0f;
+        float filter(float current);
 };
 
 #endif

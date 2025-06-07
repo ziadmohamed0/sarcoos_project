@@ -1,3 +1,0 @@
-/home/pi/sarcoos_project/code/arms_suit/rapberry_pi/build/CMakeFiles/arms_suit.dir
-/home/pi/sarcoos_project/code/arms_suit/rapberry_pi/build/CMakeFiles/edit_cache.dir
-/home/pi/sarcoos_project/code/arms_suit/rapberry_pi/build/CMakeFiles/rebuild_cache.dir

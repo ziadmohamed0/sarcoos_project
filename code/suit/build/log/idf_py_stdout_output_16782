@@ -1,0 +1,13 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/inc/potentiometer.h:15,
+                 from /home/ziad/Ziad_WS/sarcoos_project/code/suit/main/main.cpp:2:
+/home/ziad/esp-idf/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a

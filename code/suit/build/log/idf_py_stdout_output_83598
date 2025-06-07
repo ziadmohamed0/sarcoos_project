@@ -1,0 +1,77 @@
+Command: ninja flash
+[1/5] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/partition_table/partition-table.bin /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+suit.bin binary size 0xd8750 bytes. Smallest app partition is 0x100000 bytes. 0x278b0 bytes (15%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/ziad/esp-idf/components/esptool_py && /home/ziad/.espressif/tools/cmake/3.30.2/bin/cmake -D IDF_PATH=/home/ziad/esp-idf -D "SERIAL_TOOL=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python;;/home/ziad/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/ziad/Ziad_WS/sarcoos_project/code/suit/build -P /home/ziad/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 suit.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev6
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WD-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: ac:15:18:d5:24:78
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000e8fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26112 bytes to 16455...
+Writing at 0x00001000... (50 %)
+Writing at 0x0000759a... (100 %)
+Wrote 26112 bytes (16455 compressed) at 0x00001000 in 0.8 seconds (effective 272.0 kbit/s)...
+Hash of data verified.
+Compressed 886608 bytes to 558202...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001d052... (5 %)
+Writing at 0x000267a1... (8 %)
+Writing at 0x00030c11... (11 %)
+Writing at 0x0003646a... (14 %)
+Writing at 0x0003c1e1... (17 %)
+Writing at 0x0004224b... (20 %)
+Writing at 0x00048057... (22 %)
+Writing at 0x0004dbd4... (25 %)
+Writing at 0x00053b14... (28 %)
+Writing at 0x0005a187... (31 %)
+Writing at 0x0005ffc5... (34 %)
+Writing at 0x00065b47... (37 %)
+Writing at 0x0006abe8... (40 %)
+Writing at 0x00070005... (42 %)
+Writing at 0x0007555a... (45 %)
+Writing at 0x0007a970... (48 %)
+Writing at 0x0008000c... (51 %)
+Writing at 0x00085873... (54 %)
+Writing at 0x0008b740... (57 %)
+Writing at 0x00090ff1... (60 %)
+Writing at 0x00096a70... (62 %)
+Writing at 0x0009c73a... (65 %)
+Writing at 0x000a239a... (68 %)
+Writing at 0x000a7bbd... (71 %)
+Writing at 0x000ada79... (74 %)
+Writing at 0x000b35ea... (77 %)
+Writing at 0x000b8eaf... (80 %)
+Writing at 0x000c2a6a... (82 %)
+Writing at 0x000c9d7a... (85 %)
+Writing at 0x000d13a9... (88 %)
+Writing at 0x000d6fab... (91 %)
+Writing at 0x000dcc1a... (94 %)
+Writing at 0x000e2878... (97 %)
+Writing at 0x000e7f06... (100 %)
+Wrote 886608 bytes (558202 compressed) at 0x00010000 in 13.6 seconds (effective 521.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.0 seconds (effective 520.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

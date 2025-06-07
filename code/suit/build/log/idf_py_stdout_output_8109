@@ -1,0 +1,41 @@
+Command: ninja all
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/bootloader/bootloader.bin
+Bootloader binary size 0x6600 bytes. 0xa00 bytes (9%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/mqtt_client_custom.cpp.obj
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp: In member function 'void mqtt_client_custom::init_mqtt()':
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::broker_t::address_t::hostname' [-Wmissing-field-initializers]
+  134 |     };
+      |     ^
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::broker_t::address_t::transport' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::broker_t::address_t::path' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::broker_t::address_t::port' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::broker_t::verification' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::client_id' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::set_null_client_id' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::certificate' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::certificate_len' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::key' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::key_len' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::key_password' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::key_password_len' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::use_secure_element' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::credentials_t::authentication_t::ds_data' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::session' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::network' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::task' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::buffer' [-Wmissing-field-initializers]
+/home/ziad/Ziad_WS/sarcoos_project/code/suit/main/src/mqtt_client_custom.cpp:134:5: warning: missing initializer for member 'esp_mqtt_client_config_t::outbox' [-Wmissing-field-initializers]
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable suit.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.9.dev6
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+[9/9] cd /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python /home/ziad/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/partition_table/partition-table.bin /home/ziad/Ziad_WS/sarcoos_project/code/suit/build/suit.bin
+suit.bin binary size 0x2baf0 bytes. Smallest app partition is 0x100000 bytes. 0xd4510 bytes (83%) free.

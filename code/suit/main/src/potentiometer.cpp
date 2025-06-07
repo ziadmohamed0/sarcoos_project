@@ -10,7 +10,13 @@ int potentiometer::Raw() {
     return adc1_get_raw(this->pot_channel);
 }
 
-float potentiometer::getVoltage() {
+float potentiometer::getAngle() {
     int raw = Raw();
     return (raw / 4095.0f) * 3.3f; // Assuming 12-bit ADC and 3.3V ref
+}
+
+float potentiometer::filter(float current) {
+    const float alpha = 0.1f;
+    prev_angle = (alpha * current) + ((1.0f - alpha) * prev_angle);
+    return prev_angle;
 }
