@@ -1,0 +1,914 @@
+[
+    {
+        "id": "8bb7a04c0679226e",
+        "type": "group",
+        "z": "9689ccd5feff2211",
+        "name": "Rover",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e5ec9b21c2789148",
+            "54228563fc369ad1",
+            "3b0e773e6f824d85",
+            "d716eb7961137d6b",
+            "539ae591f220ec9f",
+            "4ee53ed70940ada8",
+            "02c69da0aa1c6385",
+            "91aafd7ebbbd0faf"
+        ],
+        "x": 894,
+        "y": 399,
+        "w": 332,
+        "h": 202
+    },
+    {
+        "id": "e5ec9b21c2789148",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "name": "",
+        "topic": "move/forward",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 990,
+        "y": 440,
+        "wires": [
+            [
+                "539ae591f220ec9f"
+            ]
+        ]
+    },
+    {
+        "id": "54228563fc369ad1",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "name": "",
+        "topic": "move/backward",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "4ee53ed70940ada8"
+            ]
+        ]
+    },
+    {
+        "id": "3b0e773e6f824d85",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "name": "",
+        "topic": "move/right",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 980,
+        "y": 520,
+        "wires": [
+            [
+                "02c69da0aa1c6385"
+            ]
+        ]
+    },
+    {
+        "id": "d716eb7961137d6b",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "name": "",
+        "topic": "move/left",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 980,
+        "y": 560,
+        "wires": [
+            [
+                "91aafd7ebbbd0faf"
+            ]
+        ]
+    },
+    {
+        "id": "539ae591f220ec9f",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "order": 0,
+        "group": "a2833c698968dc8f",
+        "width": "0",
+        "height": "0",
+        "label": "Forward",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4ee53ed70940ada8",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "order": 0,
+        "group": "a2833c698968dc8f",
+        "width": "0",
+        "height": "0",
+        "label": "Backward",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "02c69da0aa1c6385",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "order": 0,
+        "group": "a2833c698968dc8f",
+        "width": "0",
+        "height": "0",
+        "label": "Right",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "91aafd7ebbbd0faf",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "8bb7a04c0679226e",
+        "order": 0,
+        "group": "a2833c698968dc8f",
+        "width": "0",
+        "height": "0",
+        "label": "Left",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1150,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "993d23bcedacd90c",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.100.25 ",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "a2833c698968dc8f",
+        "type": "ui_group",
+        "name": "Rover",
+        "tab": "089a5b760cdc83bd",
+        "order": 2,
+        "disp": true,
+        "width": "3",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "089a5b760cdc83bd",
+        "type": "ui_tab",
+        "name": "Sarcos Robot O/P",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "06f2c0dd2dea3558",
+        "type": "group",
+        "z": "9689ccd5feff2211",
+        "name": "Left Arm",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e1d2e4e2affdf499",
+            "424fd90fdc8405c8",
+            "5afca1af3a348f2d",
+            "8300806db9d41326",
+            "f40da894ae18d93f",
+            "afb40b67aab199c9",
+            "6a46a1bb1124f578",
+            "2cc2471e59386c05"
+        ],
+        "x": 894,
+        "y": 179,
+        "w": 432,
+        "h": 202
+    },
+    {
+        "id": "e1d2e4e2affdf499",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "group": "a010f4d6b78298d5",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "left hand shoulder 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1210,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "424fd90fdc8405c8",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "topic": "arm_left/shoulder2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "e1d2e4e2affdf499"
+            ]
+        ]
+    },
+    {
+        "id": "5afca1af3a348f2d",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "topic": "arm_left/shoulder1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1010,
+        "y": 220,
+        "wires": [
+            [
+                "8300806db9d41326"
+            ]
+        ]
+    },
+    {
+        "id": "8300806db9d41326",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "group": "a010f4d6b78298d5",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "left hand shoulder 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1210,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f40da894ae18d93f",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "group": "a010f4d6b78298d5",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "left wrist",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1180,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "afb40b67aab199c9",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "topic": "arm_left/wrist",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 990,
+        "y": 340,
+        "wires": [
+            [
+                "f40da894ae18d93f"
+            ]
+        ]
+    },
+    {
+        "id": "6a46a1bb1124f578",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "topic": "arm_left/elbow",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1000,
+        "y": 300,
+        "wires": [
+            [
+                "2cc2471e59386c05"
+            ]
+        ]
+    },
+    {
+        "id": "2cc2471e59386c05",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "06f2c0dd2dea3558",
+        "name": "",
+        "group": "a010f4d6b78298d5",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "left elbow",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1180,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a010f4d6b78298d5",
+        "type": "ui_group",
+        "name": "Left Arm",
+        "tab": "089a5b760cdc83bd",
+        "order": 3,
+        "disp": true,
+        "width": "4",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "b3a090226fbc15bb",
+        "type": "group",
+        "z": "9689ccd5feff2211",
+        "name": "Right Arm",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "94166dfecde3c66c",
+            "5c39167c6670739b",
+            "21c3c2f7282615df",
+            "efa3fe556e47d654",
+            "eb8a488cb3473914",
+            "f05a421991d3646e",
+            "e378ca4d3ddf5f5d",
+            "ba395d8bd99bc172"
+        ],
+        "x": 1354,
+        "y": 179,
+        "w": 452,
+        "h": 202
+    },
+    {
+        "id": "94166dfecde3c66c",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "group": "d44a787a274f729a",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "right hand shoulder 2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1680,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5c39167c6670739b",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "topic": "arm_right/shoulder2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1470,
+        "y": 260,
+        "wires": [
+            [
+                "94166dfecde3c66c"
+            ]
+        ]
+    },
+    {
+        "id": "21c3c2f7282615df",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "topic": "arm_right/shoulder1",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1470,
+        "y": 220,
+        "wires": [
+            [
+                "efa3fe556e47d654"
+            ]
+        ]
+    },
+    {
+        "id": "efa3fe556e47d654",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "group": "d44a787a274f729a",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "right hand shoulder 1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1680,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "eb8a488cb3473914",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "group": "d44a787a274f729a",
+        "order": 0,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "right wrist",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1640,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f05a421991d3646e",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "topic": "arm_right/wrist",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1460,
+        "y": 340,
+        "wires": [
+            [
+                "eb8a488cb3473914"
+            ]
+        ]
+    },
+    {
+        "id": "e378ca4d3ddf5f5d",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "topic": "arm_right/elbow",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1460,
+        "y": 300,
+        "wires": [
+            [
+                "ba395d8bd99bc172"
+            ]
+        ]
+    },
+    {
+        "id": "ba395d8bd99bc172",
+        "type": "ui_gauge",
+        "z": "9689ccd5feff2211",
+        "g": "b3a090226fbc15bb",
+        "name": "",
+        "group": "d44a787a274f729a",
+        "order": 1,
+        "width": "0",
+        "height": "0",
+        "gtype": "gage",
+        "title": "right elbow",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "5000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 1650,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d44a787a274f729a",
+        "type": "ui_group",
+        "name": "Right Arm",
+        "tab": "089a5b760cdc83bd",
+        "order": 1,
+        "disp": true,
+        "width": "4",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "1c0e2411741d4bcf",
+        "type": "group",
+        "z": "9689ccd5feff2211",
+        "name": "Gripper",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "afc7b9f336632157",
+            "eae17b08fd402a83",
+            "ecf990eeee073490",
+            "d89145a0f45180f5"
+        ],
+        "x": 1254,
+        "y": 399,
+        "w": 332,
+        "h": 122
+    },
+    {
+        "id": "afc7b9f336632157",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "1c0e2411741d4bcf",
+        "name": "",
+        "topic": "gripper/open",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1350,
+        "y": 440,
+        "wires": [
+            [
+                "ecf990eeee073490"
+            ]
+        ]
+    },
+    {
+        "id": "eae17b08fd402a83",
+        "type": "mqtt in",
+        "z": "9689ccd5feff2211",
+        "g": "1c0e2411741d4bcf",
+        "name": "",
+        "topic": "gripper/close",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "993d23bcedacd90c",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 1350,
+        "y": 480,
+        "wires": [
+            [
+                "d89145a0f45180f5"
+            ]
+        ]
+    },
+    {
+        "id": "ecf990eeee073490",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "1c0e2411741d4bcf",
+        "order": 0,
+        "group": "13256231a82ade67",
+        "width": "0",
+        "height": "0",
+        "label": "Close",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1510,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "d89145a0f45180f5",
+        "type": "ui_led",
+        "z": "9689ccd5feff2211",
+        "g": "1c0e2411741d4bcf",
+        "order": 0,
+        "group": "13256231a82ade67",
+        "width": "0",
+        "height": "0",
+        "label": "Open",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "#ff0000",
+                "value": "1",
+                "valueType": "num"
+            },
+            {
+                "color": "#008000",
+                "value": "0",
+                "valueType": "num"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "shape": "circle",
+        "showGlow": true,
+        "name": "",
+        "x": 1510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "13256231a82ade67",
+        "type": "ui_group",
+        "name": "Gripper",
+        "tab": "089a5b760cdc83bd",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "6a48cbbc9cfae18c",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-contrib-ui-led": "0.4.11",
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]

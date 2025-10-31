@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_driver",
-    "project_version":    "57c2d4c-dirty",
+    "project_version":    "6e76ed7-dirty",
     "project_path":       "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver",
     "idf_path":           "/home/ziad/esp/esp-idf",
     "build_dir":          "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build",
@@ -175,8 +175,8 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/esp-idf/drivers/libdrivers.a",
-            "sources": [ "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/led/led.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/button/button.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/dc_motor/dc_motor.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/tcrt5000/TCRT5000.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/mpu6050/MPU6050.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/ultrasonic/ultrasonic.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/servo/servo.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/pot/pot.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/nvs/NVS.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/wifi/wifi_sta.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/wifi/wifi_ap.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/wifi/WiFi.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/mqtt/MQTT.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/uart/uart.cpp" ],
-            "include_dirs": [ "inc", "inc/hal/led", "inc/hal/button", "inc/hal/dc_motor", "inc/hal/tcrt5000", "inc/hal/mpu6050", "inc/hal/ultrasonic", "inc/hal/servo", "inc/hal/pot", "inc/mcal/nvs", "inc/mcal/wifi", "inc/mcal/mqtt", "inc/mcal/uart" ]
+            "sources": [ "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/led/led.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/button/button.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/dc_motor/dc_motor.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/tcrt5000/TCRT5000.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/mpu6050/MPU6050.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/ultrasonic/ultrasonic.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/bts7960/bts7960.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/bts7960/bts7960_position.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/servo/servo.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/pot/pot.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/hal/pid/pid.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/nvs/NVS.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/wifi/WiFi.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/mqtt/MQTT.cpp", "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/drivers/src/mcal/uart/uart.cpp" ],
+            "include_dirs": [ "inc", "inc/hal/led", "inc/hal/button", "inc/hal/dc_motor", "inc/hal/tcrt5000", "inc/hal/mpu6050", "inc/hal/ultrasonic", "inc/hal/bts7960", "inc/hal/servo", "inc/hal/pot", "inc/hal/pid", "inc/mcal/nvs", "inc/mcal/wifi", "inc/mcal/mqtt", "inc/mcal/uart" ]
         },
         "efuse": {
             "alias": "idf::efuse",
@@ -2938,7 +2938,7 @@
             "priv_reqs": [],
             "managed_reqs": [],
             "managed_priv_reqs": [],
-            "include_dirs": [ "inc", "inc/hal/led", "inc/hal/button", "inc/hal/dc_motor", "inc/hal/tcrt5000", "inc/hal/mpu6050", "inc/hal/ultrasonic", "inc/hal/servo", "inc/hal/pot", "inc/mcal/nvs", "inc/mcal/wifi", "inc/mcal/mqtt", "inc/mcal/uart" ]
+            "include_dirs": [ "inc", "inc/hal/led", "inc/hal/button", "inc/hal/dc_motor", "inc/hal/tcrt5000", "inc/hal/mpu6050", "inc/hal/ultrasonic", "inc/hal/bts7960", "inc/hal/servo", "inc/hal/pot", "inc/hal/pid", "inc/mcal/nvs", "inc/mcal/wifi", "inc/mcal/mqtt", "inc/mcal/uart" ]
         }
     },
     "debug_prefix_map_gdbinit": "",
