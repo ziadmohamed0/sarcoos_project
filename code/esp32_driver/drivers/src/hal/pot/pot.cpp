@@ -137,6 +137,10 @@ float Potentiometer::readAveraged(uint8_t samples) {
     return average;
 }
 
+void Potentiometer::setMaxAngle(int angle) {
+    this->ANGLE_MAX = angle;
+}
+
 Potentiometer::~Potentiometer() {
     if (this->cali_enabled && this->cali_handle) {
         adc_cali_delete_scheme_line_fitting(this->cali_handle);

@@ -61,6 +61,13 @@ public:
      */
     float readAveraged(uint8_t samples = 10);
 
+    /**
+     * @brief Set the maximum possible angle of the potentiometer
+     * 
+     * @param angle Max angle in degrees
+     */
+    void setMaxAngle(int angle);
+
     ~Potentiometer();
 
 private:
@@ -73,8 +80,8 @@ private:
     
     bool cali_enabled;
     
-    const int ADC_MAX_VALUE = 4095;  // 12-bit ADC
-    const int ANGLE_MAX = 300;
+    int ADC_MAX_VALUE = 4095;  // 12-bit ADC
+    int ANGLE_MAX = 300;
     
     void init();
 };

@@ -15,7 +15,10 @@
 ########################
 
 //No help, variable specified on the command line.
-CCACHE_ENABLE:UNINITIALIZED=0
+CCACHE_ENABLE:UNINITIALIZED=1
+
+//Path to a program.
+CCACHE_FOUND:FILEPATH=/usr/bin/ccache
 
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/home/ziad/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32-elf-addr2line
@@ -344,7 +347,7 @@ Mbed TLS_IS_TOP_LEVEL:STATIC=OFF
 Mbed TLS_SOURCE_DIR:STATIC=/home/ziad/esp/esp-idf/components/mbedtls/mbedtls
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python
+PYTHON:UNINITIALIZED=/home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1
@@ -539,7 +542,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=120
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=118
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -587,15 +590,15 @@ C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS:INTERNAL=1
 //Details about finding Git
 FIND_PACKAGE_MESSAGE_DETAILS_Git:INTERNAL=[/usr/bin/git][v2.34.1()]
 //Details about finding Python3
-FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python][cfound components: Interpreter ][v3.10.12()]
+FIND_PACKAGE_MESSAGE_DETAILS_Python3:INTERNAL=[/home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python][cfound components: Interpreter ][v3.10.12()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //ADVANCED property for variable: GIT_EXECUTABLE
 GIT_EXECUTABLE-ADVANCED:INTERNAL=1
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=/usr/local
-_Python3_EXECUTABLE:INTERNAL=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python
+_Python3_EXECUTABLE:INTERNAL=/home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python
 //Python3 Properties
-_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/home/ziad/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages;/home/ziad/.espressif/python_env/idf5.5_py3.10_env/lib/python3.10/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=c81236f2e171a56ee5a0de261b1a2ea1
+_Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;32;;;/usr/lib/python3.10;/usr/lib/python3.10;/home/ziad/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages;/home/ziad/.espressif/python_env/idf5.4_py3.10_env/lib/python3.10/site-packages
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=2885e0606ffb557279e7b2977d02e039
 

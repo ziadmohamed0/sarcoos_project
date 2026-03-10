@@ -1,0 +1,5 @@
+[1/4] cd /home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/ziad/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/partition_table/partition-table.bin /home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/esp32_driver.bin
+esp32_driver.bin binary size 0xdb5b0 bytes. Smallest app partition is 0x200000 bytes. 0x124a50 bytes (57%) free.
+[2/4] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/bootloader/esp-idf/esptool_py && /home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python /home/ziad/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build/bootloader/bootloader.bin
+Bootloader binary size 0x6560 bytes. 0xaa0 bytes (9%) free.

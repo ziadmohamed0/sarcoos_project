@@ -248,7 +248,7 @@ IGNORE_EXTRA_COMPONENT:UNINITIALIZED=
 PROJECT_SOURCE_DIR:UNINITIALIZED=/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver
 
 //No help, variable specified on the command line.
-PYTHON:UNINITIALIZED=/home/ziad/.espressif/python_env/idf5.5_py3.10_env/bin/python
+PYTHON:UNINITIALIZED=/home/ziad/.espressif/python_env/idf5.4_py3.10_env/bin/python
 
 //No help, variable specified on the command line.
 PYTHON_DEPS_CHECKED:UNINITIALIZED=1

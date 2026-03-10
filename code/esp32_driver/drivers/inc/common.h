@@ -14,7 +14,7 @@
 #include "driver/uart.h"
 #include "driver/uart_select.h"
 #include "driver/uart_vfs.h"
-#include "driver/uart_wakeup.h"
+/* uart_wakeup.h removed in newer SDKs; functionality accessible via esp_sleep or uart APIs */
 #include "esp_system.h"
 #include "nvs_flash.h"
 #include "esp_wifi.h"
