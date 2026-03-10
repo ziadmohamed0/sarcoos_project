@@ -1,107 +1,76 @@
+# SarcoOS - Teleoperation Suit & Robotic System
 
-# SarcoOS Project – Modular RTOS for Embedded Robotics & IoT
-
-**SarcoOS** is a modular RTOS project combining real-time performance with flexibility for robotics, IoT, and embedded applications. Designed to run across multiple platforms—from STM32 to ESP32 to Raspberry Pi 4—SarcoOS is ideal for engineers seeking control, performance, and a deeper understanding of system internals.
-
----
-
-## 🚀 Use Case Highlights
-
-This project is used in a real-world robotics system with the following structure:
-
-- 🤖 **Raspberry Pi 4 Model B**  
-  - Handles main robot logic, Computer Vision (OpenCV), and IoT interface
-  - Communicates with microcontrollers over UART/Wi-Fi
-
-- ⚙️ **STM32F405RGT6 + NodeMCU ESP32S**  
-  - Runs SarcoOS kernel with real-time control logic  
-  - Wi-Fi handled via ESP32S module using custom protocol
-
-- 🌐 **ESP32 (Standalone)**  
-  - Used as a smart SUIT node for additional offloaded processing
+**SarcoOS** is a modular system designed for teleoperation and robotic control, centering on an ESP32-powered suit that captures human motion and transmits control data to robotic platforms via MQTT.
 
 ---
 
-## 🔍 Overview
+## 🚀 System Architecture
 
-SarcoOS is an educational RTOS written in C for bare-metal embedded systems. It includes:
+This project integrates hardware design, firmware development, and IoT dashboards:
 
-- Manual context switching
-- Stack-separated task creation
-- Cooperative scheduling
-- Modular ISR handling
-- Cross-platform build targeting Cortex-M4, Xtensa, and Linux AArch64
+- 🧤 **Teleoperation Suit (ESP32)**  
+  - Captures joint angles using potentiometers and button states for grippers/movement.
+  - Processes data locally and publishes to an MQTT broker.
+  
+- ⚙️ **Modular Driver Architecture (HAL/MCAL)**  
+  - Structured ESP-IDF firmware with Hardware Abstraction Layers (HAL) for sensors and actuators, and Microcontroller Abstraction Layers (MCAL) for peripherals (WiFi, MQTT, UART, NVS).
 
----
+- 🌐 **IoT & HMI (Node-RED)**  
+  - Real-time monitoring and control through a Node-RED dashboard.
+  - Handles bidirectional communication between the suit and the robot.
 
-## 🧠 Key Goals
-
-- Understand low-level architecture (ARM Cortex-M, Xtensa, AArch64)  
-- Enable flexible task scheduling across MCUs  
-- Integrate MCU logic with higher-level Linux-based coordination  
-- Provide networking with ESP32 over UART and native Wi-Fi stack  
-
----
-
-## 🛠️ Target Hardware Platforms
-
-| Platform                | Role                         |
-|-------------------------|------------------------------|
-| Raspberry Pi 4 Model B  | Main brain, CV, coordinator  |
-| STM32F405RGT6           | Real-time control core       |
-| NodeMCU ESP32S          | Wi-Fi gateway for STM32      |
-| ESP32 DevKit (Standalone)| Offloaded suit features      |
-
----
-
-## ⚙️ Features (In Progress)
-
-- [x] Cooperative RTOS kernel (STM32)  
-- [x] UART communication layer (Pi ↔ STM32)  
-- [x] Task scheduler (basic round-robin)  
-- [x] Inline ARM assembly context switch  
-- [x] Basic interrupt handling  
-- [ ] Preemptive scheduling (Coming)  
-- [ ] ESP32 messaging stack  
-- [ ] Computer Vision task dispatcher (Pi side)  
-- [ ] OTA support for ESP-based nodes  
-
----
-
-## 🧪 How to Build & Run
-
-- For **STM32F405RGT6**:
-  ```bash
-  make TARGET=stm32
-  make flash
-
-
-* For **ESP32 (ESP-IDF)**:
-
-  * Use `idf.py build && idf.py flash` inside the ESP32 component folder
-
-* For **Raspberry Pi 4**:
-
-  * Native Python/C++ code (OpenCV + MQTT + Serial Parser)
+- 🤖 **Mechanical Design**  
+  - Custom 3D-printable components designed in SolidWorks for the robotic chassis and suit mounting.
 
 ---
 
 ## 🧩 Project Structure
 
-| Folder      | Description                         |
-| ----------- | ----------------------------------- |
-| `kernel/`   | Core SarcoOS scheduler & syscall    |
-| `hal/`      | Hardware abstraction (STM32, ESP32) |
-| `rpi/`      | High-level control scripts for RPi4 |
-| `wifi/`     | ESP32 communication interface       |
-| `examples/` | Task demos & use cases              |
-| `Makefile`  | Target-specific build instructions  |
+| Folder | Description |
+| :--- | :--- |
+| [`code/esp32_driver`](file:///home/ziad/ziad_ws/sarcoos_project/code/esp32_driver) | ESP-IDF firmware for the ESP32 control suit. |
+| [`sarcos_design`](file:///home/ziad/ziad_ws/sarcoos_project/sarcos_design) | Mechanical CAD files (SolidWorks) for robot parts. |
+| [`code/node_red_HMI_IIot`](file:///home/ziad/ziad_ws/sarcoos_project/code/node_red_HMI_IIot) | Node-RED flow exports for the HMI dashboard. |
+| [`pdf`](file:///home/ziad/ziad_ws/sarcoos_project/pdf) | Project documentation, schematics, and design diagrams. |
+
+---
+
+## 🛠️ Firmware Features (ESP32)
+
+- [x] **Modular HAL/MCAL**: Clean separation between hardware-specific drivers and system services.
+- [x] **WiFi Management**: Robust connection handling with auto-reconnect.
+- [x] **MQTT Client**: Real-time publishing of sensor data (Potentiometers, Buttons).
+- [x] **NVS Integration**: Non-volatile storage for configuration persistence.
+- [x] **Device Drivers**: Support for BTS7960, MPU6050, Ultrasonic, Servo, and more.
+
+---
+
+## 🧪 Getting Started
+
+### Prerequisites
+- [ESP-IDF v5.x](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/)
+- [Node-RED](https://nodered.org/docs/getting-started/)
+- [MQTT Broker](https://mosquitto.org/) (e.g., Mosquitto)
+
+### Build & Flash Firmware
+1. Navigate to the firmware directory:
+   ```bash
+   cd code/esp32_driver
+   ```
+2. Build the project:
+   ```bash
+   idf.py build
+   ```
+3. Flash to your ESP32:
+   ```bash
+   idf.py -p [PORT] flash monitor
+   ```
 
 ---
 
 ## 🧑‍💻 Maintainer
 
-Developed by **Ziad Mohammed Fathy**
+Developed by **Ziad Mohammed Fathy**  
 🔗 GitHub: [https://github.com/ziadmohamed0](https://github.com/ziadmohamed0)
 
 ---
@@ -109,5 +78,3 @@ Developed by **Ziad Mohammed Fathy**
 ## 🛡️ License
 
 MIT License
-
-> "RTOS development isn't just about multitasking—it's about mastering control."
