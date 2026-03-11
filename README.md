@@ -1,121 +1,118 @@
 <div align="center">
-  <img src="docs/assets/logo.png" width="200" alt="SarcoOS Logo">
+  <img src="docs/assets/logo.png" width="220" alt="SarcoOS Logo">
   <h1>SarcoOS</h1>
-  <p><strong>Modular RTOS Framework for Teleoperation & Robotics</strong></p>
+  <p><strong>Elite Modular RTOS Framework for Teleoperation & Robotics</strong></p>
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
   [![Platform: ESP32](https://img.shields.io/badge/Platform-ESP32-blue?logo=espressif)](https://www.espressif.com/en/products/socs/esp32)
   [![Framework: ESP-IDF](https://img.shields.io/badge/Framework-ESP--IDF-red)](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)
+  [![HMI: Node-RED](https://img.shields.io/badge/HMI-Node--RED-8F0000?logo=node-red)](https://nodered.org/)
 </div>
 
 ---
 
-## 📖 Overview
+## 📖 Project Essence
 
-**SarcoOS** is an advanced, modular firmware framework designed to bridge the gap between human motion and robotic execution. Centered around a **Teleoperation Suit**, it leverages a sophisticated **HAL/MCAL architecture** to provide real-time, low-latency control data via MQTT.
+**SarcoOS** is a high-performance, modular firmware ecosystem designed to synchronize human kinetic movement with robotic precision. Developed with an emphasis on **Industrial IoT (IIoT)** standards, it facilitates a seamless teleoperation experience through a robust **ESP32-based suit** that communicates over a distributed MQTT mesh.
 
-Whether you're controlling a multi-DOF robotic arm or a mobile rover, SarcoOS provides the robust foundation needed for precise teleoperation in IoT and Industrial 4.0 environments.
+This repository serves as a complete solution—encompassing **Low-Level Embedded C++**, **Precision CAD Design**, and **Interactive HMI Dashboards**.
 
 ---
 
-## 🏗️ System Architecture
+## 🏗️ System Architecture & Data Orchestration
 
-SarcoOS follows a strict layered architecture to ensure portability, maintainability, and real-time reliability.
+SarcoOS is built on a strict **HAL/MCAL (Hardware/Microcontroller Abstraction Layer)** hierarchy, ensuring that high-level robotic logic remains decoupled from the underlying silicon.
 
-### 🔌 Data Flow & Connectivity
-The diagram below illustrates how sensor data from the teleoperation suit is processed and transmitted to the control ecosystem.
+### 🔌 Real-Time Telemetry Flow
+Data originates from physical sensors on the operator's suit and is dispatched through a deterministic processing pipeline.
 
 ```mermaid
 graph TD
-    subgraph "Teleoperation Suit (ESP32)"
-        Sensors[Potentiometers & Buttons] --> HAL[Hardware Abstraction Layer]
-        HAL --> Logic[Application Logic]
-        Logic --> MCAL[Microcontroller Abstraction Layer]
+    subgraph "Teleoperation Node (ESP32)"
+        Sensors[Potentiometers & IMU] -->|Raw ADC/I2C| HAL[HAL: Pot, MPU6050]
+        HAL -->|Normalized Data| Logic[App: Input Mapping]
+        Logic -->|Commands| MCAL[MCAL: WiFi, MQTT, NVS]
     end
 
-    MCAL --> |MQTT over WiFi| Broker[MQTT Broker]
+    MCAL --> |QoS 1 MQTT| Broker[Mosquitto Broker]
     
-    subgraph "External Control"
-        Broker --> NodeRED[Node-RED Dashboard]
-        Broker --> Robot[Robotic Platform]
+    subgraph "Execution & Monitoring"
+        Broker -->|Control Packets| Robot[Robotic Platform: BTS7960]
+        Broker -->|Telemetry| NodeRED[Node-RED IIoT Dashboard]
     end
+
+    style Sensors fill:#f9f,stroke:#333,stroke-width:2px
+    style Robot fill:#bbf,stroke:#333,stroke-width:2px
+    style NodeRED fill:#dfd,stroke:#333,stroke-width:2px
 ```
 
-### 📁 Repository Structure
+---
 
-*   **[`code/esp32_driver`](file:///home/ziad/ziad_ws/sarcoos_project/code/esp32_driver)**: The heart of the project. A modular ESP-IDF firmware implementation featuring custom drivers for a wide array of sensors and actuators.
-*   **[`sarcos_design`](file:///home/ziad/ziad_ws/sarcoos_project/sarcos_design)**: Precision-engineered SolidWorks CAD files for the physical chassis, joint mounts, and sensor housings.
-*   **[`code/node_red_HMI_IIot`](file:///home/ziad/ziad_ws/sarcoos_project/code/node_red_HMI_IIot)**: Industrial IoT dashboards providing real-time telemetry visualization and remote override capabilities.
-*   **[`pdf`](file:///home/ziad/ziad_ws/sarcoos_project/pdf)**: Technical schematics, wiring diagrams, and formal project documentation.
+## ⚙️ Engineering Deep-Dive
+
+### 🏎️ Firmware Engineering (ESP-IDF)
+The firmware is structured to support complex robotics tasks with minimal overhead.
+
+*   **Peripheral Matrix**: Support for **BTS7960** (High-Current DC), **Servos** (PWM), **MPU6050** (6-DOF IMU), and **TCRT5000** (Infrared Line Detection).
+*   **System Services**: Integrated **PID control** loops for precision positioning and **NVS** for persistent calibration data.
+*   **Networking**: Non-blocking **MQTT Client** with asynchronous callbacks for bi-directional command handling.
+
+### 📐 Mechanical Kinematics (SolidWorks)
+All mechanical components are designed for high-stress robotic applications.
+*   **Structural Integrity**: See `Structural Design and Kinematics.pdf` for load bearing and center of mass analysis.
+*   **Modular Assemblies**: SolidWorks files in `sarcos_design/` include specific mounts for 65mm tires, high-torque motors, and the teleoperation suit frame.
+
+### 📊 IIoT Dashboard (Node-RED)
+The dashboard provides an intuitive interface for mission control:
+*   **Rover Group**: Real-time directional switches with latency monitoring.
+*   **Arm Telemetry**: Synchronized sliders representing joint angles for dual-arm configurations.
+*   **Gripper Control**: Independent toggle states for precision end-effector manipulation.
 
 ---
 
-## 🛠️ Technical Specifications
+## 🛠️ Deployment & Calibration
 
-### 🔬 Firmware Layers (ESP32)
+### 1. Embedded Firmware
+```bash
+# Clone and setup environment
+git clone https://github.com/ziadmohamed0/sarcoos_project.git
+cd code/esp32_driver
 
-| Layer | Component | Description |
-| :--- | :--- | :--- |
-| **HAL** | `Potentiometer`, `Button` | High-level API for input capture. |
-| **HAL** | `BTS7960`, `Servo`, `Motor` | Precision actuator control and power bridging. |
-| **HAL** | `MPU6050`, `Ultrasonic` | Orientation sensing and obstacle detection. |
-| **MCAL** | `WiFiManager` | Auto-restarting, station-mode connectivity. |
-| **MCAL** | `MQTTClient` | Asynchronous pub/sub with configurable QoS. |
-| **MCAL** | `NVS` | Flash-based storage for system parameters. |
+# Build and flash to ESP32
+idf.py build
+idf.py -p [PORT] flash monitor
+```
 
-### 🛰️ Telemetry Schema (MQTT)
-
-| Topic Path | Description | Data Type |
-| :--- | :--- | :--- |
-| `arm_right/shoulder[1-2]` | Right arm joint angles | Integer (ADC) |
-| `arm_left/elbow`, `arm_left/wrist` | Left arm motion data | Integer (ADC) |
-| `move/forward`, `move/left` | Rover directional commands | Boolean (0/1) |
-| `gripper/open`, `gripper/close`| End-effector states | Boolean (0/1) |
+### 2. HMI Configuration
+- Import `inputs.json` into Node-RED.
+- Ensure the MQTT broker URI matches `mqtt://192.168.100.25` (configurable in `main.h`).
 
 ---
 
-## 🚀 Getting Started
+## 🔍 Troubleshooting & FAQ
 
-### Hardware Requirements
-- **MCU**: ESP32-WROOM-32 or equivalent.
-- **Actuators**: BTS7960 Motor Driver, standard PWM Servos.
-- **Sensors**: 10k Potentiometers, MPU6050 IMU.
+**Q: ESP32 is flashing but MQTT is not connecting.**  
+> **Check**: Verify the WiFi credentials in `main.h`. Ensure your MQTT broker is reachable at the defined IP and port 1883.
 
-### Development Setup
-1.  **Clone the Repository**:
-    ```bash
-    git clone https://github.com/ziadmohamed0/sarcoos_project.git
-    ```
-2.  **Configure Build Environment**:
-    Ensure [ESP-IDF v5.1+](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/) is installed.
-3.  **Compile & Deploy**:
-    ```bash
-    cd code/esp32_driver
-    idf.py build
-    idf.py -p /dev/ttyUSB0 flash monitor
-    ```
+**Q: Potentiometer data is jittery.**  
+> **Solution**: Check the ADC attenuation settings in the HAL. Ensure sensors have common ground with the ESP32.
+
+**Q: Servo movement is stuttering.**  
+> **Solution**: Verify the power supply; servos often require more current than the ESP32 internal regulator can provide.
 
 ---
 
-## 🗺️ Roadmap & Future Enhancements
-
-- [ ] **IMU Fusion**: Integrating MPU6050 data for 6-DOF orientation tracking.
-- [ ] **PID Tuning HMI**: Real-time PID parameter adjustment via Node-RED.
-- [ ] **OTA Updates**: Over-The-Air firmware updates for remote suit maintenance.
-- [ ] **ROS2 Integration**: Bridging MQTT data into the ROS2 micro-ros ecosystem.
-
----
-
-## 🧑‍💻 Maintainer
+## 🧑‍💻 Technical Leadership
 
 **Ziad Mohammed Fathy**  
-Embedded Systems & Robotics Engineer  
+*Robotics & Embedded Systems Specialist*  
 🔗 [GitHub Profile](https://github.com/ziadmohamed0) | [LinkedIn](https://www.linkedin.com/in/ziad-mohamed-fathy/)
 
 ---
 
-## 🛡️ License
+## 🛡️ License & Acknowledgements
 
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+Authorized under the **MIT License**.  
+*Special thanks to the Open Source robotics community for the inspiration behind the modular HAL design.*
 
-> *"Engineering is not just about making things work; it's about making them elegant, efficient, and extensible."*
+> *"Perfection is attained, not when there is nothing more to add, but when there is nothing left to take away."* — Antoine de Saint-Exupéry
