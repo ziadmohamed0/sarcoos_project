@@ -1,7 +1,7 @@
 {
     "version":            "1.2",
     "project_name":       "esp32_driver",
-    "project_version":    "d6af0a5-dirty",
+    "project_version":    "71faf31-dirty",
     "project_path":       "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver",
     "idf_path":           "/home/ziad/esp/esp-idf",
     "build_dir":          "/home/ziad/ziad_ws/sarcoos_project/code/esp32_driver/build",

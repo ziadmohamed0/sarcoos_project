@@ -3270,8 +3270,8 @@
 		(layer "F.Cu")
 		(uuid "715a8f39-1757-44b3-aead-22f1a0684dfe")
 		(at 124.7 117.1 180)
-		(property "Reference" "TMC1"
-			(at -6.3 12.2 0)
+		(property "Reference" "TMC2209"
+			(at 1.675 9.05 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "c628d496-df7d-4bcf-b169-6e66a4d9a071")
@@ -3770,8 +3770,8 @@
 		(layer "F.Cu")
 		(uuid "912a51f9-99fc-40e4-a8fa-49be48cf3b7c")
 		(at 148.3 117.5 180)
-		(property "Reference" "TMC2"
-			(at -6.675 12.125 0)
+		(property "Reference" "TMC2209"
+			(at -7.9 9.65 0)
 			(unlocked yes)
 			(layer "F.SilkS")
 			(uuid "d968e3bc-5b46-4b27-8ac9-d1c98504e7c7")
