@@ -1,4 +1,4 @@
-"-specs=/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader/specs/picolibc.specs"
+"-specs=D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader/specs/picolibc.specs"
 -Wno-frame-address
 -mlongcalls
 -fno-builtin-memcpy

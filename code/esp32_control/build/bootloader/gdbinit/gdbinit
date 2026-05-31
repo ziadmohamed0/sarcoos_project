@@ -1,2 +1,2 @@
-source /home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader/gdbinit/symbols
-source /home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader/gdbinit/connect
+source D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader/gdbinit/symbols
+source D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader/gdbinit/connect

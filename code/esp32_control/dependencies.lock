@@ -2,7 +2,7 @@ dependencies:
   espressif/mqtt:
     dependencies: []
     source:
-      path: managed_components/espressif__mqtt
+      path: managed_components\espressif__mqtt
       type: local
     version: 1.0.0
   idf:

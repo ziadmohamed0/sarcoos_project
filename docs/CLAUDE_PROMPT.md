@@ -44,7 +44,7 @@ Deep-dive into every driver implemented in the `code/esp32_driver/drivers` folde
 Analyze the PCB design based on the following connections:
 - **Microcontroller:** ESP32 DevKitC-32E.
 - **Power System:** DCDC Buck Converter (Step Down) to provide stable 5V from a 24V source.
-- **Ground Strategy:** Dedicated 2-layer ground plane for EMI reduction and signal integrity.
+- **Ground Strategy:** Dedicated 2-layer ground plan for EMI reduction and signal integrity.
 - **Pin Mapping (from Schematics):**
   - **TMC2209 (1):** STEP1 (IO25), DIR1 (IO26).
   - **TMC2209 (2):** STEP2 (IO35), DIR2 (IO12).

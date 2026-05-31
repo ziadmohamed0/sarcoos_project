@@ -1,4 +1,4 @@
-"-specs=/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/specs/picolibc.specs"
+"-specs=D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader/specs/picolibc.specs"
 -Wno-frame-address
 -mlongcalls
 -fno-builtin-memcpy

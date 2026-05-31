@@ -1,2 +1,2 @@
-source /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/gdbinit/symbols
-source /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/gdbinit/connect
+source D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader/gdbinit/symbols
+source D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader/gdbinit/connect

@@ -20,8 +20,11 @@
    to simple macros with numeric values, and/or #if/#endif blocks.
 */
 /*
+
  * Automatically generated file. DO NOT EDIT.
+
  * Espressif IoT Development Framework (ESP-IDF) 6.0.1 Configuration Header
+
  */
        
 /* List of deprecated options */

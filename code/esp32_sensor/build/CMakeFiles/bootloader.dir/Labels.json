@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/CMakeFiles/bootloader"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/CMakeFiles/bootloader.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "D:/Ziad/sarcoos_project/code/esp32_sensor/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

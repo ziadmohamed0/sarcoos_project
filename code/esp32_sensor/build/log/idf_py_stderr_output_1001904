@@ -1,9 +1,0 @@
-Command: cmake -G Ninja -B /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=True /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot
-Configuration Report               
- ───────────────────────────────── 
-   Parser Version: 1               
-   Verbosity: default              
-   Defaults policy: sdkconfig      
-   Status: Finished successfully   
-                                   
- ───────────────────────────────── 

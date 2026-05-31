@@ -1,0 +1,15 @@
+Command: cmake -G Ninja -B D:\Ziad\sarcoos_project\code\esp32_control\build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe -DESP_PLATFORM=1 -DCCACHE_ENABLE=False D:\Ziad\sarcoos_project\code\esp32_control
+Configuration Report                                                           
++-----------------------------------------------------------------------------+
+|  Parser Version: 1                                                          |
+|  Verbosity: default                                                         |
+|  Defaults policy: sdkconfig                                                 |
+|  Status: Finished with notifications                                        |
+|                                                                             |
+| Disabled Symbols/Choices With User-Set Value                                |
+| +-------------------------------------------------------------------------+ |
+| | * ESP_CONSOLE_UART_BAUDRATE (defined at                                 | |
+| | C:/esp/v6.0.1/esp-idf/components/esp_stdio/Kconfig:150) with user-set   | |
+| | value 115200 from D:/Ziad/sarcoos_project/code/esp32_control/sdkconfig  | |
+| +-------------------------------------------------------------------------+ |
++-----------------------------------------------------------------------------+

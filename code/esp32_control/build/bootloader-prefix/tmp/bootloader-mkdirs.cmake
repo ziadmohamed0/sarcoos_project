@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/ziad/.espressif/v6.0.1/esp-idf/components/bootloader/subproject")
-  file(MAKE_DIRECTORY "/home/ziad/.espressif/v6.0.1/esp-idf/components/bootloader/subproject")
+if(NOT EXISTS "C:/esp/v6.0.1/esp-idf/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "C:/esp/v6.0.1/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader"
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix"
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/tmp"
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/src/bootloader-stamp"
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/src"
-  "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/tmp"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/src/bootloader-stamp"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/src"
+  "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
