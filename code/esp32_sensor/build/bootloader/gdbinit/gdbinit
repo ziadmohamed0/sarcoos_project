@@ -1,0 +1,2 @@
+source /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/gdbinit/symbols
+source /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/gdbinit/connect

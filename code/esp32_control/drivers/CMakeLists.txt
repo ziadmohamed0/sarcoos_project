@@ -1,0 +1,32 @@
+idf_component_register(
+    SRCS 
+        "src/hal/dc_motor/dc_motor.cpp"
+        "src/hal/bts7960/bts7960.cpp"
+        "src/hal/bts7960/bts7960_position.cpp"
+        "src/hal/servo/servo.cpp"
+        "src/mcal/wifi/WiFi.cpp"
+        "src/mcal/mqtt/MQTT.cpp"
+    INCLUDE_DIRS 
+        "inc"
+        "inc/hal/dc_motor"
+        "inc/hal/bts7960"
+        "inc/hal/servo"
+        "inc/mcal/wifi"
+        "inc/mcal/mqtt"
+    REQUIRES
+        driver    
+        freertos
+        nvs_flash
+        esp_common
+        esp_event
+        esp_netif
+        esp_timer
+        esp_adc
+        esp_wifi
+        esp_http_client
+        esp_driver_gpio
+        esp_driver_uart
+        esp_driver_i2c
+        esp_driver_ledc
+        mqtt
+)

@@ -1,0 +1,19 @@
+Command: ninja all
+info: Default value for ESP_MAIN_TASK_STACK_SIZE in sdkconfig is 8192 but it is 3584 according to Kconfig.
+Using default value from sdkconfig (8192).
+Configuration Report                                                            
+ ────────────────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                            
+   Verbosity: default                                                           
+   Defaults policy: sdkconfig                                                   
+   Status: Finished with notifications                                          
+                                                                                
+  Default Value Mismatch                                                        
+   ──────────────────────────────────────────────────────────────────────────   
+    Using sdkconfig default values                                              
+    Config symbols with different default value between sdkconfig and           
+    Kconfig                                                                     
+    ESP_MAIN_TASK_STACK_SIZE: Kconfig default value: 3584, sdkconfig            
+    default value: 8192                                                         
+   ──────────────────────────────────────────────────────────────────────────   
+ ────────────────────────────────────────────────────────────────────────────── 

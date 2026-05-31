@@ -1,0 +1,87 @@
+Command: ninja all
+[1/34] Linking C static library esp-idf/esp_driver_gptimer/libesp_driver_gptimer.a
+[2/34] Linking C static library esp-idf/cmock/libcmock.a
+[3/34] Linking C static library esp-idf/esp_blockdev_util/libesp_blockdev_util.a
+[4/34] Linking C static library esp-idf/esp_driver_cam/libesp_driver_cam.a
+[5/34] Linking C static library esp-idf/esp_driver_ledc/libesp_driver_ledc.a
+[6/34] Linking C static library esp-idf/esp_driver_dac/libesp_driver_dac.a
+[7/34] Linking C static library esp-idf/esp_driver_pcnt/libesp_driver_pcnt.a
+[8/34] Linking C static library esp-idf/esp_driver_mcpwm/libesp_driver_mcpwm.a
+[9/34] Linking C static library esp-idf/esp_driver_sdio/libesp_driver_sdio.a
+[10/34] Linking C static library esp-idf/esp_driver_rmt/libesp_driver_rmt.a
+[11/34] Linking C static library esp-idf/esp_driver_sdm/libesp_driver_sdm.a
+[12/34] Linking C static library esp-idf/esp_driver_touch_sens/libesp_driver_touch_sens.a
+[13/34] Linking C static library esp-idf/esp_driver_twai/libesp_driver_twai.a
+[14/34] Linking C static library esp-idf/esp_eth/libesp_eth.a
+[15/34] Linking C static library esp-idf/esp_hid/libesp_hid.a
+[16/34] Linking C static library esp-idf/esp_lcd/libesp_lcd.a
+[17/34] Linking C static library esp-idf/esp_local_ctrl/libesp_local_ctrl.a
+[18/34] Linking C static library esp-idf/perfmon/libperfmon.a
+[19/34] Linking C static library esp-idf/rt/librt.a
+[20/34] Linking C static library esp-idf/spiffs/libspiffs.a
+[21/34] Linking C static library esp-idf/fatfs/libfatfs.a
+[22/34] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader && /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/bootloader.bin
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[23/34] No install step for 'bootloader'
+[24/34] Completed 'bootloader'
+[25/34] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/DebugManager.cpp.obj
+[26/34] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/HeartbeatManager.cpp.obj
+[27/34] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/SensorManager.cpp.obj
+In file included from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/inc/SensorManager.h:12,
+                 from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/src/SensorManager.cpp:6:
+/home/ziad/.espressif/v6.0.1/esp-idf/components/driver/i2c/include/driver/i2c.h:29:103: note: '#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   '
+   29 |                 "==================================================================================\n")
+      |                                                                                                       ^
+[28/34] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/inc/SensorManager.h:12,
+                 from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/main.cpp:35:
+/home/ziad/.espressif/v6.0.1/esp-idf/components/driver/i2c/include/driver/i2c.h:29:103: note: '#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   '
+   29 |                 "==================================================================================\n")
+      |                                                                                                       ^
+[29/34] Linking C static library esp-idf/main/libmain.a
+[30/34] Generating esp-idf/esp_system/ld/sections.ld
+[31/34] Building C object CMakeFiles/SARCUS_Robot.elf.dir/project_elf_src_esp32.c.obj
+[32/34] Linking CXX executable SARCUS_Robot.elf
+[33/34] Generating binary image from built executable
+esptool v5.3.dev3
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.bin
+[34/34] cd /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build && /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/partition_table/partition-table.bin /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.bin
+SARCUS_Robot.bin binary size 0xeb0f0 bytes. Smallest app partition is 0x100000 bytes. 0x14f10 bytes (8%) free.

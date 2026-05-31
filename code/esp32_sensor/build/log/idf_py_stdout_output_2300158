@@ -1,0 +1,681 @@
+Command: /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.elf /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/bootloader.elf -m '/home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/ziad/.espressif/v6.0.1/esp-idf/tools/idf.py' '-p' '/dev/ttyUSB0' '-b' '115200'
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ left=13.1cm right=5.0cm
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 28 2026 05:46:04[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23c98h (146584) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=00033cc0 vaddr=3ffb0000 size=045e8h ( 17896) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=000382b0 vaddr=40080000 size=07d68h ( 32104) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ac83ch (706620) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000ec864 vaddr=40087d68 size=0ed64h ( 60772) load[0m
+[0;32mI (436) esp_image: segment 5: paddr=000fb5d0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (466) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     SARCUS_Robot[0m
+[0;32mI (477) app_init: App version:      1f9dae3-dirty[0m
+[0;32mI (481) app_init: Compile time:     May 28 2026 05:45:25[0m
+[0;32mI (486) app_init: ELF file SHA256:  023f99967...[0m
+[0;32mI (490) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB92F8 len 00026D08 (155 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096ACC len 00009534 (37 KiB): IRAM[0m
+[0;33mW (540) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (558) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (571) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (582) main_task: Started on CPU0[0m
+[0;32mI (592) main_task: Calling app_main()[0m
+[0;32mI (592) main: ============================================[0m
+[0;32mI (592) main:   SARCUS Robot — ESP32 Robot Node          [0m
+[0;32mI (592) main:   Assistive Exoskeleton Control System     [0m
+[0;32mI (602) main: ============================================[0m
+[0;32mI (602) NVSManager: [ENTRY] init()[0m
+[0;32mI (642) NVSManager: NVS Flash initialized OK[0m
+[0;32mI (642) NVSManager: [EXIT]  init()[0m
+[0;32mI (642) main: [1/8] NVS ready ✓[0m
+[0;32mI (642) main: [2/8] Device ID: AC:15:18:D5:24:78[0m
+[0;32mI (652) WifiManager: [ENTRY] init()[0m
+[0;32mI (662) wifi:wifi driver task: 3ffc233c, prio:23, stack:6656, core=0[0m
+[0;32mI (682) wifi:wifi firmware version: b37c951[0m
+[0;32mI (682) wifi:wifi certification version: v7.0[0m
+[0;32mI (682) wifi:config NVS flash: enabled[0m
+[0;32mI (682) wifi:config nano formatting: disabled[0m
+[0;32mI (682) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (692) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (692) wifi:Init management short buffer num: 32[0m
+[0;32mI (692) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (702) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (702) wifi:Init static rx buffer num: 10[0m
+[0;32mI (712) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (712) wifi_init: rx ba win: 6[0m
+[0;32mI (712) wifi_init: accept mbox: 6[0m
+[0;32mI (722) wifi_init: tcpip mbox: 32[0m
+[0;32mI (722) wifi_init: udp mbox: 6[0m
+[0;32mI (722) wifi_init: tcp mbox: 6[0m
+[0;32mI (722) wifi_init: tcp tx win: 5760[0m
+[0;32mI (732) wifi_init: tcp rx win: 5760[0m
+[0;32mI (732) wifi_init: tcp mss: 1440[0m
+[0;32mI (732) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (742) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (742) WifiManager: WiFi stack initialized[0m
+[0;32mI (752) WifiManager: [EXIT]  init()[0m
+[0;32mI (752) main: Connecting to: WE_BF1790[0m
+[0;32mI (752) WifiManager: [ENTRY] startSTA() ssid='WE_BF1790'[0m
+[0;32mI (762) WifiManager: startSTA: setting mode WIFI_MODE_STA[0m
+[0;32mI (762) WifiManager: startSTA: applying STA config[0m
+[0;32mI (772) WifiManager: startSTA: starting WiFi[0m
+[0;32mI (772) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (862) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (882) wifi:mode : sta (ac:15:18:d5:24:78)[0m
+[0;32mI (882) wifi:enable tsf[0m
+[0;32mI (882) WifiManager: eventHandler: base=WIFI_EVENT id=43[0m
+[0;32mI (882) WifiManager: Unhandled WIFI_EVENT id=43[0m
+[0;32mI (892) WifiManager: startSTA: esp_wifi_start() returned[0m
+[0;32mI (892) WifiManag-:�)�������: base=WIFI_EVENT i'&([0m
+B�ʒJWifiManager: STA started → connecting...
+[0;32mI (902) WifiManager: startSTA: connecting to AP immediately[0m
+[1;31mE (912) wifi:sta is connecting, return error[0m
+I (91I���b�х:&	�b����:1, snd_ch_cfg:0x0
+[0;32mI (922) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (922) WifiManager: eventHandler: base=)j��J���j[0m
+[0;32mI (922) WifiMana:Unhandled WIFI_EV)JJ�=43[0m
+[0;32mI (922) wifi:state: auth -> assoc (0x0)[0m
+[0;33mW (932) WifiManager: esp_wifi_connect() returned ESP_ERR_5J�5=995[0m
+[0;32mI (942) wifi:state: as�+-�չ (0x10)[0m
+[0;32mI (952) WifiManager: STA mode started, waiting for connection...[0m
+[0;32mI (952) WifiManager: [EXIT]  startS)�)4[0m
+[0;32mI (962) wifi:connected with WE_BF1790, aid = 1, channel 11, BW20, bssid = a4:f3:3b:bfF��S�C�
+B��IJ"���:security: WPA2-PSK, phy: bgn, rssi: -44, cipher(pairwise:0x3, group:0x1), pmf:0
+[0;32mI (972) wifi:pm start, type: 1[0m
+
+[0;32mI (972) +k.� 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (982) WifiManager: eventHandler: base=WIFI_EVENT id=4[0m
+[0;32mI (992) WifiManager: STA connected to AP[0m
+[0;32mI (992) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+ ip: 192.168.1.5, mask: 255.255.255.0, gw: 192.168.1.1
+[0;32mI (4252) WifiManager: eventHandler: base=IP_EVENT id=0[0m
+[0;32mI (4252) WifiManager: STA got IP: 192.168.1.5[0m
+[0;32mI (4252) main: [3/8] WiFi connected ✓[0m
+[0;32mI (4262) MqttManager: [ENTRY] start() broker=mqtt://192.168.1.4:1883[0m
+t started
+[0;32mI (4282) MqttManager: [EXIT]  start()[0m
+[0;32mI (4282) main: [4/8] MQTT connected ✓[0m
+[0;32mI (4282) MotorController: [ENTRY] init() stm32_port=1[0m
+[0;32mI (4282) MotorController: Motor controller initialized. Queue depth=16[0m
+[0;32mI (4292) MotorController: [EXIT]  init()[0m
+[0;32mI (4292) MotorController: [ENTRY] start()[0m
+[0;32mI (4292) MotorController: Dispatch task running[0m
+[0;32mI (4302) MotorController: Motor dispatch task started[0m
+[0;32mI (4302) MotorController: [EXIT]  start()[0m
+[0;32mI (4312) main: [5a/9] Motor controller ready ✓[0m
+[0;32mI (4312) UartBridge: [ENTRY] i)	����=1 rx=16 tx=17 baud=115200[0m
+[0;32mI (4322) UartBridge: UART1 initialized (baud=115200)[0m
+[0;32mI (4322) UartBridge: [EXIT]  init()[0m
+[0;32mI (4332) UartBridge: [ENTRY] start() port=1[0m
+[0;32mI (4332) UartBridge: RX task running on UART1[0m
+[0;32mI (4332) UartBridge: UART1 RX task started[0m
+[0;32mI (4342) UartBridge: [EXIT]  start()[0m
+[0;32mI (4342) main: [5b/9] UART bridges ready (STM32 UART1) ✓ | RPi=WiFi/MQTT[0m
+[0;32mI (4352) SensorManager: [ENTRY] init()[0m
+[0;32mI (4352) SensorManager: MPU6050 initialized OK[0m
+[0;32mI (4362) SensorManager: GPS UART initialized (baud=9600)[0m
+[0;32mI (4362) SensorManager: 4x HC-SR04 GPIO c�������5Q[0m
+����JSensoV*�����: [EXIT]  init()
+[0;32mI (4372) SensorManager: [ENTRY] start()[0m
+[0;32mI (4372) SensorManager: IMU task running (inY�W�L�V2[0m
+A
+B��J����:<ba-add>idx:0 (ifx:0, a4:f3:3b:bf:17:90), tid:0, ssn:2, winSize64
+[0;32mI (4392) SensorManager: GPS task runni[0m
+JG��م�=1000�.:�B��ʒJj���5������: publish() skipped — not connected [sarcus/sensoV�+���=+�YJE�م�=200ms)PD�ʒJSensorManager: Sensor tasks started — IMU:100ms GPS:1000ms US:200ms
+I (4SJSensorManager: [EXIT]  start()
+BH��Jj���5������: MQTT cnnected to broker
+[0;32mI (4422) main: [6/9] Sensors running ✓[0m
+I EIV	"��՝5������: Debug routing to MQTT enabled
+[0;32mI (4422) HeartbetMt [ENTRY] start() device_id=AC:15:18:D5:24:78[0m
+[0;32mI (4422) MqttManager: Subscribed to all control topics[0m
+[0;32mI (4452) HeartbeatMgr: Heartbeat ask r=.�5[0m
+[0;32mI (4452) HeartbeatMgr: Heartbeat task started (interval=500ms)[0m
+[0;32mI (4452) HeartbeatMgr: [EXIT]  start()[0m
+[0;32mI (4452) main: [7/9] Debug + Heartbeat running ✓[0m
+[0;32mI (4462) main: ============================================[0m
+[0;32mI (4482) SensorManager: US distances: front=35.5cm back=15.0cm l�4L�	� P[0m
+B��ʒJj��:   SARCUS Robot fully operational           
+[0;32mI (4492) main:��ѽ�5:j$�+�2%j[0m
+[0;32mI (4492) main:   Broker: mqtt://192.168.1.4:1883[0m
+[0;32mI (4492) main: ============================================[0m
+nces: front=300cm ba��)� left=14.0cm right=5.1cm
+[0;32mI (4972) SensorManager: US distances: front=30.�� back�i� left=22.9cm right=5.0cm[0m
+nces: front=30.0cm back=1.4cm l9W�&)� right=5.0cm
+BT5f	ensorManager: US distnces: F�.ׂr�� bck=10\k/b���=13.1cm right=5.0cm
+[0;32mI (5692) SensorManager: US distances: front=30.1 back�Q� left=14.0cm right=5.1cm[0m
+[0;32mI (5932) SensorManager: US distances: front=30.�� b��$r�� left=28.1cm right=5.0cm[0m
+[0;32mI (6172) SensorManager: US distances: front=30.0cm back=10.4cmleft=1�	�-�����=5.0cm[0m
+[0;32mI (6412) L��ͽ�5,+��: US diW�TVi �ɽ��=30.0L���=10.4cm lSu14.0cm ri�=5.0cm[0m
+nces: front=30.cm ba�U&r��� left=14	�-�����=5.5�I (6892) SensorManager: US distances: front=30.1cm back=10.3cm �U��=̦	�+�����=5�5
+nces: front=30.cm bacU$D� left=�	/����=5.1m
+[0;32mI (7372) SensorManager: US distances: front=30.0cm back=10.4cmb���=,�	�+�����=5.cm[0m
+[0;32mI (7612) SensorManager: US distances: front=30.0cm back=10.3cm left=13.1cm right=5.0cm[0m
+[0;32mI (7852) SensorManager: US distances: front=30.0cm back=10.3cm left=13.1cm right=M	�5[0m
+nces: front=30.0cm back=6.2cm l3��=1�	�/�����=5.1cm
+[0;32mI (8332) SensorManager: US distances: front=30.cm back=$i� left=7.0cm right=5.0cm[0m
+nces: front=30.0cm back=10.4cm leW����+�����=16.2cm
+[0;32mI (8812) SJ�k��Y.'US di.W����: front=33.7cm back=10.4cm left=13.1cm right=5.0cm[0m
+nces: front=30.0m back1� left=14.0cm right=5.0cm
+[0;32mI (9292) SensorManager: US distances: front=30.0cm back=8.4cm left=13.1cm right=5.�5[0m
+k=$�AWiFi=OK | MQTT=OK | EStop=clear
+[0;32mI (9532) SensorManager: US distances: front30.1cm back=10.3cm left=14.0cm right=5.0cm[0m
+nces: front=30.0cm back=10.4cmleI (10012) SensorManager: US distances: front=30.1cm���=105�/b���=14.0cm rNkE5.1cm
+[0;32mI (10252) SensorManager: US distances: front=33.5cm back=10.3cm left=13.1cm right=5.0cm[0m
+[0;32mI (10492) SensorManager: US dist14.0cm right=5.0cm[0m
+[0;32mI (10732) SensorManager: US distances: front=30.0�� back=10.4cm left=13.1cm right=5.0cm[0m
+[0;32mI (10972) SensorManager: US dist26.7cm right=5.1cm[0m
+[0;32mI (11212) SensorManager: US distances: front=30.0cm back=10.3cm left=14.0cm right=5.1cm[0m
+I ),ensorManager: US distanes: front=30.0cm back=10.4cm left=14.0cm right=5.0cm
+[0;32mI (11692) SensorManager: US distances: front=30.0cm back=7.0cm left=14.0cL�����=5.0cm[0m
+[0;32mI (11932) SensorManager: US distances: front=30.1 backM&�� left=14.0cm right=5.1cm[0m
+[0;32mI (12172) SensorManager: US distances: front=30.1c back=10.3cm left=14.0cm right=5.0cm[0m
+[0;32mI (12412) SensorManager: US distances: front=30.0cm back=10.3cm left14.0cm right=5.0cm[0m
+[0;32mI (12652) SensorManager: US distances: front=30	� \�+�r�� left=13.1cm right=5.0cm[0m
+[0;32mI (12892) SensorManager: US distances: front=30.0cm back=5.8cm left=13.1cm right=5.0cm[0m
+[0;32mI (13132) SensorManager: US distances: front=30.0�� back=$�i� left=13.1cm right=5.0cm[0m
+[0;32mI (13372) SensorManager: US distances: front=30.1cm back=10.4c� I (13632) SensorManager: US distances: front=30.0cm back=10.4cm left=-1.0cm right=5.1cm[0m
+[0;33mW (13632) SensorManager: One or more ultrasonic sensors returned no echo; check wiring and pin mapping[0m
+ances: front=30.0cm back=10.4cm left=13.1cm right=5.0cm
+[0;32mI (14112) SensorManager: US distances: front=30.0cm back=10.3cm left=13.1cm right=5.1cm[0m
+ances: front=30.1cm back=10.4cm left=13.1cm right=5.0cm
+[0;32mI (14502) main: ♥ Heartbeat tick=2 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (14592) SensorManager: US distances: front=30.0cm back=10i��-W��&)� right=5.0cm[0m
+[0;32mI (14832) SensorManager: US distances: front=30.0m bac1�� left=13.1cm right=5.1cm[0m
+[0;32mI (15092) SensorManager: US distances: front=30.0cm back=10.3cm left=13.1cm right=-1.0cm[0m
+[0;33mW (15092) SensorManager: One or more ultn���� ��+K������r�kcheck wiring and pin mapping[0m
+[0;32mI (15342) SensorManager: US distances: front=30.0cm back=10.4cm left14.0cm right=5.0cm[0m
+[0;32mI (15582) SensorManager: US dist&�	� rightM	��5[0m
+[0;32mI (15822) SensorManager: US distances: front=4.7cm back=8.6cm left=14.0cm right=5.0cm[0m
+[0;32mI (16082) SensorManager: US distances: front=5.3cm back=6.0cm left=14.0cm right=-1.0cm[0m
+[0;33mW (16082) SensorManager: One or moreɅ�+E���ͽ�� returned no echo; chec wiring and pin mapping[0m
+[0;32mI (16332) SensorManager: US distances: front=6.6cm back=6.4cm left=15.3cm right=5.0cm[0m
+ances: front=5.0m bacU�)� left=15.3c+Ҭ�=5.0cm
+[0;32mI (16812) SensorManager: US distances: front=5.0cm back57cm left=1�i� right=5.0cm[0m
+[0;32mI (17052) SensorManager: US distances: front=4.0cm back=5.2cm left=15.3cm right=5.1cm[0m
+[0;32mI (17292) SensorManager: US distances: front=4.0cm back=5.2cm lft=18.c-ҥ��=5.1cm[0m
+ances: front=4.� back=5.2cm left=15.3cm right=5.0cm
+[0;32mI (17772) SensorManager: US distances: front=3.7cm back=5.2cm left=1��i� right=5.0cm[0m
+[0;32mI (18032) SensorManager: US distances: front=3.7cm back=5.2cm left=15.3cm right=-1.0cm[0m
+[0;33mW (18032) SensorManager: Ob� orj%�)���Ʌͽ��� sensors returned no echo; check wiring and pin mapping[0m
+[0;32mI (18282) SensorManager: US distances: front=5.0cm back=5.9cm left=6.6cm right=5.0cm[0m
+[0;32mI (18522) SensorManager: US distances: front=3�� back=5.9cm left=0.3cm right=5.0cm[0m
+ances:�����=3.7cm back=5.3cmleft=%I�+�����=50cm
+[0;32mI (19002) SensorManager: US distances: front=3.4cm back=4.8cm left=6.9cm right=5.0cm[0m
+[0;32mI (19242) SensorManager: US distances: front=3.7cL���=3.4cm left=8.1cm right=5.0cm[0m
+[0;32mI (19482) SensorManager: US distances: front=2.4cm back=5.3cm left=3.6cm right=3.2cm[0m
+[0;32mI (19502) main: ♥ Heartbeat tick=3 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (19722) SensorManager: US distances: front=4.7cm back=19.8cm left=14.0cm right=5.0cm[0m
+[0;32mI (19962) SensorManager: US distances: front=30.� b�+1LI� left=15.3cm right=5.0cm[0m
+[0;32mI (20202) SensorManager: US distances: front=20.0cm back=11.2cm leW��r��-Ҭ�=5.0cm[0m
+[0;32mI (20442) SensorManager: US distances: front=300cm back=11.2cm lI (20682) SensorManager: US distances: front=30.0cm back=11.2cmb�����%)� right=M	�5[0m
+[0;32mI (2022) SensorManager: US distances: front=30.1cm back=11.2cm lef�-i� right=5.0c5�I (21162) SensorManager: US distances: front=30.0cm bck=11./╙�=15.3cm right=5.1cm[0m
+[0;32mI (21402) SensorManager: US distances: front=30.0cm back=11.2cm I (21642) SensorManager: US distances: front=30.cm back=11.2cm left=15.3cm right=5.1cm[0m
+ances: front=30.0cm���=11.2cm left=15./����=5.1m
+[0;32mI (22122) SensorManager: US distances: front=30.1cm back=6.5cm left=15.3cm right=5.0cm[0m
+ances: front=30.0cm back$	� left=15.3cm right=5.0cm
+[0;32mI (22602) SensorManager: US distances: front=30.0cm back=11.2cm left=15.3cm right��r��5�ances: front=30.0cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (23082) SensorManager: US distances: front=30.0cm back=11.2�� le�&�	� rigt=5.0cm[0m
+[0;32mI (23322) SensorManager:US distances: front=30.1c���=1,I���b���=14.0cm right=5.0cm[0m
+[0;32mI (23562) SensorManager: US distances: front=300cm back&I� left=14.0cm right=5.1cm[0m
+[0;32mI (23802) SensorManager: US distances: front=30.0cm back=7.5cm��I (24042) SensorManager: US distances: front=30cm bacU�QI� left=14.0cm rigt=5.0cm[0m
+[0;32mI (24282) SensorManager: US distances: front=25.7cm back=11.2c����=$�	�� right=51cm[0m
+[0;32mI (24502) main: ♥ Heartbeat tick=4 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (24522) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (24762) SensorManager: US distances: front=30.0cm back=11.2cm eft=14.0cm r�Ku5.1cm[0m
+[0;32mI (25002) SensorManager: US distances: front=30.1cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (25242) SensorManager: US dist-W��r�� right=5.0cm[0m
+ances: front=30.0cm back=22.3cm left=16.9cm right=-1.0cm
+[0;33mW (25502) SensorManager:<�U or more ultrasonic sensors returned no echo; check wiring and pin mappins5[0m
+[0;32mI (25752) SensorManager: US distances: front=30X0cm ba�U�r�� left14.0cm right=5.1cm[0m
+[0;32mI (25992) SensorManager: US distances: front=30.1cm back=11.2cmb���=14.0cm right=5.1cm[0m
+[0;32mI (26232) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (26472) SensorManager: US distances: front=30.0cm back=11.2cm left=21.3cm right=5.0cm[0m
+[0;32mI (26712) SensorManager: US distances: froK=�&I� back=11.2cm left=14.0cm right=5.0cm[0m
+[0;32mI (26962) SensorManager: US distances: front=30.1cm back=11.2cm left=14.0cm right=5.0cm[0m
+[0;32mI (27202) SensorManager: US distances: front=30.0cm back=11.2cmb���=15.3VҮ�=5.0cm[0m
+ances: front=30.� ba-$I� left=12.6cm right=5.1cm
+[0;32mI (27682) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (27922) SnsorManager: US distances: front=30.1cm back=11.2cm left=15.3cm rigC5.0cm[0m
+[0;32mI (28162) SensorManager: US distances: front=30.0cm back=11.2cm l3��=�	�+�����=5	��I (28422) SensorManagY.q US distances: front=30.0cm back=-1.0cm left=15.3cm right=5.0cm[0m
+[0;33mW (28422) SensorManagr: One %A�K� ultrasonic sensors returned no echo; check wiring and pin mapping[0m
+[0;32mI (28672) SensorM��: US distances: front=30.0cm back=11.2cm eftI (28912) SensorManager: US distances: front=30.1cm back=11.2cm left=14.0cm right=5.1cm[0m
+[0;32mI (29152) SensorManager: US distances: front=30.1cm back=11I� lI (29392) SensorManager: US distances: front=30.0c back=�I�/b���=14.0cm right=5.1cm[0m
+[0;32mI (29502) main: ♥ Heartbeat tick=5 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (29632) SensorManager: US dist4.0lҮ�=5.1cm[0m
+ances: front=30.0cm back=11.2cm leW��r/�����=5.0cm
+[0;32mI (30112) SensorManager: US distances: front=30.1cm back=11.2cm leW��r�-Ү�=5.0cm[0m�I (30352) SensorManager: US distances: front=30.� bacM$I� left=15.3cm right=5.1cm
+[0;32mI (30592) SensorManager: US distances: front=30.1cm back=11.2lb���=M)�;�����=5.�5�I (30832) SensorManager: US distances: front=30.�� bacU&	� left=��r�� right=9.8cm[0m
+[0;32mI (31072) SensorManager: US d�.W����: front=30.0cm back=10.8�� lef��Ui� right=5.1cm[0m
+[0;32mI (31312) SensorManager: US distances: front=30.0cm back=11.2cm I (31572) S7�5������: US distances: front=-1.0cm back=11.2cm left=15.3cm right=5.1cm[0m
+[0;33mW (31572) SensorManager: One or more ultras+k s+Kͳ�������� no echo; check wiring and pin mapping[0m
+[0;32mI (31822) SensorManager:S"��х����:����=3	�/���=11.2lb���=15.3cm right=5.0cm[0m
+ances: front=44.�� back=11.2cm left=15.3cm right=5.0cm
+[0;32mI (32302) SensorManager: US distances: front=35.5cm back=11.2cm left=15.3cm right=5.0cm[0m
+ances: front=28.s� backLI� left=.3cm right=2.8cm
+[0;32mI (32782) SensorManager: US distances: front=30.0cm back=11%�+b���=15.3cm right=5.1cm[0m
+[0;32mI (33022) SensorManager: US distances: front=29.5cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (33262) SensorManager: US distances: front=28.0L���=11.2cm left=15.3cm right=5.1cm[0m
+ances: front0.1cm back=11.2cm left=15.3cm right=5.1cm
+[0;32mI (33742) SensorManager: US distances: front=3.� b]r�� lef=15.3cm right=5.1cm[0m
+[0;32mI (33982) SensorManager: US distances: front=30.0cL���=��)� left=1.3cm right=5.0cm[0m
+[0;32mI (34222) SensorManager: US distances: front=30.0cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (34462) SensorManager: US distances: front=30X1cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (34502) main: ♥ Heartbeat tick=6 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (34702) SensorManager: US distances: front=30.0cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (34942) SensorManager: US distances: front=30� baU$I� left=14.5cm right=5.0cm[0m
+[0;32mI (35182) SensorManager: US distances: front=30.0cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (35422) SensorManager: US distances: front=30.0cm back=11.2cm left=34.3cm right=5.1cm[0m
+[0;32mI (35662) SensorManager: US distances: front=30cm back=1	��+b���=15.3cm right=5.0cm[0m
+[0;32mI (35902) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=5.0cm[0m
+ances: front=30.1cm back=11.2c left=14.0cm right=5.0cm
+[0;32mI (36382) SensorManager: US distances: front=30.0,��U�$I� left=5.3cm right=5.0cm[0m
+ances: front=30.0cm back=11.2cm lS��=15.3cm riKu-	�5
+[0;32mI (36862) SensorManager: US dist&I� left=15.3cm right=5.1cm[0m
+ances: front=29.5cm back=11.2c�I (37342) SensorManager: US distances: front=29.5cm bacM��r�� left=15.3cm right=5.1c5�I (37582) SensorManager: US distances: front=29.5cm back=11.2c�b����,�	� right=15.8cm
+[0;32mI (37822) SensorManager: US distances: front=30.0cm ack=11.2L�W��r�� right=5.0cm[0m
+[0;32mI (38062) SensorManager: US distances: front=24.�� back=11.2cm left=1�	��+�����=5.0cm[0m
+[0;32mI (38302) SensorManager: US distances: front=29.5cm back=11.2cm left���r��AVk�=5.0cm[0m
+[0;32mI (38542) SensorManager: US distances: front=29.5cm back=9.8cm left=14.0cm right=5.1cm[0m
+[0;32mI (38782) SensorManager: US distances: front=29.5cm back=11.2cm left=14.0cm right=��	�5[0m
+: front=29.5cm back=11.2cm left=15.3cm right=5.0cm
+[0;32mI (39262) SensorManager: US distances: front=30.� bac]$I� left=4.0cm right=5.0cm[0m
+[0;32mI (39502) SensorManager: US distances: front=30.1V���=11.2F;�-W��r�� right=5.1cm[0m
+[0;32mI (3902) main: ♥ Heartbeat tick=7 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (39742) SensorManager: US dist=15.3cm right=5.0cm[0m
+[0;32mI (39982) SensorManager: US distances: front=2.� back=22.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (40242) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=-1.0cm[0m
+[0;33mW (40242) SensorManagYq One or more ultrasonic sensors returned no echo; check wiring and pin mapping[0m
+ances: front=34.�����=11.2cm left=14.0cm right=5.0cm
+[0;32mI (40732) SensorManager: US distances: front=29.5cm back=11.2cm left=14.0cm right=5.0cm[0m
+ances: front=2.��� back=11.2cm left=27.8cm righ�&	�5
+[0;32mI (41212) SensorManager: US distances: front=36.1cm back=11.2cm leW��r�� right=5.1cm[0m
+I4��RJSensorManager: US distances: front=d0.1cm T]�r�� W�׊$�	� righC=5.0cm
+[0;32mI (41692) SensorManager: US distances: front=30.0cm back=11.2c[b���=10.8cm right=5.0cm[0m
+[0;32mI (41932) SensorManager: US distances: front=30X1cm b���r�� left=14.0cm right=5.1cm[0m
+[0;32mI (42172) SensorM(+���: US distances: front=30.0cm back=11.2cmleft=1�	�/�����=5.15�I (42412) SensorManager: US distances: front=32.3cm back=11.2cm left���r�� right=5.0cm[0m
+[0;32mI (42652) SensorManager: US dist14.0cm right=5.0cm[0m
+[0;32mI (42892) SensorManager: US distances: front=29.2cm back=11.2�leI (43132) SensorManager: US distances: front=29.5cm back=11.7cmleft=14.3cm right=4.7cm[0m
+ances: front=29.5cm bac1�)� left=14.3cm right=4.6cm
+[0;32mI (43612) SensorManager: US distances: front=28.9cm back=12.1cm lefW��r�� right=4.6cm[0m
+[0;32mI (43852) SensorManager: US distances: front=29.5����#m&&)� left14.3cm right=4.6cm[0m
+[0;32mI (44092) SensorManager: US distances: front=29.5cm back=12.1cLb���=144�-�����u�I��5[0m
+[0;32mI (44352) SensorManager: US distances: front=29.5cm back=12.1cm left=-1.0cm right=4.6cm[0m
+[0;33mW (44352) SensorManage: One or more ultrasonic sensors returned no echo; check wiring and pin mapping[0m
+[0;32mI (44502) main: ♥ Heartbeat tick=8 | WiFi=OK | MQTT=OK | EStop=clear[0m
+ances: front=29.5cm back=11.7c �I (44842) SensorManager: US distt=5.6cm right=4.7cm
+[0;32mI (45082) SensorManager: US distances: front=29.8cm back=11.2c�I (45322) SensorManager: US distances: front=30.6cm back=1,I�U�4L�	� right=4X9cm[0m
+[0;32mI (45562) SensorManager: US distances: front=29.!� bL�+Lr�� left���r�� right=5.0cm[0m
+[0;32mI (45802) SensorManager: US distances: front=30.1cm back=4.9cmb���=14.0cm right=4.9cm[0m
+[0;32mI (46042) SensorManager: US distances: front=30	� bacU,I� left=Mi� right=5.0cm[0m
+[0;32mI (46282) SensorManager: US distances: front=30.0cm back=11.2cb���u�Ui� right=�	�5[0m
+[0;32mI (46522) SensorManager: US distances: front=3	� back=10.8cm left=14.0cm right=5.0cm[0m
+[0;32mI (46762) SensorManager: US distances: front=39.0cm bacL���r/b���=14.0cm right=5.0cm[0m
+[0;32mI (47002) SensorManager: US distances: front=30X6cm back=10.8cm left=14.0cm right=5.0cm[0m
+[0;32mI (47242) SensorManager: US distances: front=30.� back=11.2cm left=15.3cm right=5.0cm[0m
+ances: front=30.0c+���=22.6cm left=14.0cm right=5.0cm
+[0;32mI (47722) SensorManager: US distances: front=30.1cm���u!� left=15.3cm right=5.0cm[0m
+[0;32mI (47962) SensorManager: US distances: front=30.0cm back=11.2cm left=14.0cm right=5.0cm[0m
+[0;32mI (48202) SensorManager: US distances: front=30.0cm back=19.5cm left=15.3cm righ��r��5[0m
+[0;32mI (48442) SensorManager: US distances: front=29.1cm back=11.2cm left=14.0cm right=5.0cm[0m
+[0;32mI (48682) SensorManager: US distances: front=30.0cm back=11.2cmb���L�	� right=50cm[0m
+[0;32mI (48922) SensorManager: US distances:front=30.0cm back=11.2cm left=15.3cm right=5.0cm[0m
+[0;32mI (49162) SensorManager: US dist��=14.0cm right=5.0cm[0m
+ances: front=30.0cm back=8.7cleft=14.0cm right=5.0cm
+[0;32mI (49502) main: ♥ Heartbeat tick=9 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (49642) SensorManager: US distances: front=29.5cL���=10.3cm I (49882) SensorManager: US distances: front=30.3cm back=10.7cmb���=15.3cm right=5.2cm[0m
+ances: front=43.4cm back=10.7cm left=15.0cm right=5.2cm
+[0;32mI (50362) SensorManager: US distances: front=30.3cm back=10.7cm left=15.0cm right=5.2cm[0m
+[0;32mI (50602) SensorManager: US distances: front=30.3cm back=7.1cm left=15.0cm right=5.2cm[0m
+[0;32mI (50842) SensorManager: US distft=15.� right=5.2cm[0m
+[0;32mI (51082) SensorManager: US distances: front=29.5cm back=11.2cleft=M	��+�����=5.1cm[0m
+[0;32mI (51322) SensorManager: US distances: front=29.5cm back=11.1cm left=15.0cm right=5.1cm[0m
+ances: front=29�� ba��,)� left=15.0cm right=5.1cm
+[0;32mI (51802) SensorManager: US distances: front=29.5cm back=10.5cm ����=1�/�����=5.2cm[0m
+[0;32mI (52042) SensorManager: US distances: front29.5cm back=3.9cm left=16.6cm right=5.2cm[0m
+[0;32mI (52282) SensorManager: US distances: front=30.3cm back=10.7cm left���r�� right=5.1cm[0m
+[0;32mI (52542) SensorManager: US distances: front=30.3cm back=11.1cm left=43.3cm right=-1.0cm[0m
+[0;33mW (52542) SensorManagr: One or more ultrasonic sensors returned no echo; chek�.�� and pin mapping[0m
+[0;32mI (52792) SensorManager: US distances: front=30.3cm back=11.cm lef�%	� right=5.2cm[0m
+[0;32mI (53032) SensorManager: US distances: front=29.5cm back=10.7cm left=19.1cm right=6.1cm[0m
+ances: front=30.3cm back=11.1cm left=15.0cm right=5.2cm
+RT����J"��%k��5������: US distances: fr��=29.5cm baU�$)� l)W�r�� right=5.2cm
+[0;32mI (53772) S9k�V*����: US distances: front=29.5cm back=11.1cm left=-1.0cm right=5.2cm[0m
+[0;33mW (53772) SensorManager: One or more ultraso�,��kKͳ�������� no echo; check wiring and pinmapping[0m
+[0;32mI (54022) SensorManager: US distances: front=30.3cm back=11.1cm left=19.2cm right=5.1cm[0m
+[0;32mI (54262) SensorManager: US distances: front=26.1cm back=11.1cm left=15.0cm right=5.2cm[0m
+ances: front=30.3l�����r�� left=1.I�+�����=5.1cm#!
+U����Jj���: ♥ Heartbeat tick=10 | WiFi=OK | MQTT=OK | EStop=clear
+[0;32mI (54742) SensorManager: US distu l)W9.2cm right=5.�5[0m
+ances: front=30.3cL���=21.7cm left=14.2cm right=5.���I (55222) SensorManager: US distances: front=29.5cm back=11.1cm left=10.1cm right=5.1cm
+ances: front=10.q� bacUE� left=5.4cm right=5.1cm
+[0;32mI (55722) SensorManaert US distances: front=29.5cm back=-1.0cm left=12.8cm right=5.1cm[0m
+W (55722onic sensors returned no echo; check wiring and pin mapping
+[0;32mI (55972) SensorManager: US dist=22.6cm right=5.2cm[0m
+ances: front=39.4cm back=10.7cm lef=15.3c+Ҭ�=5.2c
+I5�&ensorManager: US distk��:��ѴONi� bac���)�+b���=12.cm r�K=MI�5
+[0;32mI (56692) SensorManager: US distances: front=7.3cm back=7.7cm����=15.0cmҬѴOMI�5[0m
+[0;32mI (56932) SensorManager: US dist���r�� right=5.1cm[0m
+[0;32mI (57172) SensorManager: US distances: front=27.2cm back=11.1cm left=15.0cm right=5.2cm[0m
+[0;32mI (57412) SensorManager: US distances: front=27.2cm back=11.1cm left=15.0cm right=5.2cm[0m
+ances: front=27.2F� ba�,)� left=15.0cm righ�&	�5
+[0;32mI (57892) SensorManager: US distances: front=27.2cm back=11.1cm left=15.0cm right=5.2cm[0m
+ances: front=27.2cm back=11.1cm left=15.0cm right=5.1cm
+[0;32mI (58372) SensorManager: US distances: front=27.2L���u�	�� left=15.0cm right=5.2cm[0m
+ances: front=28.1cm backMjr�� left=15.0cm right=5.1cm
+[0;33mW (58632) SensorManag.'z�� or more ultrasonic sensors returned no echo; check wiring and pin mapping[0m
+[0;32mI (58902) SensorManager: US distances: front=28.1cm back=-1.0cm left=20.9cm right=5.2cm[0m
+[0;33mW (58902) SensorManager: One or more���ck wiring and pin mapping[0m
+ances: front=28.1cm bL��=1$)�/b���=10.7cm right=5.2cm
+[0;32mI (59392) SensorManager: US distances: front=28.1cm back=11.1cm ����=�U	� right=5.2cm[0m
+ck=11 | WiFi=OK | MQTT=OK | EStop=clear

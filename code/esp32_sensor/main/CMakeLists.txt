@@ -1,0 +1,29 @@
+idf_component_register(
+    SRCS
+        "main.cpp"
+        "src/WifiManager.cpp"
+        "src/NVSManager.cpp"
+        "src/WebServer.cpp"
+        "src/MqttManager.cpp"
+        "src/UartBridge.cpp"
+        "src/MotorController.cpp"
+        "src/SensorManager.cpp"
+        "src/HeartbeatManager.cpp"
+        "src/DebugManager.cpp"
+    INCLUDE_DIRS
+        "."
+        "inc"
+    REQUIRES
+        esp_wifi
+        esp_event
+        nvs_flash
+        esp_http_server
+        esp_netif
+        driver
+        esp_driver_gpio
+        esp_driver_uart
+        mqtt
+        freertos
+        esp_timer
+        log
+)

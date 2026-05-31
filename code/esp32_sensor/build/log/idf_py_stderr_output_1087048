@@ -1,0 +1,13 @@
+Command: ninja all
+CMake Error at /home/ziad/.espressif/v6.0.1/esp-idf/tools/cmake/build.cmake:697 (message):
+  ERROR: Cannot establish a connection to the component registry.  Are you
+  connected to the internet?
+
+  URL: https://components-file.espressif.com/components/espressif/mqtt.json
+
+Call Stack (most recent call first):
+  /home/ziad/.espressif/v6.0.1/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:6 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

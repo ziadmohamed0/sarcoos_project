@@ -1,0 +1,16 @@
+Command: ninja all
+Configuration Report                                                
+ ────────────────────────────────────────────────────────────────── 
+   Parser Version: 1                                                
+   Verbosity: default                                               
+   Defaults policy: sdkconfig                                       
+   Status: Finished with notifications                              
+                                                                    
+  Disabled Symbols/Choices With User-Set Value                      
+   ──────────────────────────────────────────────────────────────   
+    * ESP_CONSOLE_UART_BAUDRATE (defined at                         
+    /home/ziad/.espressif/v6.0.1/esp-idf/components/esp_stdio/K…    
+    with user-set value 115200 from                                 
+    /home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/sdk…    
+   ──────────────────────────────────────────────────────────────   
+ ────────────────────────────────────────────────────────────────── 

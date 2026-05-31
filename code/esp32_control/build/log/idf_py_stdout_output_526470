@@ -1,0 +1,114 @@
+Command: /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/esp32_driver.elf /home/ziad/ziad_ws/sarcoos_project/code/v1/esp32_driver/build/bootloader/bootloader.elf -m '/home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/ziad/.espressif/v6.0.1/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 29 2026 17:27:56[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=205d0h (132560) map[0m
+[0;32mI (133) esp_image: segment 1: paddr=000305f8 vaddr=3ffb0000 size=0498ch ( 18828) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00034f8c vaddr=40080000 size=0b08ch ( 45196) load[0m
+[0;32mI (160) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a3f6ch (671596) map[0m
+[0;32mI (399) esp_image: segment 4: paddr=000e3f94 vaddr=4008b08c size=0acdch ( 44252) load[0m
+[0;32mI (417) esp_image: segment 5: paddr=000eec78 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (429) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (429) boot: Disabling RNG early entropy source...[0m
+[0;32mI (439) cpu_start: Multicore app[0m
+[0;32mI (448) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (448) cpu_start: Pro cpu start user code[0m
+[0;32mI (448) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (450) app_init: Application information:[0m
+[0;32mI (453) app_init: Project name:     esp32_driver[0m
+[0;32mI (458) app_init: App version:      1f9dae3-dirty[0m
+[0;32mI (462) app_init: Compile time:     May 29 2026 17:28:16[0m
+[0;32mI (467) app_init: ELF file SHA256:  98a25041d...[0m
+[0;32mI (472) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (475) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (479) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (483) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (487) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (494) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (498) heap_init: At 3FFB93A0 len 00026C60 (155 KiB): DRAM[0m
+[0;32mI (504) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (509) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (515) heap_init: At 40095D68 len 0000A298 (40 KiB): IRAM[0m
+[0;33mW (521) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (533) spi_flash: detected chip: generic[0m
+[0;32mI (536) spi_flash: flash io: dio[0m
+[0;32mI (541) main_task: Started on CPU0[0m
+[0;32mI (551) main_task: Calling app_main()[0m
+[0;32mI (551) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO19, LPWM: GPIO18[0m
+[0;32mI (551) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO17, LPWM: GPIO16[0m
+[0;32mI (551) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (561) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (601) WIFI_MANAGER: WiFi Manager initialized[0m
+[0;32mI (601) MQTT_CLIENT: MQTT Client created[0m
+[0;32mI (611) wifi:wifi driver task: 3ffc110c, prio:23, stack:6656, core=0[0m
+[0;32mI (621) wifi:wifi firmware version: b37c951[0m
+[0;32mI (621) wifi:wifi certification version: v7.0[0m
+[0;32mI (621) wifi:config NVS flash: enabled[0m
+[0;32mI (621) wifi:config nano formatting: disabled[0m
+[0;32mI (631) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (631) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (641) wifi:Init management short buffer num: 32[0m
+[0;32mI (641) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (651) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (651) wifi:Init static rx buffer num: 10[0m
+[0;32mI (651) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (661) wifi_init: rx ba win: 6[0m
+[0;32mI (661) wifi_init: accept mbox: 6[0m
+[0;32mI (661) wifi_init: tcpip mbox: 32[0m
+[0;32mI (671) wifi_init: udp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp mbox: 6[0m
+[0;32mI (671) wifi_init: tcp tx win: 5760[0m
+[0;32mI (681) wifi_init: tcp rx win: 5760[0m
+[0;32mI (681) wifi_init: tcp mss: 1440[0m
+[0;32mI (681) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (691) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (711) WIFI_MANAGER: WiFi Station initialized with SSID: WE_BF1790[0m
+[0;32mI (721) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;33mW (721) phy_init: failed to load RF calibration data (0xffffffff), falling back to full calibration[0m
+[0;32mI (801) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (821) wifi:mode : sta (44:1d:64:fb:48:74)[0m
+[0;32mI (821) wifi:enable tsf[0m
+[0;32mI (821) WIFI_MANAGER: Connecting to WiFi...[0m
+[0;32mI (831) WIFI_MANAGER: WiFi started, attempting connection...[0m
+[0;32mI (2351) wifi:new:<11,0>, old:<1,0>, ap:<255,255>, sta:<11,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (2351) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2371) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2381) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2401) wifi:connected with WE_BF1790, aid = 1, channel 11, BW20, bssid = a4:f3:3b:bf:17:90[0m
+[0;32mI (2401) wifi:security: WPA2-PSK, phy: bgn, rssi: -48, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (2421) wifi:pm start, type: 1[0m
+
+[0;32mI (2421) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2441) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (5651) esp_netif_handlers: sta ip: 192.168.1.7, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (5651) WIFI_MANAGER: Connected! IP Address: 192.168.1.7[0m
+[0;32mI (5651) MAIN: WiFi connected, IP=192.168.1.7[0m
+[0;32mI (5841) MQTT_CLIENT: MQTT Client initialized with broker: mqtt://192.168.1.100[0m
+[0;32mI (5851) MQTT_CLIENT: Connecting to MQTT broker...[0m
+[1;31mE (15861) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (15861) transport_base: Failed to open a new connection: 32774[0m
+[1;31mE (15861) mqtt_client: Error transport connect[0m
+[1;31mE (15861) MQTT_CLIENT: MQTT error occurred[0m
+[0;32mI (15861) MQTT_CLIENT: Disconnected from MQTT broker[0m
+[0;33mW (15871) MAIN: MQTT disconnected[0m

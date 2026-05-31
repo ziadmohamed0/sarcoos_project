@@ -1,0 +1,965 @@
+Command: /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/tools/idf_monitor.py -p /dev/ttyUSB0 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.elf /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/bootloader.elf -m '/home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python' '/home/ziad/.espressif/v6.0.1/esp-idf/tools/idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 28 2026 05:46:04[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=23c98h (146584) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=00033cc0 vaddr=3ffb0000 size=045e8h ( 17896) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=000382b0 vaddr=40080000 size=07d68h ( 32104) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=ac83ch (706620) map[0m
+[0;32mI (411) esp_image: segment 4: paddr=000ec864 vaddr=40087d68 size=0ed64h ( 60772) load[0m
+[0;32mI (436) esp_image: segment 5: paddr=000fb5d0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (447) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (448) boot: Disabling RNG early entropy source...[0m
+[0;32mI (458) cpu_start: Multicore app[0m
+[0;32mI (466) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (467) cpu_start: Pro cpu start user code[0m
+[0;32mI (467) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (469) app_init: Application information:[0m
+[0;32mI (472) app_init: Project name:     SARCUS_Robot[0m
+[0;32mI (477) app_init: App version:      1f9dae3-dirty[0m
+[0;32mI (481) app_init: Compile time:     May 28 2026 05:45:25[0m
+[0;32mI (486) app_init: ELF file SHA256:  023f99967...[0m
+[0;32mI (490) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (494) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (498) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (502) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (506) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (512) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (517) heap_init: At 3FFB92F8 len 00026D08 (155 KiB): DRAM[0m
+[0;32mI (523) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (528) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 40096ACC len 00009534 (37 KiB): IRAM[0m
+[0;33mW (540) spi_flash: Detected boya flash chip but using generic driver. For optimal functionality, enable `SPI_FLASH_SUPPORT_BOYA_CHIP` in menuconfig[0m
+[0;32mI (552) spi_flash: detected chip: generic[0m
+[0;32mI (555) spi_flash: flash io: dio[0m
+[0;33mW (558) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (571) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (582) main_task: Started on CPU0[0m
+[0;32mI (592) main_task: Calling app_main()[0m
+[0;32mI (592) main: ============================================[0m
+[0;32mI (592) main:   SARCUS Robot — ESP32 Robot Node          [0m
+[0;32mI (592) main:   Assistive Exoskeleton Control System     [0m
+[0;32mI (602) main: ============================================[0m
+[0;32mI (602) NVSManager: [ENTRY] init()[0m
+[0;32mI (642) NVSManager: NVS Flash initialized OK[0m
+[0;32mI (642) NVSManager: [EXIT]  init()[0m
+[0;32mI (642) main: [1/8] NVS ready ✓[0m
+[0;32mI (642) main: [2/8] Device ID: AC:15:18:D5:24:78[0m
+[0;32mI (652) WifiManager: [ENTRY] init()[0m
+[0;32mI (662) wifi:wifi driver task: 3ffc22b8, prio:23, stack:6656, core=0[0m
+[0;32mI (682) wifi:wifi firmware version: b37c951[0m
+[0;32mI (682) wifi:wifi certification version: v7.0[0m
+[0;32mI (682) wifi:config NVS flash: enabled[0m
+[0;32mI (682) wifi:config nano formatting: disabled[0m
+[0;32mI (682) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (692) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (692) wifi:Init management short buffer num: 32[0m
+[0;32mI (692) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (702) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (702) wifi:Init static rx buffer num: 10[0m
+[0;32mI (712) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (712) wifi_init: rx ba win: 6[0m
+[0;32mI (712) wifi_init: accept mbox: 6[0m
+[0;32mI (722) wifi_init: tcpip mbox: 32[0m
+[0;32mI (722) wifi_init: udp mbox: 6[0m
+[0;32mI (722) wifi_init: tcp mbox: 6[0m
+[0;32mI (722) wifi_init: tcp tx win: 5760[0m
+[0;32mI (732) wifi_init: tcp rx win: 5760[0m
+[0;32mI (732) wifi_init: tcp mss: 1440[0m
+[0;32mI (732) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (742) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (742) WifiManager: WiFi stack initialized[0m
+[0;32mI (752) WifiManager: [EXIT]  init()[0m
+[0;32mI (752) main: Connecting to: WE_BF1790[0m
+[0;32mI (752) WifiManager: [ENTRY] startSTA() ssid='WE_BF1790'[0m
+[0;32mI (762) WifiManager: startSTA: setting mode WIFI_MODE_STA[0m
+[0;32mI (762) WifiManager: startSTA: applying STA config[0m
+[0;32mI (772) WifiManager: startSTA: starting WiFi[0m
+[0;32mI (772) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+� (8v2) p�y�ini�: ��vi�� ��w calibration data due to checksum failure or outdated calibration data, mode(0)
+[0;32mI (932) wifi:mode : sta (ac:15:18:d5:24:78)[0m
+[0;32mI (932) wifi:enable tsf[0m
+[0;32mI (932) WifiManager: eventHandler: base=WIFI_EVENT id=43[0m
+[0;32mI (932) WifiManager: Unhandled WIFI_EVENT id=43[0m
+[0;32mI (932) WifiManager: startSTA: esp_wifi_start() returned[0m
+[0;32mI (932) WifiManag)uA[0m
+���JWifiManager: STA started → connecting...
+[0;32mI (952) WifiManager: startSTA: connecting to AP immediately[0m
+[1;31mE (952) wifi:sta is connecting, return error[0m
+[0;32mI (962) wifi:new:<11,0>, ocK,	�b[0m
+�y�-I���b�хiL	�b����:1, snd_ch_cfg:0x0
+[0;32mI (962) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (972) Wifi!J���j[0m
+[0;32mI (972) WifiManaguUnhandled WIFI_EVED��$O�j[0m
+[0;32mI (972) wifi:state: auth -> assoc (0x0)[0m
+[0;33mW (982) WifiManager: esp_wifi_connect() returned ESP_ERR_W%�T�5=995[0m
+[0;32mI (982) wifi:state: as�+> run (0x10)[0m
+[0;32mI (992) WifiManager: STA mode started, waiting for connection...[0m
+[0;32mI (1002) WifiManager: [EXIT]  startSTA()[0m
+[0;32mI (1012) wifi:connected with WE_BF1790, aid = 1, channel 11, BW20, bssid = a4:f3:3b:bf:17:90[0m
+[0;32mI (1012) wifi:security: WPA2-PSK, phy: bgn, rssi: -25, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (1022) wifi:pm start, type: 1[0m
+
+[0;32mI (1022) w*6���b�: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (1032) WifiManager: eventHandler: base=WIFI_EVENT id=4[0m
+[0;32mI (1032) WifiManager: STA connected to AP[0m
+[0;32mI (1112) wifi:AP's beacon interval = 102400 us, DTIM period = 1[0m
+[0;32mI (4272) esp_netif_handlers: sta ip: 192.168.1.5, mask: 255.255.255.0, gw: 192.168.1.1[0m
+[0;32mI (4272) WifiManager: eventHandler: base=IP_EVENT id=0[0m
+[0;32mI (4272) WifiManager: STA got IP: 192.168.1.5[0m
+[0;32mI (4272) main: [3/8] WiFi connected ✓[0m
+[0;32mI (4282) MqttManager: [ENTRY] start() broker=mqtt://192.168.1.S$j[0m
+[0;32mI (4292) MqttManager: MQTT client started[0m
+[0;32mI (4292) MqttManager: [EXIT]  start()[0m
+[0;32mI (4292) main: [4/8] MQTT connected ✓[0m
+[0;32mI (4292) MotorController: [ENTRY] init() stm32_port=1[0m
+[0;32mI (4302) MotorController: Motor controller initialized. Queue depth=16[0m
+[0;32mI (4302) MotorController: [EXIT]  init()[0m
+[0;32mI (4312) MotorController: [ENTRY] start()[0m
+[0;32mI (4312) MotorController: Dispatch task running[0m
+[0;32mI (4312) Mot'��ɽ����: MoC�% dispatch task started[0m
+[0;32mI (4322) MotorController: [EXIT]  start()[0m
+[0;32mI (4322) main: [5a/9] Motor controller ready ✓[0m
+[0;32mI (4332) UartBridge: [ENTRY] init() port=1 rx���=17 V/V���&�j[0m
+[0;32mI (4332) wifi:<ba-add>idx:0 (ifx:0, a4:f3:3b:bf:17:90), tid:0, ssn:2, winSize:64[0m
+I ��R$J,.	ɥ���: UART1��)W+��镑 (u��Q&�j
+I4352) UartBridge: [EXIT]  init()
+[0;32mI (4352) UartBridge: [ENTRY] start() port=1[0m
+I (4352"j(.	ɥ���: RX t�-�-�˝ on IQ1#a
+����JUrtBr:UART1 RX task started
+[0;32mI (4362) UartBridge: [EXIT]  start()[0m
+[0;32mI (4372) main: [5b/9] UART bridges ready 5U*��UART1) ✓ |[0m
+�iFi/MQTT
+[0;32mI (4372) MqttManager: MQTT connected to broker[0m
+I (439R	j<W*�����: SubscNK9��(��ɽ�t���5
+[0;32mI (4392) SensorManager: [ENTRY] init()[0m
+[1;31mE (4402) SensorManager: MPU6050 init FAILED[0m
+[1;31mE (4402) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=SensorManager::init[0m
+[0;32mI (4412) SensorManager: GPS UART initialized (baud=9600)[0m
+[0;32mI (4412) SensorManager: 4x HC-SR04 GPIO configured[0m
+[0;32mI (4412) SensorManager: [EXIT]  init()[0m
+[0;32mI (4412) SensorManager: [ENTRY] start()[0m
+[0;32mI (4422) SensorManager: IMU task running (interval=100ms)[0m
+[0;33mW (4422) SensorManager: IMU read failed[0m
+[1;31mE (4422) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (4432) SensorManager: GPS task running (interval=1000ms)[0m
+[0;32mI (4442) SensorManager: Ultrasonic task running ��ѕ�م�=200ms)[0m
+[0;32mI (4462) SensorManager: Sensor tasks started — IMU:100ms GPS:1000ms US:200ms[0m
+[0;32mI (4462) SensorManager: [EXIT]  start()[0m
+[0;32mI (4462) main: [6/9] Sensors running ✓[0m
+[0;32mI (4462) DebugManager: Debug routing to MQTT enabled[0m
+[0;32mI (4482) HeartbeatMgr: [ENTRY] start() device_id=AC:15:1:D5:24:7*Q[0m
+B��JB���щ���5��: Heartbeat task running
+[0;32mI (4502) HeartbeatMgr: Heartbeat task started (interval=500ms)[0m
+[0;32mI (4502) HeartbeatMgr: [EXIT]  start()[0m
+[0;32mI (4502) main: [7/9] Debug + Heartbeat running ✓[0m
+[0;32mI (4502) main: ============================================[0m
+[0;32mI (4522) main:   SARCUS Robot fully operational           [0m
+[0;32mI (4522) main:   Controls: MQTT + Suit + ROS2             [0m
+[0;32mI (4522) main:   Broker: mqtt://192.168.1.4:1883[0m
+[0;33mW (4532) SensorManager: IMU read faile��AA��&J"��՝5����iM�*UERRO�*��ԑ�YO�03 ontext=imuTask[0m
+[0;32mI (4542) SensorManager: US distances: front=117.3cm back=161.5cm left=135.0cm right=159.0cm[0m
+[0;32mI (4562) main: ============================================[0m
+[0;33mW (4642) SensorManager: IMU read*+*II=I: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (4742) SensorManager: IMU read failed[0m
+[1;31mE (4742) DebugManager:SYST�
+*%=I: ErrorCode=0x03 context=imuTask
+[0;32mI (4832) SensorManager: US distances: front=33.6cm back=160.9cm eft=1�I��+�����=159.1cm[0m
+[0;33mW (4842) SensorManager: IMU read failed[0m
+[1;31mE (4842) DebugManager: SYSTEM )�
+�*�+Б�=0x03 context=imuTask
+[0;33mW (4942) SensorManager: IMU read failed[0m
+[1;31mE (4942) DebugManager: SYS+)[0m
+I��J�*�ɽ����=0x03 context=imuTask
+[0;33mW (5042) SensorManager: IMU read failed[0m
+E (5042 Debu�*+��Y.'SYSTEM I
+�*�������=0x03 context=imuTask
+[0;32mI (5112) SensorManager: US distances: front=0.1cm back=161.3cmleft=1�i� right=158.7cm[0m
+[0;33mW (5142) SensorManager: IMU read failed[0m
+[1;31mE (5142) �%l�*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (5242) SensorManager: IMU read failed[0m
+[1;31mE (5242) DebugManager SYSTEM�J�*�ɽ�[0m���=0x03 context=imuTask
+[0;33mW (5342) SensorManager: IMU read failed[0m
+[1;31mE (5342) DebugManager:SYSTE+%�J�*�ɽɽ��=0x03 context=imuTask[0m
+[0;32mI (5382) SensorManager: US distances: front=18.2cm\��O&Sr�� ����=164.2cm right=0.0cm[0m
+[0;33mW (5442) SensorManage: IMU read failed[0m
+[1;31mE (5442) DebugManage: SYSTEM ��J�*�ɽ�[0m���=0x03 context=imuTask
+[0;33mW (5542) SensorManager: IMU read failed[0m
+E (554CJ"����*���: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (5642) SensorManager: IMU read failed[0m
+[1;31mE (5642) DebugManaY.'SY�
+*II=I: Erro#���=0x03 context=imuTask
+[0;32mI (5652) SensorManager: US distances: front=0.1cL��V�� lef=180.6cm right=254.4cm[0m
+[0;33mW (5742) SensorManager: IMU read failed[0m
+[1;31mE (5742) DebugManageu SYS)+[0m
+I��J�*�ɽ%���=0x03 context=imuTask
+[0;33mW (5842) SensorManager: IMU read failed[0m
+[1;31mE (5842) DebugManage.1 SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (5902) SensorManager: US distances: front=0.1,��U&�� left=164.0cm right=0.0cm[0m
+[0;33mW (5942) SensorManager: IMU read failed[0m
+E (59KJ"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (6042) SensorManager: IMU read failed[0m
+E (604CJ"���
+��XV�: SYTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (6142) SensorManager: IMU read failed[0m
+[1;31mE (6142) DebugManagrt SY-)*II=I: ErrK[0m���=0x03 context=imuTask
+[0;32mI (6172) SensorManager: US distances: front=0cm bacU� left=285.8cm right=158.9cm[0m
+[0;33mW (6242) SensorManager: IMU read failed[0m
+[1;31mE (6242) DebugManagert SYSTE+*I: ErroCode=0x03 context=imuTask[0m
+[0;33mW (6342) SensorManager: IMU read failed[0m
+[1;31mE (6342) DebugManage.q SYS++[0m
+IROR: Erro����=0x03 context=imuTask
+[0;32mI (6432) SensorManager: US distances: front=116.8cm back=160�� left=1S)�;�����=0.0cm[0m
+[0;33mW (6442) SensorManager: IMU read failed[0m
+[1;31mE (6442) DebugManager: SYSTEM ERROR:ErrorCode=0x03 context=imuTask[0m
+[0;33mW (6542) SensorManager: IMU read failed[0m
+[1;31mE (6542) DebugManagerNSYSTE3[0m
+%�J�*�ɽ���=0x03 context=imuTask
+[0;33mW (6642) SensorManager: IMU read failed[0m
+E (6642	"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTa�
+[0;32mI (6702) SensorManager: US distancesN2ɽ��=0.1cm back=160.7c[b���=164.3cm right=158.9cm[0m
+[0;33mW (6742) SensorManager: IMU read failed[0m
+[1;31mE (6742) DebugManager: SYSTEM ERRO�*����[0m���=0x03 conteѫ�UQ���5
+[0;33mW (6842) SensorManager: IMU read failed[0m
+[1;31mE (6842) DebugManag.1 SYSTEM )�
+�*�������=0x03 context=imuTask
+[0;33mW (6942) SensorManager: IMU read failed[0m
+[1;31mE (6942) DebugManagY'SY[0m
+-+*II=I: ErrorCode=0x03 context=imuTask
+[0;32mI (6982) SensorManager: US distances: front=113.�[���U&r�� left=158.6cm right=158.8cm[0m
+[0;33mW (7042) SensorManager: IMU read failed[0m
+QB����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (7142) SensorManager: IMU read failed[0m
+[1;31mE (7142) DebugManag9.q SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (7242) SensorManager: IMU read failed[0m
+[1;31mE (7242) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (7242) SensorManager: US distances: front=0.1cm back=131.2cm left=164.1cm right=158.7cm[0m
+[0;33mW (7342) SensorManager: IMU read failed[0m
+[1;31mE (7342) DebugManag9.1 SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (7442) SensorManager: IMU read failed[0m
+[1;31mE (7442) DebugManage:SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (7522) SensorManager: US distances: front=10ˢ� back=161.2cm left=164.2cm right=159.3cm[0m
+[0;33mW (7542) SensorManager: IMU read failed[0m
+!BS�J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (7642) SensorManager: IMU read failed[0m
+[1;31mE (7642) DebugMan�Ver: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (7742) SensorManager: IMU read failed[0m
+[1;31mE (7742) DebugManage*5EU5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (7802) SensorX+���: US distances: front=116.8cm back=130.9cm left=163.7cm right=15.7cm[0m
+[0;33mW (7842) SensorManager: IMU read failed[0mAB�¢S	"���5�*����: SYSTEMuI: ErrorCodYO�03 context=imuTask
+[0;33mW (7942) SensorManager: IMU read failed[0m
+[1;31mE (7942) DebugManage: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (8042) SensorManager: IMU read failed[0m
+E	���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (8082) SensorManager: US distances: front=118.�� ba�+Lr�� lef=141.1cm right=158.7cm[0m
+[0;33mW (8142) SensorManager: IMU NV� *- ERROR: E$ɽ����=0x03 context=imuTask
+[0;33mW (8242) SensorManager: IMU read failed[0m
+[1;31mE (8242) DebugManager:LeMQ)*=I: ErrorCK�=0x03 context=imuTask[0m
+[0;33mW (8342) SensorManager: IMU read failed[0m
+[1;31mE (8342) DebugManaget SYSTEM*�J�*�ɽ�[0m���=0x03 context=imuTask
+[0;32mI (8362) SensorManager: US distances: front=1�r�� back=160.4cm left=163.6cm right=98.9cm[0m
+[0;33mW (8442) SensorManager: IMU read failed[0m
+[1;31mE (8442) DebugManage& SYS�
+
+ROR*��K���=0x03 context=imuTask
+[0;33mW (8542) SensorManager: IMU read failed[0m
+E (84CJ"����
+�-uMeMQ)*I=I: Er�Kԑ�=0x03 cnteW�UQ��V�I (8572) MotorController: [MQTT] Move dir=�������*�I (8622) SensorManager: US distances: front=0.1cm back=40.3cm left=156.2cm right=158.6cm
+[0;33mW (8642) SensorManager: IMU read failed[0m
+[1;31mE (8642) DebugMa+��iM�*UA)�J�*�ɽ[0m�K���03 conet=-Uͭ5
+[0;33mW (8742) SensorManager: IMU read failed[0m
+[1;31mE (8742) DebugManager'j5EU5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (8752) MotorController: [MQTT] Move dir=�.��YVj[0m
+[0;33mW (8842) SensorManager: IMU read failed[0m
+[1;31mE (8842) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (8882) SensorManager: US distances: fron����r�� back=28.6cm left=102.9cm right=159.0cm[0m
+[0;32mI (8932) MotorController: [MQTT] Move dir=0 sp�YVj[0m
+[0;33mW (8942) SensorManager: IMU read V����5[0m
+[1;31mE (8942) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (9042) SensorManager: IMU read failed[0m
+[1;31mE (9042) DebugManager: SYSTEM ERROR:*�ɽ�[0m���=0x03 context=imuTask
+[0;33mW (9142) SensorManager: IMU read failed[0m
+[1;31mE (9142) DebugManager: SYS) ERROR: )�[0mЕ=0x03 cG-ѫJ��Q���5A
+Bʊ�R	�ͽ�5������: US distances: front=118.1cm back=16.0cm left=163.8cm right=159.0cm
+[0;33mW (9242) SensorManager: IMU read failed[0m
+[1;31mE (9242) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (9342) SensorManager: IMU read failed[0m
+E (93R	"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (9422) SensorManager: US distances: front=0.1cm back=0.9cm l163.4cm right=187.5cm[0m
+[0;33mW (9442) SensorManager: IMU read failed[0m
+Eʢ��J"-LV*�����: SJ5EU5 ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (9542) SensorManager: IMU read failed[0m
+E (95��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=iSQ�X��H�I (9562) main: ♥ Heartbeat tick=1 | WiFi=OK | MQTT=OK | EStop=clear
+[0;33mW (9642) SensorManager: IMU read failed[0m
+[1;31mE (9642) DebugManager'YSTEM 1�
+�*������0x03 context=imuTask
+[0;32mI (9692) SensorManager: US distances: front=110.5cm back=160.9cm left=163.7cm right=158.6cm[0m
+[0;33mW (9742) SensorManager: IMU read failed[0m
+[1;31mE (9742) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (9842) SensorManager: IMU read failed[0m
+E (98SJ"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=i-Uͭ5
+[0;33mW (9942) SensorManager: IMU read failed[0m
+[1;31mE (9942) DebugManaget SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (9972) SensorManager: US distances: fron����r�� back=161.1cm left=163.5cm right=158.4cm[0m
+[0;33mW (10042) SensorManager: IMU read failed[0m
+[1;31mE (10042) DebugManager: SYSTEM ERROR: ErrorCode=0x03 ���ѕ��=imuTask[0m
+[0;33mW (10142) SensorManager: IMU read failed[0m
+[1;31mE (10142) DebugManager: SYSEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (10232) SensorManager: US distances: front=0.1cm back=127.9cm ���=16�i�-�����=158)�5[0m
+[0;33mW (10242) SensorManager: IMU read failed[0m
+[1;31mE (10242) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (10342) SensorManager: IMU read failed[0m
+[1;31mE (10342) DebugManar: SY-)*II=I: Er�K[0m���=0x03 context=imuTask
+[0;33mW (10442) SensorManager: IMU read failed[0m
+[1;31mE (10442) DebugManagFɨ[0m
+*I�J��K���=0x03 context=imuTask
+[0;32mI (10512) SensorManager: US distances: front=1Sr�� back=160.7cm left=163.8cm right=158.4cm[0m
+[0;33mW (10542) SensorManager: IMU read failed[0m
+E (105�J"��ժ*��V�: SYSTM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (10642) SensorManager: IMU read failed[0m
+[1;31mE (10642) DebugManagY.'SYS*)[0m
+IROR: Erro����=0x03 context=imuTask
+[0;33mW (10742) SensorManager: IMU read failed[0m
+[1;31mE (10742) DebugManageu SYSTE#*I�J�*�ɽ�[0m�YO�03 context=imuTask
+[0;32mI (10772) SensorManager: US distances: front=)� back=98.6cm left=214.4cm right=158.4cm[0m
+[0;33mW (10842) SensorManager: IMU read failed[0m
+[1;31mE (10842) DebugManager: SYSTEM ERROR: E�K[0m���=0x03 context=imuTask
+[0;33mW (10942) SensorManager: IMU read failed[0m
+E (10p42) DebugManager: SY-+*II=I: Erro#���=0x03 context=imuTask
+[0;32mI (11032) SensorManager: US distances: front=0	� \�+O�r�� lefF=163.6cm right=158.6cm[0m
+[0;33mW (11042) SensorManagert $5U read failed[0m
+E (1104CJ"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (11142) SensorManager: IMU read failed[0m
+[1;31mE (11142) DebugManaV,.'SYSTEM!T�J�*�ɽ�[0m���=0x03 context=imuTask
+[0;33mW (11242) SensorManager: IMU read failed[0m
+E (114J"�Ve�*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (11312) SensorManager: US distances: front=203.6cm back=160.9cm lef�163.8cm right=158.6cm[0m
+[0;33mW (11342) SensorManager: IMU read failed[0m
+E�����J-L�*�����: eMQ5 ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (11442) SensorManager: IMU read failed[0m
+[1;31mE (11442) DebugManaY.'S[0m
+��
+*II=I: ErrorCode=0x03 context=imuTask
+[0;33mW (11542) SensorManager: IMU read failed[0m
+QB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=im�Uͭ5
+[0;32mI (11572) SensorManager: US distances: front=0.� ba�'�)� left=0.0cm right=158.5cm[0m
+[0;33mW (11642) SensorManager: IMU read failed[0m
+[1;31mE (11642) DebugMa��: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (11742) SensorManager: IMU read failed[0m
+[1;31mE (11742) DebugManagY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (11832) SensorManager: US distances: front=0.1cm back=37.3cm S��=171.7cm right=158.6cm[0m
+[0;33mW (11842)M�)k��5������: IMU read failed[0m
+E (118h2) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTخe
+[0;33mW (11942) SensorManager: IMU read failed[0m
+[1;31mE (11942) DebugMan��: S�
+%)*II=I: ErrK���=0x03 context=imuTask
+[0;33mW (12042) SensorManager: IMU read failed[0m
+[1;31mE (12042) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (12112) SensorManager: US distances: front=0.̵����=160.7cm left=172.1cm rigEur��5[0m
+[0;33mW (12142) SensorManager: IMU read failedCQB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 coG�%�=imuTask[0m
+[0;33mW (12242) SensorManager: IMU read failed[0m
+[1;31mE (12242) DebugManag'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (12342) SensorManager: IMU read failed[0m
+[1;31mE (12342) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (12372) SensorManager: US distances: front=0.1cm back=11.7cm left=221.0cm right=159.3cm[0m
+[0;33mW (12442) SensorManager: IMU read 6����5Q)���J"��T�V�!V�r: SYST�5 ERJ�*����[0m��=0x03 context=imuTask
+[0;33mW (12542) SensorManager: IMU read failed[0m
+AB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (12642) SensorManager: IMU read failed[0m
+[1;31mE (12642) DebugMan���: V�T[0m
+*II=I: Eɽ����=0x03 context=imuTask
+[0;32mI (12642) SensorManager: US distances: front=0.1cm back=160.4cm left=0.1cm right=158.9cm[0m
+[0;33mW (12742) SensorManager: IMU read failed[0m
+[1;31mE (12742) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (12842) SensorManager: IMU read failed[0m
+E (L&��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (12902) SensorManager: US distances: front=107cm lU$r�� lft=0.0cm right=148.5cm[0m
+[0;33mW (12942) SensorManager: IMU read failed[0m
+AB��ʢ�J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (13042) SensorManager: IMU read failed[0m
+E 13042) YLV*�����: YSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (13142) SensorManager: IMU read failed[0m
+[1;31mE (13142) DebugManagF�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (13182) SensorManager: US distances: front=L�	� back=160.6cm left=163.3cm right=158.4cm[0m
+[0;33mW (13242) SensorManager: IMU read failed[0m
+[1;31mE (13242) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (13342) SensorManager: IMU read failed[0m
+[1;31mE (13342) DebugManager: SYT)5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (13442) SensorManager: IMU read failed[0m
+[1;31mE (13442) DebugManagf�: SY3*IOR4ɽ/����=0x0d context=imuTask[0m
+[0;32mI (13442) SensorManager: US distances: front=0.1cm back=123.6cm left=163.4cm right=158.5cm[0m
+[0;33mW (13542) SensorManager: IMU read failed[0m
+[1;31mE (13542) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (13642) SensorManager: IMU read failed[0m
+[1;31mE (13642) DY՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (13692) SensorManager: US distances: front28.9cm ��+Or�� left=105.6cm right=0.0cm[0m
+[0;33mW (13742) SensorManager: IMU read failed[0m
+E (13�J"-LV*�����: SSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (13842) SensorManager: IMU read failed[0m
+[1;31mE (13842) DebugManag: SYST�
+
+ROR: ErroCode=0x03 context=imuTask
+[0;33mW (13942) SensorManager: IMU read failed[0m
+[1;31mE (13942) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (13942) SensorManager: US distances: front=20.9cm back=194.6cm left=0.0cm right=89.6cm[0m
+[0;33mW (14042) SensorManager: IMU read failed[0m
+E (1��J"-LV*�����: YSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (14142) SensorManager: IMU read failed[0m
+[1;31mE (14142) DebugManae.'SYST�
+
+=I: Erro���=0x03 context=imuTask
+[0;32mI (14192) SensorManager: US distances: front=5M�� b��r�� lef=78.6cm right=0.0cm[0m
+[0;33mW (14242) SensorManager: IMU read failed[0m
+E (1424CJ"����*����: SYSEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (14342) SensorManager: IMU read failed[0m
+[1;31mE (14342) DebugManage.'SYSTE+*=I: ErroCode=0x03 context=imuTask[0m
+[0;33mW (14442) SensorManager: IMU read failed[0m
+[1;31mE (14442) DebugManager: SY[0m
+U5 ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (14442) SensorManager: US distances: ront=0.7cm back=167.7cm left=0.0cm right=61.9cm[0m
+[0;33mW (14542) SensorManager: IMU read failed[0m
+[1;31mE (14542) DebugManager: SYSTEM ERROR: ErrorCode=03 context=imuTask[0m
+[0;32mI (14562) main: ♥ Heartbeat tick=2 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;33mW (14642) SensorManager: IMU read failed[0m
+[1;31mE (14642) DebugManagF�: SYS*)*II=I: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (14692) SensorManager: US distances: front=0.� back=0.0cm left=51.4cm right=0.1cm[0m
+[0;33mW (14742) SensorManager: IMU read failed[0m
+E (14c��J"����*����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (14842) SensorManager: IMU read failed[0m
+[1;31mE (14842) DebugManage.'SYSTE!�J�*�ɽ�[0m���=0x03 context=imuTask
+[0;32mI (14932) SensorManager: US distances: front=0.1cm back=0.0cm lef34.2cm right=0.0cm[0m
+[0;33mW (14942) SensorManager: IMU read failed[0m
+[1;31mE (14942) DebugManager: SYSTEM EROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (15042) SensorManager: IMU read failed[0m
+[1;31mE (15042) DebugManagerSYSTE[0m
+%�J�*�ɽ����YO�03 context=imuTask
+[0;33mW (15142) SensorManager: IMU read failed[0m
+[1;31mE (15142) DebugManager: LR5EU5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (15182) SensorManager: US distances: front=1� back=24.0cm left=0.0cm right=20.1cm[0m
+[0;33mW (15242) SensorManager: IMU read failed[0m
+E (15242J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (15342) SensorManager: IMU read failed[0m
+[1;31mE (15342) DebugManager: SYSTEM ERROR: ErrorCode=0x0 context=imuTask[0m
+[0;33mW (15442) SensorManager: IMU read failed[0m
+)����R	"��՝5���XV�:M�*U5 ERROR:E$ɽ����=0x03 context=imuTask
+[0;32mI (15442) SensorManager: US distances: front=0.1cm back=14.4cm leW���	�/�����=159.��5[0m
+[0;33mW (15542) SensorManager: IMU read failed[0m
+QB����S	"9՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (15642) SensorManager: IMU read failed[0m
+[1;31mE (15642) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (15732) SensorManager: US distances: front=0.1cm back=160.8cm left=163.1cm right=0.1cm[0m
+[0;33mW (15742) SensorManager: IMU read failed[0m
+[1;31mE (15742) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (15842) SensorManager: IMU read failed[0m
+[1;31mE (15842) DebugMan�V�: V��[0m
+*II=I: ErrorCode=0x03 context=imuTask
+[0;33mW (15942) SensorManager: IMU read failed[0m
+[1;31mE (15942) DebugManagY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+I (9JSensorManager: US distanes: front=0.1cm back=27.1cm left=163.3cm right=158.8cm
+[0;33mW (16042) SensorManager: IMU read failed[0m
+E (1604#$"�՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (16142) SensorManager: IMU read failed[0m
+[1;31mE (16142) DebugManagf�: SYS*+*II=I: ErorCode=0x03 context=imuTask[0m
+[0;32mI (16232) SensorManager: US distances: front=0.3cm back=140.5cmb���=0.�T�����=1372cm#�W (16242) SensorManager: IMU read failed[0m
+[1;31mE (16242) DebugM�����:J*T[0m
+*II=I�*�������=0x03 context=imuTask
+[0;33mW (16342) SensorManager: IMU read failed[0m
+[1;31mE (16342) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (16442) SensorManager: IMU read failed[0m
+[1;31mE (16442) DebugManagf�: SYST�
+
+I=I: ErroCode=0x03 context=imuTask
+I (14#�JSensorManager: US dista+ҥ��=158.k�5
+[0;33mW (16542) SensorManager: IMU read failed[0m
+B�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (16642) SensorManager: IMU read failed[0m
+[1;31mE (16642) DebugManager: SJ5UT[0m
+
+�J�*�ɽ����=0x03 context=imuTask
+[0;33mW (16742) SensorManager: IMU read failed[0m
+[1;31mE (16742) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (16752) SensorManager: US distances: front=0.3cm back=108.5cm left=163.1cm right=159.0cm[0m
+[0;33mW (16842) SensorManager: IMU read faiS��HE (16842) DebugManagf�: SJ55#*II=I: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (16942) SensorManager: IMU read failed[0m
+[1;31mE (16942) DebugManagY'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+I (16��&JSensorManager: US distanes: fr�r� back=97.1cm left=0.0cm right=94.5cm
+[0;33mW (17042) SensorManager: IMU read failed[0mE (1R	"��՝5����V�: S
+% ERROR: ).�K���=0x03 context=imuTask
+[0;33mW (17142) SensorManager: IMU read failed[0m
+[1;31mE (17142) DebugManaV�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (17152) MotorController: [MQTT] Move dr=1 s���5[0m
+[0;32mI (17232) SensorManager: US distances: front=0.1cm back=83.3cm ���=0.0cm right=80.0cm[0m
+[0;33mW (17242) SensorManager: IMU read failed[0m
+E )����%-յV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (17342) SensorManager: IMU read failed[0m
+[1;31mE (17342) DebugManaY.'SY[0m
+-+*II=I: ErorCode=0x03 context=imuTask
+I )����Jj�ѽ����ɽ����: [M4�j��� d&�V&�����=75
+[0;33mW (17442) SensorManager: IMU read failed[0m
+[1;31mE (17442) DebugManage: SYST+*%=$�*����[0m��VV��03 context=imuTask
+[0;32mI (17482) SensorManager: US distances: front=0)� back=0.1cm left=68.2cm right=0.0cm[0m
+[0;33mW (17542) SensorManager: IMU read failed[0m
+E (15�J"�V*�����: Z55 ERROR: E.�K����03 cѕ��=imuTask
+[0;33mW (17642) SensorManager: IMU read failed[0m
+[1;31mE (17642) DebugManager: SYSTEM ERROR�*����[0m���=0x03 context=imuTask
+[0;32mI (17672) MotorController: [MQTT] Move d&K=1 �V�j[0m
+[0;32mI (17722) SensorManager: US distances: front=0.1cm back=0.1cm left=55.6cm right0.1cm[0m
+[0;33mW (17742) SensorManager: IMU read failed[0m
+QB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (17842) SensorManager: IMU read failed[0m
+[1;31mE (17842) DebugManagY.q SYST�
+
+I��J�*��#���=0x03 context=imuTask
+[0;32mI (17872) MotorController: [MQTT] Move dir=L�����=75[0m�W (17942) Sen�K5������: IMU read failed
+[1;31mE (17942) DebugManager: SJ5EU5 E�*�rrorCE��3 conte����]Uͭ5[0m
+[0;32mI (17972) SensorManager: US distances: frontOr�� back=0.0cm left=0.0cm right=36.7cm[0m
+[0;33mW (18042) SensorManager: IMU read failed[0m
+E (1��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (18102) MotorController: [MQTT] MY"��=1 )V��j[0m
+[0;33mW (18142) SensorManager: IMU read failed[0m
+E (1LJ"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (18212) SensorManager: US distances: front=0.1cm back=27.0cm left=0.0cm right=25.0cm[0m
+[0;33mW (18242) SensorManager: IMU read failed[0m
+E (,��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (18322) MotorController: [MQTT] Move dir=����=SSH�W (18342) SensorManager: IMU read failed[0m
+E���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (18442) SensorManager: IMU read failed[0m
+[1;31mE (18442) DebugMan�V�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (18462) SensorManager: US distances: front=0.1cm back=41.8cm left=0.0cm right=0.1cm[0m
+[0;32mI (18472) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (18542) SensorManager: IMU read failed[0m
+E (�ª��"-��V*�����'SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (18642) SensorManager: IMU read failed[0m
+[1;31mE (18642) DebugMan��: S**%*II=I: E�K[0m���=0x03 context=imuTask
+[0;32mI (18652) MotorController: [MQTT] Move di�=1 spe)���I (18722) SensorManager: US distances: front=0.1cm back=1.9cm left=174.0cm rightLSr��5[0m
+[0;33mW (18742) SensorManager: IMU read failed[0m
+E º��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (18802) MotorController: [MQTT] Move djr=1 speed=75[0m
+[0;33mW (18842) SensorManager: IMU read failed[0m
+E (1��J"�VV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (18942) SensorManager: IMU read failed[0m
+[1;31mE (18942) DebugManagY.'SYST�
+*II: ErrorБ�YO�03 context=imuTask
+[0;32mI (18962) SensorManager: US distances: front=0.1cm back=1.k left=0.1cm right=156.45[0m
+[0;32mI (18972) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (19042) SensorManager: IMU read failed[0m
+E (19�IJ"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (19142) SensorManager: MU read failed[0m
+[1;31mE (19142) Deb�V*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+I (191 MotorController: [MQTT] Move diN�Q�����=75
+[0;32mI (19202) SensorManager: US distances: froC=r�� back=147.0cm left=0.0cm right=143.3cm[0m
+[0;33mW (19242) SensorManager: IMU read failed[0m
+E)ʒ��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (19302) MotorController: [MQTT] Mov"�*=L�����=75[0m
+[0;33mW (19342) SensorManager: IMU read failed[0m
+[1;31mE (19342) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (19442) SensorManager: US distances: front=0.1cm back=133.7cm left=0.0cm right=130.6cm[0m
+[0;33mW (19442) SensorManager: IMU read failed[0m
+QB�ʢ�S	9՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+I (19�&j�������ɱ���: [MQTT] Move dir=1 speed=75
+[0;33mW (19552) SensorManager: IMU read failed[0m
+E (19�J"-LV*�����: SJ5EU5 ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (19562) main: ♥ Heartbeat tick=3 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (19612) MotorController: [MQTT] Move ir=1 speed=75[0m
+[0;33mW (19652) SensorManager: IMU read failed[0m
+E (1�52) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (19702) SensorManager: US distances: front=r�� b��18.9cm eW��+�����=16.3cm[0m
+[0;33mW (19752) SensorManager: IMU read failed[0m
+[1;31mE (19752) DebugManagY'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (19782) MotorController: [MQTT] Move dr=1 speed=75[0m
+[0;33mW (19852) SensorManager: IMU read failed[0m
+E)�ª�J"��՝5������: V��
+*II=I: Q.�K���=0x03 context=imuTask
+[0;32mI (19942) SensorManager: US distances: front=0.1cm back=105.3c[b���=0.0cm right=103.3cm[0m
+[0;33mW (19952) SensorManager: IMU read &����5[0m
+[1;31mE (19952) DebugManager:S[0m
+5EU5 ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (19962) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (20052) SensorManager: IMU read failed[0mAB���%f	"�)՝5������� LeMQ5 ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (20152) SensorManager: IMU read failed[0m
+[1;31mE (20152) DebugManagF�: SYSTEM EI*�*�ɽ������03 context=imuTask
+[0;32mI (20162) MotorController: [MQTT] Move dirN������=75[0m
+[0;32mI (20202) SensorManager: US distances: front/r�L� back=33.3cm left=0.0cm riEu9.5cm[0m
+[0;33mW (20252) SensorManager: IMU read failed[0m
+E(20252) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (20282) MotorConK����: [MQTT] Move diL���Y��UC�W (20352) SensorManager: IMU read failed[0m
+E %����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (20442) SensorManager: US distances: front=0.1cm back=66.3cmb���=0.0cm right=76.1cm[0m
+[0;33mW (20452) SensorManager: IMU read failed[0m
+E(2��%""),�MManaer: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (20482) MotorController: [MQTT �� dir=,ڕ��=75[0m
+[0;33mW (20552) SensorManager: IMU read failed[0m
+AB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (20652) SensorManager: IMU read failed[0m
+[1;31mE (20652) DebugMan�V,.'SYSTEM ERROR: ErrorCode=0x03 context=imTskMHI (20662) MotorController: [MQTT] Move dirN������=75�I (20702) SensorManager: US distances: front=0� bacM'�� left=0\0cm right=61.6cm[0m
+[0;33mW (20752) SensorManager: IMU read failed[0m
+QB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (20852) SensorManager: IMU read failed[0m
+[1;31mE (20852) DebugMan�V,.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (20942) SensorManager: US distances: front=0.1cm back=65.1cm l#��=0.0cm right=48.9cm[0m
+[0;33mW (20952) SensorManager: IMU read failed[0m
+E (20952F	"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (21052) SensorManager: IMU read failed[0m
+E (2F���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (21152) SensorManager: IMU read failed[0m
+[1;31mE (21152) DebugMan�V�: SYS*)*I��J�*��ԑ�=0x03 �e�J��Q�ͭ5[0m
+[0;32mI (21192) SensorManager: US distances: front=0.1cm back=0.0cm left=36.4cm right=0.0cm[0m
+[0;33mW (21252) SensorManager: IMU read failed[0m
+[1;31mE (21252) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (21352) SensorManager: IMU read failed[0m
+E (213"���*�!V�: SYSTEM II=I: ErrorCode=0x03 context=imuTask
+I (21442) SensorManager: US distances: front=0.1cm back=22.6cm����=0.1cm right=20.6cm
+W (21452) SensorManager: IMU rX2�����5
+E (2145J""��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+W (21552) SensorManager: IMU read failed
+E (21552) DelV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+W (21652) SensorManager: IMU read failed
+E (21652) DebugMa��: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+I (21702) SensorManager: US distances: front=0.�� back=0.1cm left=9.7cm right=141.3cm
+W (21752) SensorManager: IMU read failed
+EB�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (21782) MotorController: [MQTT] Move d&K=3 speed=60[0m
+[0;33mW (21852) SensorManager: IMU read failed[0m
+E (2Fª�J"�VV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (21942) SensorManager: US distances: front=0.3cm back=0.1cm left=164.2cm right=0.0m[0m
+[0;33mW (21952) SensorManager: IMU read failed[0m
+[1;31mE (21952) DebugMa���: S�
+%+*II=I: ErrorCode=0x03 context=imuTask
+W !�JSensorManager: IMU read failed
+[1;31mE (22052) DebugManaer: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (22152) SensorManager: IMU read failed[0m
+[1;31mE (22152) DebugManag: SYQ[0m
+*II=I: ErrK���=0x03 context=imuTask
+[0;32mI (22182) SensorManager: US distances: front=.7cm b��r�� lef=153d�/�����=0X1cm[0m
+[0;33mW (22252) SensorManager: IMU read failed[0m
+[1;31mE (22252) DebugManagf�: SYSQ��*II=Ii�K[0m���=0x0L context=imuTask
+[0;33mW (22352) SensorManager: IMU read failed[0m
+[1;31mE (22352) DebugManager: SYSTEM ERROR: E$ɽ����=0x03 context=imuTask
+[0;32mI (22422) SensorManager: US distances: front=69.1cm back=0.0c;b���=$)� rightOr��5[0m
+[0;33mW (22452) SensorManager: IMU read failed[0m
+E )����J"-lV*�����: SJ5EU5 ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (22552) SensorManager: IMU read failed[0m
+E (2V�J"-LV*���uMe�*UT
+*I�J�*�ɽ����=0x03 context=imuTask
+[0;33mW (22652) SensorManager: IMU read failed[0m
+[1;31mE (22652) DebugManag9'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (22672) SensorManager: US distances: fron���r�� back=0.0cm left=128.1cm right=162.7cm[0m
+[0;33mW (22752) SensorManager: IMU read failed[0m
+[1;31mE (22752) DebugMana�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (22852) SensorManager: IMU read failed[0m
+[1;31mE (22852) DebugManaVEr: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (22912) Sens'������: US distances: front=0.1cm back=114.3cm l#�=0.0cm right=112.2cm[0m
+[0;33mW (22952) SensorManager: IMU read failed[0m
+E (2F��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (23052) SensorManager: IMU read failed[0m
+[1;31mE (23052) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (23152) SensorManager: IMU read failed[0m
+[1;31mE (23152) DebugManaV�: SY[0m
+-)*II=I: ErrorCode=0x03 context=imuTask
+[0;32mI (23152) SensorManager: US distances: front=.1cm back=120.7cm left=0.0cm right=99.3cm[0m
+[0;33mW (23252) SensorManager: IMU read failed[0m
+[1;31mE (23252) DebugManagY.'SYST�
+
+I=I: ErroCode=0x03 context=imuTask
+[0;33mW (23352) SensorManager: IMU read failed[0m
+[1;31mE (23352) DebugManager: YSTEM )�
+�*������=0x03 context=imuTask
+[0;32mI (23402) SensorManager: US distances: front=1.�� TU�r�� left=84.5cm right=0.1cm[0m
+[0;33mW (23452) SensorManager: IMU read failed[0m
+E (&S�J"����*����: SYSTEM ERROR: Err%ԋ�=0x03 cntext=imuTask
+[0;33mW (23552) SensorManager: IMU read failed[0m
+E (235M"��ի)����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (23642) SensorManager: US distances: front=0.6cm back=0.0cm left=74.6cm right=0.0�5[0m
+[0;33mW (23652) SensorManager: IMU read failed[0m
+[1;31mE (2352) Debug�!V,.'SYSTE�
+*II=I: ErrorCode=0x03 context=imuTask
+[0;33mW (23752) SensorManager: IMU read failed[0m
+[1;31mE (23752) DebugMan�V�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (23852) SensorManager: IMU read failed[0m
+[1;31mE (23852) DebugManaY.'SY[0m
+-)*II=I: Er�K���=0x03 context=imuTask
+[0;32mI (23892) SensorManager: US distances: front=0.3cm back=108.7c� left=0.0cm right=57.6cm[0m
+[0;33mW (23952) SensoMer: IMU read failed[0m
+[1;31mE (23952) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (24052) SensorManager: IMU read failed[0m
+[1;31mE (24052) DebugManager: SYSTEM ERROR: E�K[0m���=�a��ѕ��=]U��5
+[0;32mI (24132) SensorManager: US distances: front=0.1cm back=48.7lb���=0.0cm right=45.1cm[0m
+[0;33mW (24152) SensorManager: IMU read failed[0m
+E (23��J"��՝5������: SYS)*II=I: ErrorCode=0x03 context=imuTask
+[0;33mW (24252) SensorManager: IMU read failed[0m
+[1;31mE (24252) DebugManager: SYS+5#*II=I: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (24362) SensorManager: IMU read failed[0m
+[1;31mE (24362) DbugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (24372) SensorManager: US distances: front=0.1cm babk=30.6cm left=0.0cm right=2.7cm[0m
+[0;33mW (24462) SensorManager: IMU read failed[0m
+[1;31mE (24462) DebugManager: SYSTEM ERROR: Er�K[0m���=0x03 context=imuTask
+[0;33mW (24562) SensorManager: IMU read failed[0m
+E (2456CJ�"����5������: SY-)*II=I: Err#ЕY��3 context=imuTask
+[0;32mI (24562) main: ♥ Heartbeat tick=4 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;32mI (24612) SensorManager: US distances: front=0� back=20.8cm left=0.0cm right=20.7cm[0m
+[0;33mW (24662) SensorManager: IMU read failed[0m
+[1;31mE (24662) DebugManager: SYSTEMII=I: ErrorCode=0x0�Y�=imuTa[0m
+[0;33mW (24762) SensorManager: IMU read failed[0m
+[1;31mE (24762) DebugManager: SJ5EU5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (24862) SensorManager: IMU read failed[0m
+[1;31mE (24862) DebugMX+���: S�*%+*II=I: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (24862) SensorManager: US distances: front=0.1cm b���r� left=8.0cm right=0.1cm[0m
+[0;33mW (24962) SensorManager: IMU read failed[0m
+[1;31mE (24962) DebugMan���: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (25062) SensorManager: IMU read failed[0m
+[1;31mE (25062) DebugMan��: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (25112) SensorManager: US distances: front=95.� back'	� left=16Cr�� right=0.1cm[0m
+[0;33mW (25162) SensorManager: IMU read failed[0m
+E�����J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (25262) SensorManager: IMU read failed[0m
+[1;31mE (25262) DebugManaget SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (25362) SensorManager: IMU read failed[0m
+[1;31mE (25362) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (25362) SensorManager: US distances: front=82.4cm back=170.0cm left=0.0cm right=148.3cm[0m
+[0;32mI (25452) MotorController: [MQTT] Move dir=1 spee=75[0m
+[0;33mW (25462) SensorManager: IMU read failed[0m
+[1;31mE (25462) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (25562) SensorManager: IMU read failed[0m
+[1;31mE (25562) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (25602) SensorManager: US distances: front=0.� b�-��r�� left=0.1cm right=121.6cm[0m
+[0;32mI (25632) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (25662) SensorManager: IMU read failed[0m
+[1;31mE (25662) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (25762) SensorManager: IMU read failed[0m
+[1;31mE (25762) DebugManagY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (25812) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;32mI (25852) SensorManager: US distances: front=0.1cm back=262.1cm left=124.2cm right=0.0cm[0m
+[0;33mW (25862) SensorManager: IMU read failed[0m
+[1;31mE (25862) Debu�*����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (25962) SensorManager: IMU read failed[0m
+[1;31mE (25962) DebugManagf�: SYS))*I=I: ErrrCode=0x03 context=imuTask[0m
+[0;33mW (26062) SensorManager: IMU read failed[0m
+[1;31mE (26062) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (26092) SensorManager: US distances: front=38.3cm back=0.0cm left=111.7cm right=0.1cm[0m
+[0;33mW (26162) Se7�%5������: IMU read failed[0m
+[1;31mE (26162) DebugManagY.'SYS3*II=I: ErrK[0m���=0x03 context=imuTask
+[0;33mW (26262) SensorManager: IMU read failed[0m
+[1;31mE (26262) DebugManage: SY%)*II=I: ErorCode=0x03 context=imuTask[0m
+[0;32mI (26352) SensorManager: US distances: front=25.4cm back=152.2cm����=�3�� right=0X0cm[0m
+[0;33mW (26362) SensorManager: IMU read failed[0m
+[1;31mE (26362) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (26462) SensorManager: IMU read failed[0m
+[1;31mE (26462) DebugMan���:L�*55 ERROR: rrorCode=0x03 context=imuTask[0m
+[0;33mW (26562) SensorManager: IMU read failed[0m
+[1;31mE (26562) DebugMana�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (26602) SensorManager: US distances: frontO��i� back=131.1cm left=0.0cm right=81.8cm[0m
+[0;32mI (26642) MotorController: [MQTT] Move dir=1 seYV��j[0m
+[0;33mW (26662) SensorManager: IMU read failed[0m
+[1;31mE (26662) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+W (2��J�)k��5������: IMU read failed
+[1;31mE (26762) DebuV*���-tMeMQ5 ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (26802) MotorController: [MQTT] Move ir=1 speed=75[0m
+[0;32mI (26852) SensorManager: US distances: front=43.7cm backM�r�� kW (26862) SensorManager: IMU read failed[0m
+[1;31mE (26862) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (26962) SensorManager: IMU read failed[0m
+[1;31mE (26962) DebugManagY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+2�ʺ�Jj�ѽ����ɽ����: [MQTT] Move dir=1 see=75
+[0;33mW (27062) SensorManager: IMU read failed[0m
+[1;31mE (27062) DebugManager: SYSTEM ERROR: ErrorC��=0x03 context=imuTask[0m
+[0;32mI (27102) SensorManager: US distances: front=r�� b����r�� left=0.0cm right=54.4cm[0m
+[0;32mI (27132) MotorController: [MQTT] Move dirN������=75[0m
+[0;33mW (27162) SensorManager: IMU read failed[0m
+[1;31mE (27162) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (27262) SensorManager: IMU read failed[0m
+[1;31mE (27262) DebugManagf�: SYS�
+*II=I: ErrK���=0x03 context=imuTask
+[0;32mI (27292) MotorController: [MQTT] Move dir=1 spY��UC�I (27342) SensorManager: US distances: front=0.1cm back=37.9cm left=0.0cm right=43.2cm[0m
+[0;33mW (27362) SensorManager: IMU read failed[0m
+[1;31mE (27362) De�5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (27462) SensorManager: IMU read failed[0m
+[1;31mE (27462) DebugManae.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (27472) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (27562) SensorManager: IMU read failed[0m
+[1;31mE (27562) DebugMangf�: S�[0m
+-+*II=i�����=0x3context=imuTask
+[0;32mI (27592) SensorManager: US distances: front=)� back=27.4cm left=72.2cm right=0.1cm[0m
+[0;33mW (27662) SensorManager: IMU read failed[0m
+[1;31mE (27662) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (27762) SensorManager: IMU read failed[0m
+[1;31mE (27762) DebugMan�V�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (27842) SensorManager: US���х����: front=0.1cm back=16.3cm left=0.0cm right=13.5cmC�I (27852) MotorController: [MQTT] Move dir=1 speed=75[0m
+��²�$Z-k��5��!: IMU rea fail)VE (27862) ��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (27962) SensorManager: IMU read failed[0m
+[1;31mE (27962) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (28002) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (28062) SensorManager: IMU read failed[0m
+E (2��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (28112) SensorManager: US distances: front=2.5cm back=r�� left=171.6cm right=168.9cm[0m
+[0;33mW (28162) SensorManager: IMU read failed[0m
+E 2���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (28172) MotorContrller: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (28262) SensorManager: IMU read failed[0m
+[1;31mE (28262) DebugManage&� SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (28322) MotorController: [MQTT] Move dir1 spee�SJ#�W (28362) SensorManager: IMU read failed[0m
+E (283�J",LV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (28362) SensorManager: US distances: front=0.1cm back=203.8cm left=157.0cm right=0.2cm[0m
+[0;33mW (28462) SensorManager: IMU read failed[0m
+[1;31mE (28462) DebugManaV�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (28492) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (28562) SensorManager: IMU read failed[0m
+E (2��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (28602) SensorManager: US distances: fron0.1cm bL]��)� left=143.7cm right=0.0cm[0m
+[0;32mI (28642) MotorController: [MQTT] �˕)"��=1��=75[0m
+[0;33mW (28662) SensorManager: IMU read failed[0m
+[1;31mE (28662) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (28762) SensorManager: M read failed[0m
+[1;31mE (28762) DebugManager: SYSTEM ER[0m
+I: E�ԑ�=0x03 ���ѕ��=imuTask
+[0;32mI (28852) SensorManager: US distances: front=60.7cm back=17cr�� left=0.0cm right=128.4cm[0m
+[0;33mW (28862) SensorManager: IMU read failed[0m
+[1;31mE (28862)DebugManager: SYSTEM ERROR: Er�K���=0x03 context=imuTask[0m
+[0;32mI (28862) MotorController: [MQTT] Move dir=1 sped=75[0m
+[0;33mW (28972) SensorManager: IMU read failed[0m
+[1;31mE (28972) DebugMan�V�: S�
+%5*II=I: ErrorCode=0x03 context=imuTask
+[0;32mI (29022) MotorController: [MQTT] Move d&K=1 speed=75[0m
+[0;33mW (29072) SensorMger: IMU read failed[0m
+[1;31mE (29072) DebugManager: SYSTEM *I: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (29102) SensorManager: US distances: fronC=r�� back=117.7cm left=173.9cm right=0.0cm[0m
+[0;33mW (29172) SensorManager: IMU read failed[0m
+[1;31mE (29172) DebugManager: SYSTEM ERROR: E�K[0m���=�A��ѕ��=im�Uͭ5
+[0;33mW (29272) SensorManager: IMU read failed[0m
+[1;31mE (29272) DebugManager: SYSTEM ERROR: Q.aorCode=0x03 context=imuTask[0m
+[0;32mI (29342) SensorManager: US distances: front=30.2cm back=0.1c�b���=$i� right=0.0cm[0m
+[0;33mW (29382) SensorManager: IMU read failed[0m
+E (29d82) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (29482) SensorManager: IMU read failed[0m
+[1;31mE (29482)"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (29562) main: ♥ Heartbeat tick=5 | WiFi=OK | MQTT=OK | EStop=clear[0m
+[0;33mW (29582) SensorManager: IMU read failed[0m
+[1;31mE (29582) DebugManager: SYSTEM ERROR:Q.�K[0m���=0x03 context=imuTask
+[0;32mI (29582) SensorManager: US distances: front=0.3cm back=0.1cm left=89.1cm right=0.1cm[0m
+[0;33mW (29682) SensorManager: IMU read failed[0m
+E (29682F	"��՝5������: SYSTEM)�*�*�ɽ����YO�03 context=imuTask
+[0;33mW (29782) SensorManager: IMU read failed[0m
+[1;31mE (29782) DebugManager: SYSTE�
+*II=I: ErrorCode=�a��ѕ��=imuTask
+[0;32mI (29832) SensorManager: US distances: front=0.1cm back=76.cLb���ur�� right=73.0cm[0m
+[0;33mW (29882) SensorManager: IMU read failed[0m
+E I��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (29982) SensorManager: IMU read failed[0m
+[1;31mE (29982) DebugManaV�: S�[0m
+-)*II=I: Er�����=0x03 context=imuTask
+ances: front=.1cm back=33.0cm left=0.1cm right=59.8cm
+[0;33mW (30082) SensorManager: IMU read failed�HPB���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (30182) SensorManager: IMU read failed[0m
+[1;31mE (30182) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (30282) SensorManager: IMU read failed[0m
+[1;31mE (30282) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (30322) SensorManager: US distances: front=0.1cm back=0.0cm left=27.6cm rght=0.0cm[0m
+[0;33mW (30382) SensorManager: IMU read failed[0m
+EB���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (30482) SensorManager: IMU read failed[0m
+[1;31mE (30482) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (30562) SensorManager: US distances: front=0.1cm back=0.0cm left=25.7cm right=0.0cm[0m
+[0;33mW (30582) SensorManager: IMU read failed[0m
+[1;31mE (30582) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (30682) SensorManager: IMU read failed[0m
+[1;31mE (30682) DebugManger: SYS)+*IROR: ErrK[0m���=0x03 context=imuTask
+[0;33mW (30782) SensorManager: IMU read failed[0m
+[1;31mE (30782) DebugManagY.'SY-)*II=I: Erro����=0x03 context=imuTask
+[0;32mI (30822) SensorManager: US distances: front=0.1cL���=0/b���=16.3m right=0.0cm[0m
+[0;33mW (30882) SensorManager: IMU r.�
+2�����5
+[1;31mE (30882) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (30982) SensorManager: IMU read failed[0m
+[1;31mE (30982) DebugManaV�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (31082) SensorManager: IMU read failed[0m
+[1;31mE (31082) DebugMager:V�S*II=I: EDɽ����=0x03 context=imuTask
+[0;32mI (31102) SensorManager: US distances: front.1cm ���Sr�� let=291.9cm right=0.1cm[0m
+[0;33mW (31182) SensorManager: IMU read failed[0m
+[1;31mE (31182) DebugManagY.'SY*-)*II=I: ErorCode=0x03 context=imuTask[0m
+[0;33mW (31282) SensorManager: IMU read failed[0m
+[1;31mE (31282) DebugManagF�: SY-+*II=I: ErrK[0m���=0x03 context=imuTask
+[0;32mI (31342) SensorManager: US distances: front)� back=162.0cm W�=0.1cm right=159.1cm[0m
+[0;33mW (31382) SensorManager: IMU read faile[0m@E (313S	"��՝5�����).'SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (31482) SensorManager: IMU read failed[0m
+[1;31mE (31482) DebugManager: YSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (31492) MotorController: [MQTT] Move di�=1 sp�%��j[0m
+[0;33mW (31582) SensorManager: IMU read failed[0m
+[1;31mE (31582) DebugMana�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (31592) SensorManager: US distances: front� back�Q�� left=bM�/��=0.1cm[0m
+[0;32mI (31602) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (31682) SensorManager: IMU read failed[0m
+E (1�J"-LV*����� U5U+*II=I: E�K���=0x03 context=imuTask
+[0;33mW (31782) SensorManager: IMU read failed[0m
+[1;31mE (31782) DebugManaY.'SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+I (1��ʒJj�ѽ����ɽ����: [MQT�jٕ dir=1 speed=75
+[0;32mI (31832) SensorManager: US distances: front=`.2cm back=0.0cm left��i� rightr��5[0m
+[0;33mW (31882) SensorManager: IMU read failed[0m
+E (���J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;32mI (31892) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (31982) SensorManager: IMU read failed[0m
+E (31.�R	"�VV*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+I 32022) MotorController: [�*E�T Mo�)�:=1 speed���j
+[0;32mI (32072) SensorManager: US distances: front=47.6cm ba��r�� )W�LN)� right=0.0cm[0m
+[0;33mW (32082) SensorManager: IMU read failed[0m
+[1;31mE (322) DebugMa�&: SYSTEM 1*�J�*�ɽ�[0m���=0x03 context=imuTask
+[0;33mW (32182) SensorManager: IMU read failed[0m
+[1;31mE (32182) DebugManager: SYSTEM ERROR: ErrK[0m���=0x03 context=imuTask
+[0;32mI (32202) MotorController: [MQTT] Move i=1 sp9��j[0m
+[0;33mW (32282) SensorManager: IMU read failed[0m
+[1;31mE (32282) Debu�*�����: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (32322) SensorManager: US distances: froE=&��� back=172.7cm left=0.0cm right=104.1cm[0m
+[0;32mI (32352) MotorController: [MQTT] Move dir=1 �����j[0m
+[0;33mW (32382) SensorManager: IMU read failed[0m
+[1;31mE (32382) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (32482) SensorManager: IMU read failed[0m
+[1;31mE (32482) DebugMana�� SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (32502) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;32mI (32572) SensorManager: US distances: front=0.����U'�	� left1Sr�� right=0.0cm[0m
+[0;33mW (32582) SensorManager: IMU read failed[0m
+E (32F�J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (32682) SensorManager: IMU read failed[0m
+[1;31mE (32682) DebugManage& SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (32692) MotorController: [MQTT] Move dir=1 speed=75[0m
+[0;33mW (32782) SensorManager: IMU read failed[0m
+[1;31mE (32782) DebugManaY.'S-)*II=I: Er'[0m���=0x03 context=imuTask
+[0;32mI (32822) SensorManager: US distances: front=i� back=125.0cm left=0.0cm right=76.0cm[0m
+[0;33mW (32882) SensorManager%U read failed[0m
+[1;31mE (2882) DebugManager: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (32982) SensorManager: IMU read failed[0m
+[1;31mE (32982) DebugMa��: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;32mI (33062) SensorManager: US distances: front=0.1cm back=63.3cm left=0.0cm right=6��5[0m
+[0;33mW (33082) SensorManager: IMU read failed[0m
+E 9��J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask
+[0;33mW (33182) SensorManager: IMU read failed[0m
+[1;31mE (33182) DebugManaY.'S�
+%+*II=I: E�K���=0x03 context=imuTask
+[0;33mW (33282) SensorManager: IMU read failed[0m
+[1;31mE (33282) DebugManage: SYST�
+=�*'*�ɽ�E��3 contex�=���Q�ͭ5
+[0;32mI (33312) SensorManager: US distances: front=)� back=48.2cm l9ךr�� righC=0.0cm[0m
+[0;33mW (33382) SensorManager: IMU read failed[0m
+[1;31mE (33382) DebugMan�V�: SYSTEM ERROR: ErrorCode=0x03 context=imuTask[0m
+[0;33mW (33482) SensorManager: IMU read failed[0m
+[1;31mE (33482) DebugMan���: SY%+*II=I: Ero����=0x03 context=imuTask
+[0;32mI (33552) SensorManager: US distances: fron��r�� back=0.1cm left=37.7cm right=0.0cm[0m
+[0;33mW (33582) SensorManager: IMU read failed[0m
+E (V�J"��՝5������: SYSTEM ERROR: ErrorCode=0x03 context=imuTask

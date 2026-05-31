@@ -1,0 +1,42 @@
+Command: ninja all
+[1/9] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/main.cpp.obj
+In file included from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/inc/SensorManager.h:12,
+                 from /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/main/main.cpp:35:
+/home/ziad/.espressif/v6.0.1/esp-idf/components/driver/i2c/include/driver/i2c.h:29:103: note: '#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   '
+   29 |                 "==================================================================================\n")
+      |                                                                                                       ^
+[2/9] Performing build step for 'bootloader'
+[1/1] cd /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader && /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/bootloader/bootloader.bin
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[3/9] No install step for 'bootloader'
+[4/9] Completed 'bootloader'
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating esp-idf/esp_system/ld/sections.ld
+info: Default value for ESP_MAIN_TASK_STACK_SIZE in sdkconfig is 8192 but it is 3584 according to Kconfig.
+Using default value from sdkconfig (8192).
+[7/9] Linking CXX executable SARCUS_Robot.elf
+[8/9] Generating binary image from built executable
+esptool v5.3.dev3
+Creating ESP32 image...
+Merged 3 ELF sections.
+Successfully created ESP32 image.
+Generated /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.bin
+[9/9] cd /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build && /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python /home/ziad/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/partition_table/partition-table.bin /home/ziad/ziad_ws/sarcoos_project/code/v2/SARCUS_Robot/build/SARCUS_Robot.bin
+SARCUS_Robot.bin binary size 0xeb0e0 bytes. Smallest app partition is 0x100000 bytes. 0x14f20 bytes (8%) free.

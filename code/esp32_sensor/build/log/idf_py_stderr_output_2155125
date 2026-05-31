@@ -1,0 +1,1 @@
+Command: /home/ziad/.espressif/python_env/idf6.0_py3.10_env/bin/python -m esptool -p /dev/ttyUSB1 -b 460800 --before default-reset --after hard-reset --chip esp32 erase-flash
