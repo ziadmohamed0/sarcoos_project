@@ -1,0 +1,146 @@
+Command: ninja all
+[1/79] Linking C static library esp-idf\esp_hal_lcd\libesp_hal_lcd.a
+[2/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/phy/esp_eth_phy_generic.c.obj
+[3/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/mac/esp_eth_mac_esp_dma.c.obj
+[4/79] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hid_common.c.obj
+[5/79] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidd.c.obj
+[6/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/mac/esp_eth_mac_esp_gpio.c.obj
+[7/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/esp_eth.c.obj
+[8/79] Building C object esp-idf/esp_hid/CMakeFiles/__idf_esp_hid.dir/src/esp_hidh.c.obj
+[9/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/phy/esp_eth_phy_802_3.c.obj
+[10/79] Building C object esp-idf/esp_eth/CMakeFiles/__idf_esp_eth.dir/src/mac/esp_eth_mac_esp.c.obj
+[11/79] Linking C static library esp-idf\esp_https_server\libesp_https_server.a
+[12/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_common.c.obj
+[13/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_io.c.obj
+[14/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ops.c.obj
+[15/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_ssd1306.c.obj
+[16/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/src/esp_lcd_panel_st7789.c.obj
+[17/79] Linking C static library esp-idf\protocomm\libprotocomm.a
+[18/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i2c/esp_lcd_panel_io_i2c.c.obj
+[19/79] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/proto-c/esp_local_ctrl.pb-c.c.obj
+[20/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/spi/esp_lcd_panel_io_spi.c.obj
+[21/79] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl.c.obj
+[22/79] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_handler.c.obj
+[23/79] Building C object esp-idf/esp_local_ctrl/CMakeFiles/__idf_esp_local_ctrl.dir/src/esp_local_ctrl_transport_httpd.c.obj
+[24/79] Linking C static library esp-idf\wear_levelling\libwear_levelling.a
+[25/79] Building C object esp-idf/esp_lcd/CMakeFiles/__idf_esp_lcd.dir/i80/esp_lcd_panel_io_i2s.c.obj
+[26/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_wl.c.obj
+[27/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio.c.obj
+[28/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_rawflash.c.obj
+[29/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ffunicode.c.obj
+[30/79] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_masks.c.obj
+[31/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/port/freertos/ffsystem.c.obj
+[32/79] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_access.c.obj
+[33/79] Building C object esp-idf/perfmon/CMakeFiles/__idf_perfmon.dir/xtensa_perfmon_apis.c.obj
+[34/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/diskio/diskio_sdmmc.c.obj
+[35/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/src/ff.c.obj
+[36/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_spiflash.c.obj
+[37/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat_sdmmc.c.obj
+[38/79] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_mqueue.c.obj
+[39/79] Building C object esp-idf/rt/CMakeFiles/__idf_rt.dir/FreeRTOS_POSIX_utils.c.obj
+[40/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_cache.c.obj
+[41/79] Building C object esp-idf/fatfs/CMakeFiles/__idf_fatfs.dir/vfs/vfs_fat.c.obj
+[42/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_gc.c.obj
+[43/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs_api.c.obj
+[44/79] Linking C static library esp-idf\drivers\libdrivers.a
+[45/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_check.c.obj
+[46/79] Linking C static library esp-idf\esp_driver_gptimer\libesp_driver_gptimer.a
+[47/79] Linking C static library esp-idf\esp_blockdev_util\libesp_blockdev_util.a
+[48/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_hydrogen.c.obj
+[49/79] Linking C static library esp-idf\cmock\libcmock.a
+[50/79] Linking C static library esp-idf\esp_driver_cam\libesp_driver_cam.a
+[51/79] Linking C static library esp-idf\esp_driver_dac\libesp_driver_dac.a
+[52/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/spiffs/src/spiffs_nucleus.c.obj
+[53/79] Linking C static library esp-idf\esp_driver_mcpwm\libesp_driver_mcpwm.a
+[54/79] Linking C static library esp-idf\esp_driver_pcnt\libesp_driver_pcnt.a
+[55/79] Linking C static library esp-idf\esp_driver_sdio\libesp_driver_sdio.a
+[56/79] Linking C static library esp-idf\esp_driver_rmt\libesp_driver_rmt.a
+[57/79] Linking C static library esp-idf\esp_driver_sdm\libesp_driver_sdm.a
+[58/79] Building C object esp-idf/spiffs/CMakeFiles/__idf_spiffs.dir/esp_spiffs.c.obj
+[59/79] Linking C static library esp-idf\esp_driver_touch_sens\libesp_driver_touch_sens.a
+[60/79] Linking C static library esp-idf\esp_driver_twai\libesp_driver_twai.a
+[61/79] Linking C static library esp-idf\esp_hid\libesp_hid.a
+[62/79] Linking C static library esp-idf\esp_eth\libesp_eth.a
+[63/79] Linking C static library esp-idf\perfmon\libperfmon.a
+[64/79] Linking C static library esp-idf\fatfs\libfatfs.a
+[65/79] Linking C static library esp-idf\esp_local_ctrl\libesp_local_ctrl.a
+[66/79] Linking C static library esp-idf\esp_lcd\libesp_lcd.a
+[67/79] Linking C static library esp-idf\rt\librt.a
+[68/79] Linking C static library esp-idf\spiffs\libspiffs.a
+[69/79] Performing build step for 'bootloader'
+[1/1] C:\Windows\system32\cmd.exe /C "cd /D D:\Ziad\sarcoos_project\code\esp32_control\build\bootloader && C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:/esp/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/Ziad/sarcoos_project/code/esp32_control/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6610 bytes. 0x9f0 bytes (9%) free.
+[70/79] No install step for 'bootloader'
+[71/79] Completed 'bootloader'
+[72/79] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/ProvisioningServer.cpp.obj
+In file included from D:/Ziad/sarcoos_project/code/esp32_control/drivers/inc/common.h:24,
+                 from D:/Ziad/sarcoos_project/code/esp32_control/drivers/inc/mcal/nvs/nvs.h:4,
+                 from D:/Ziad/sarcoos_project/code/esp32_control/main/src/ProvisioningServer.cpp:7:
+C:/esp/v6.0.1/esp-idf/components/driver/i2c/include/driver/i2c.h:29:103: note: '#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   '
+   29 |                 "==================================================================================\n")
+      |                                                                                                       ^
+[73/79] Building CXX object esp-idf/main/CMakeFiles/__idf_main.dir/src/main.cpp.obj
+In file included from D:/Ziad/sarcoos_project/code/esp32_control/drivers/inc/common.h:24,
+                 from D:/Ziad/sarcoos_project/code/esp32_control/drivers/inc/hal/dc_motor/dc_motor.h:5,
+                 from D:/Ziad/sarcoos_project/code/esp32_control/main/inc/main.h:5,
+                 from D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:1:
+C:/esp/v6.0.1/esp-idf/components/driver/i2c/include/driver/i2c.h:29:103: note: '#pragma message: 
+================================ CRITICAL WARNING ================================
+This legacy I2C driver (driver/i2c.h) is officially END-OF-LIFE (EOL) as of ESP-IDF v6.0.
+
+1. NO SUPPORT: ESP-IDF will not provide updates, bug fixes, or security patches timely.
+2. PLANNED REMOVAL: This driver WILL BE REMOVED in ESP-IDF v7.0 (next major release).
+3. ACTION REQUIRED: Migrate to 'driver/i2c_master.h' or 'driver/i2c_slave.h' immediately.
+   - If you are a library maintainer, please update your code.
+   - If you are using 3rd-party libraries, contact the authors for updates.
+
+4. SUPPRESS WARNING: Set Kconfig 'CONFIG_I2C_SUPPRESS_DEPRECATE_WARN=y' to silent
+   this warning. However, by doing so, YOU ASSUME ALL RISKS including potential
+   security vulnerabilities, system instability, and future incompatibility.
+
+For API reference of the new I2C driver, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/peripherals/i2c.html
+For other items about migration, see: https://docs.espressif.com/projects/esp-idf/en/latest/esp32/migration-guides/index.html
+==================================================================================
+   '
+   29 |                 "==================================================================================\n")
+      |                                                                                                       ^
+[74/79] Linking C static library esp-idf\main\libmain.a
+[75/79] Generating esp-idf/esp_system/ld/sections.ld
+[76/79] Building C object CMakeFiles/esp32_driver.elf.dir/project_elf_src_esp32.c.obj
+[77/79] Linking CXX executable esp32_driver.elf
+FAILED: esp32_driver.elf 
+C:\Windows\system32\cmd.exe /C "cd . && C:\Espressif\tools\xtensa-esp-elf\esp-15.2.0_20251204\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe @"D:/Ziad/sarcoos_project/code/esp32_control/build/toolchain/cxxflags" @"D:/Ziad/sarcoos_project/code/esp32_control/build/toolchain/ldflags" -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32=0 -Wl,--Map=D:/Ziad/sarcoos_project/code/esp32_control/build/esp32_driver.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32.peripherals.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.libc-funcs.ld -T memory.ld -T sections.ld -u include_esp_phy_override @CMakeFiles\esp32_driver.elf.rsp -o esp32_driver.elf && cd ."
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal._ZL11sensor_taskPv+0x1c): undefined reference to `MPU6050::updateAngles(float)'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal._ZL11sensor_taskPv+0x20): undefined reference to `MPU6050::getRoll()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal._ZL11sensor_taskPv+0x24): undefined reference to `MPU6050::getPitch()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal._ZL11sensor_taskPv+0x28): undefined reference to `MPU6050::getYaw()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal.app_main+0xc4): undefined reference to `MPU6050::MPU6050(i2c_port_t, gpio_num_t, gpio_num_t, float, float)'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj):(.literal.app_main+0xc8): undefined reference to `MPU6050::calibrateGyro(int)'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj): in function `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::~basic_string()':
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/xtensa-esp-elf/include/c++/15.2.0/bits/basic_string.h:896:(.text._ZL11sensor_taskPv+0x15): undefined reference to `MPU6050::updateAngles(float)'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj): in function `sensor_task(void*)':
+D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:251:(.text._ZL11sensor_taskPv+0x20): undefined reference to `MPU6050::getRoll()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:252:(.text._ZL11sensor_taskPv+0x2d): undefined reference to `MPU6050::getPitch()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:253:(.text._ZL11sensor_taskPv+0x37): undefined reference to `MPU6050::getYaw()'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(main.cpp.obj): in function `app_main':
+D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:488:(.text.app_main+0x3ec): undefined reference to `MPU6050::MPU6050(i2c_port_t, gpio_num_t, gpio_num_t, float, float)'
+C:/Espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/15.2.0/../../../../xtensa-esp-elf/bin/ld.exe: D:/Ziad/sarcoos_project/code/esp32_control/main/src/main.cpp:488:(.text.app_main+0x3fc): undefined reference to `MPU6050::calibrateGyro(int)'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

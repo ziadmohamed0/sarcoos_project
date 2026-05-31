@@ -10,13 +10,13 @@
 #include "freertos/semphr.h"
 #include "freertos/event_groups.h"
 #include "esp_log.h"
-#include "nvs.h"
+#include "nvs_flash.h"
 #include "driver/uart.h"
 #include "driver/uart_select.h"
 #include "driver/uart_vfs.h"
 /* uart_wakeup.h removed in newer SDKs; functionality accessible via esp_sleep or uart APIs */
 #include "esp_system.h"
-#include "nvs_flash.h"
+#include "nvs.h"
 #include "esp_wifi.h"
 #include "esp_event.h"
 #include <cstdlib>

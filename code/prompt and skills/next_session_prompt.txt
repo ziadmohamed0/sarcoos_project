@@ -1,0 +1,170 @@
+You are resuming work on the **SARCUS Robot** project. Below is the complete session state, architecture, and all changes made. Read this carefully before answering any question or writing any code.
+
+---
+
+## SYSTEM INSTRUCTION
+
+You are working on TWO independent ESP32 sub-projects:
+
+1. **`esp32_control`** at `D:\Ziad\sarcoos_project\code\esp32_control\` — Actuator Node
+2. **`esp32_sensor`** at `D:\Ziad\sarcoos_project\code\esp32_sensor\` — Sensor Node
+
+Both are built with **ESP-IDF v6.0.1** and **C++17**. There is no Arduino, no STM32.
+
+**IMMUTABLE RULE:** The two nodes are DECOUPLED. Node A has zero motor control logic. Node B has zero sensor polling loops. Never mix them.
+
+A master roadmap is documented in `D:\Ziad\sarcoos_project\code\prompt.md`.
+
+---
+
+## 1. NODE B: `esp32_control` (Actuator Node)
+
+### Hardware
+- 2× BTS7960 H-bridge motor drivers (traction + geared DC locomotion)
+- 4× Feetech servos (shoulder L/R 95 kg·cm, elbow L/R 35 kg·cm, 270° range)
+- 2× NEMA23 stepper motors via TB6600/DM542 drivers (wrist, step/dir interface)
+
+### Build System
+```cmake
+# Root CMakeLists.txt
+project(esp32_driver)
+EXTRA_COMPONENT_DIRS = drivers managed_components/espressif__mqtt
+```
+
+### Pin Assignments
+
+| Motors   | GPIO | Servos    | GPIO | Steppers | GPIO |
+|--------  |------|--------   |------|----------|------|
+| M1 R_PWM | 32   |Shoulder L | 13   | L STEP   | 4    |
+| M1 L_PWM | 33   |Shoulder R | 14   |  L DIR   | 21   |
+| M1 R_EN  | 19   |Elbow L    | 27   | L EN     | 22   |
+| M1 L_EN  | 18   |Elbow R    | 23   | R STEP   | 15   |
+| M2 R_PWM | 26   |           |      | R DIR    | 2    |
+| M2 L_PWM | 25   |           |      | R EN     | 5    |
+| M2 R_EN  | 17   |           |      |          |      |
+| M2 L_EN  | 16   |           |      |          |      |
+
+### MQTT Subscribe (Commands — broker `192.168.1.5:1883`)
+| Topic | Payload |
+|-------|---------|
+| `sarcus/robot/movement` | `{"dir":0-4, "speed":0-100}` |
+| `sarcus/robot/estop` | any |
+| `sarcus/robot/joints/shoulder` | `{"side":0|1, "servo":0-270}` |
+| `sarcus/robot/joints/elbow` | `{"side":0|1, "angle":0-270}` |
+| `sarcus/robot/joints/wrist` | `{"steps":N, "speed":60, "dir":0|1, "side":0|1}` |
+
+### MQTT Publish (Feedback — broker `192.168.1.5:1883`)
+| Topic | Payload | When |
+|-------|---------|------|
+| `sarcus/robot/joints/wrist` | `{"side":0|1,"remaining":N,"total":N}` | Every 1 s while stepper moving |
+
+### Motion Control Params (menuconfig defaults)
+```cpp
+MOTION_CTRL_PERIOD_MS     50
+MOTOR_SPEED_SLEW_STEP     6.0f
+SERVO_ANGLE_SLEW_STEP     4.0f
+SERVO_ANGLE_FILTER_ALPHA  0.7f
+SERVO_DEFAULT_ANGLE       135.0f
+STEPS_PER_REV             200
+```
+
+### Key Files
+| File | Purpose |
+|------|---------|
+| `main/src/main.cpp` | App entry: motion task, MQTT handlers, stepper init, provisioning |
+| `main/inc/main.h` | Kconfig-aware defines for WiFi, MQTT, pins, stepper, motion |
+| `main/inc/json_parser.h` | Header-only JSON parser (replaces cJSON) |
+| `main/src/ProvisioningServer.cpp` | Captive portal HTTP+DNS, AP+STA |
+| `main/Kconfig.projbuild` | Menuconfig: WiFi, MQTT, Motor/Servo/Stepper pins, Motion Control |
+| `drivers/src/hal/stepper/stepper.cpp` | Task-based stepper pulse gen + status tracking |
+| `drivers/inc/hal/stepper/stepper.h` | Stepper class with STEP/DIR/ENABLE, cmd queue |
+
+---
+
+## 2. NODE A: `esp32_sensor` (Sensor Node)
+
+### Hardware
+- MPU6050 IMU (I2C, SDA=GPIO21, SCL=GPIO22)
+- NEO-7M GPS (UART2, RX=GPIO18, TX=GPIO19, 9600 baud)
+- 4× HC-SR04 Ultrasonic (TRIG=25,27,12,32 / ECHO=26,14,13,33)
+
+### Architecture
+Singleton manager pattern — all sensor code inline in `SensorManager`. No separate HAL/MCAL layer.
+
+### MQTT Publish (broker `192.168.1.4:1883`)
+| Topic | Payload | Rate |
+|-------|---------|------|
+| `sarcus/sensors/imu` | `{"roll":N,"pitch":N,"yaw":N}` | 10 Hz (100 ms) |
+| `sarcus/sensors/gps` | `{"fix":bool,"lat":N,"lon":N,"alt":N,"sats":N}` | 1 Hz (1000 ms) |
+| `sarcus/sensors/ultrasonic` | `{"front":N,"back":N,"left":N,"right":N}` | 5 Hz (200 ms) |
+
+### DSP Filters (added this session)
+
+**IMU Complementary Filter (`readMPU6050()`):**
+- Gyro bias calibration at init (200 samples, ~1 s)
+- EMA low-pass on raw accel (alpha=0.15) to reject vibration
+- `angle = 0.98 × (angle + gyro×dt) + 0.02 × accel_angle`
+- Yaw integrated from gyro_z
+
+**GPS Median Filter (`parseNMEA()`):**
+- Ring buffer window=5 on lat/lon
+- Bubble-sort median rejects single-sample coordinate spikes
+
+### Key Files
+| File | Purpose |
+|------|---------|
+| `main/main.cpp` | App entry: NVS→WiFi→MQTT→sensor init |
+| `main/src/SensorManager.cpp` | All sensor reads + DSP filters |
+| `main/inc/SensorManager.h` | SensorManager class + filter state members |
+| `main/src/MqttManager.cpp` | MQTT publish for sensor data |
+
+---
+
+## 3. MODERN C++ CODING STANDARDS (both nodes)
+
+1. **No `delay()` or `Arduino.h`** — use `vTaskDelay(pdMS_TO_TICKS(x))`
+2. **Logging** — use `ESP_LOGI/LOGW/LOGE/LOGD(TAG, ...)`
+3. **Thread safety** — shared state → `SemaphoreHandle` or `QueueHandle`
+4. **MQTT payloads** — parse with `JsonParser` (Node B) or standard JSON (Node A)
+5. **WiFi credentials** — always from NVS first, hardcoded fallback only
+6. **No magic numbers** — constants in Kconfig or header defines
+7. **C++17 allowed** — `if constexpr`, `std::function`, `constexpr`, `enum class`
+8. **RTTI and exceptions are disabled** — no `dynamic_cast`, `typeid`, `try`/`catch`
+9. **Const-correctness** — mark member functions `const` where applicable
+
+---
+
+## 4. CHANGES THIS SESSION
+
+### Node B (`esp32_control`) — Reverted + Stepper Feedback
+| File | Change |
+|------|--------|
+| `main/src/main.cpp` | Removed MPU6050/GPS includes, globals, sensor_task function. Added stepper status MQTT publish in idle loop (1 Hz). |
+| `main/inc/main.h` | Removed IMU/GPS/sensor task Kconfig defines and topic defines. |
+| `main/Kconfig.projbuild` | Removed IMU, GPS, Sensor Task menus. Fixed missing `endmenu` after Stepper Pins. |
+| `drivers/CMakeLists.txt` | Removed MPU6050.cpp and GPS.cpp sources; removed mpu6050/gps include dirs. |
+| `drivers/inc/hal/stepper/stepper.h` | Added `volatile bool m_running`, `volatile int m_remaining/m_total_steps`, `getRemainingSteps()`, `getTotalSteps()`, `is_running() const`. |
+| `drivers/src/hal/stepper/stepper.cpp` | Task sets `m_running`/`m_remaining`/`m_total_steps` during pulse gen; clears on complete/abort. |
+
+### Node A (`esp32_sensor`) — DSP Filters
+| File | Change |
+|------|--------|
+| `main/inc/SensorManager.h` | Added filter state members (`m_imu_roll/pitch/yaw`, `m_ax/ay/az_filt`, gyro bias, `m_last_imu_ts`, GPS median buffers). Added `calibrateGyro()`, `applyMedianFilter()` declarations. Filter coefficient constants. |
+| `main/src/SensorManager.cpp` | `calibrateGyro()` — averages 200 gyro samples for zero-rate bias. `readMPU6050()` — accel EMA pre-filter, complementary filter with dt tracking, gyro bias subtraction. `parseNMEA()` — median filter on lat/lon after coordinate extraction. `applyMedianFilter()` — bubble-sort median on ring buffer. |
+
+---
+
+## 5. KNOWN ISSUES & NEXT STEPS
+
+### Node B (`esp32_control`)
+- **Blocking startup** — `while (!wifi->is_connected())` and `while (!mqtt->is_connected())` spin before scheduler.
+- **Stepper limit switches** not implemented — no homing or endstop detection for wrist axes.
+- **OTA partition missing** — only 2 MB factory, no OTA update capability.
+- **Dead MPU6050 files** on disk (`drivers/inc/hal/mpu6050/`, `drivers/src/hal/mpu6050/`) — pre-existing dead code, not compiled.
+
+### Node A (`esp32_sensor`)
+- **Legacy I2C driver** (`driver/i2c.h`) is EOL in ESP-IDF v6.0 — plan migration to `driver/i2c_master.h`.
+- **GPS satellite count** hardcoded to 4 (RMC doesn't provide it). Add `$GPGGA` parser for real count.
+- **Ultrasonic readings** unfiltered — consider EMA smoothing.
+- **No i2c device probe** — if MPU6050 absent, gyro calibration hangs ~1 s.
+- **Single MQTT broker** hardcoded `192.168.1.4:1883` in `main.cpp` — make configurable via NVS.

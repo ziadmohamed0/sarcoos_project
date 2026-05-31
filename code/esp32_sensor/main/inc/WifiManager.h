@@ -31,11 +31,17 @@ public:
     // Block until IP is obtained or timeout. Returns true on success.
     bool waitForIP(TickType_t timeout_ticks);
 
+    // Start WiFi in AP+STA dual mode (keeps AP up while connecting STA)
+    void startSTA_keepAP(const std::string& ssid, const std::string& password);
+
     // Stop WiFi
     void stop();
 
     // Check if connected
     bool isConnected() const { return m_connected; }
+
+    // Get STA IP as string (returns "0.0.0.0" if not connected)
+    std::string getIP() const;
 
     static constexpr EventBits_t kIpReadyBit = BIT0;
 

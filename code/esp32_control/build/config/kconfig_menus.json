@@ -4875,6 +4875,417 @@
                 "children": [
                     {
                         "children": [],
+                        "depends_on": null,
+                        "help": "Default WiFi network name. Can be overridden at runtime via NVS.",
+                        "id": "SARCUS_WIFI_SSID",
+                        "name": "SARCUS_WIFI_SSID",
+                        "range": null,
+                        "title": "WiFi SSID",
+                        "type": "string"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Default WiFi password. Can be overridden at runtime via NVS.",
+                        "id": "SARCUS_WIFI_PASSWORD",
+                        "name": "SARCUS_WIFI_PASSWORD",
+                        "range": null,
+                        "title": "WiFi Password",
+                        "type": "string"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-wifi-configuration-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-3",
+                "title": "WiFi Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "MQTT broker URI (e.g. mqtt://192.168.1.5).",
+                        "id": "SARCUS_MQTT_BROKER_URI",
+                        "name": "SARCUS_MQTT_BROKER_URI",
+                        "range": null,
+                        "title": "MQTT Broker URI",
+                        "type": "string"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "MQTT broker TCP port.",
+                        "id": "SARCUS_MQTT_PORT",
+                        "name": "SARCUS_MQTT_PORT",
+                        "range": [
+                            1,
+                            65535
+                        ],
+                        "title": "MQTT Broker Port",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-mqtt-configuration-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-17",
+                "title": "MQTT Configuration",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR1_R_PWM",
+                        "name": "SARCUS_MOTOR1_R_PWM",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 1 Right PWM GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR1_L_PWM",
+                        "name": "SARCUS_MOTOR1_L_PWM",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 1 Left PWM GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR1_R_EN",
+                        "name": "SARCUS_MOTOR1_R_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 1 Right Enable GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR1_L_EN",
+                        "name": "SARCUS_MOTOR1_L_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 1 Left Enable GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR2_R_PWM",
+                        "name": "SARCUS_MOTOR2_R_PWM",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 2 Right PWM GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR2_L_PWM",
+                        "name": "SARCUS_MOTOR2_L_PWM",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 2 Left PWM GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR2_R_EN",
+                        "name": "SARCUS_MOTOR2_R_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 2 Right Enable GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR2_L_EN",
+                        "name": "SARCUS_MOTOR2_L_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Motor 2 Left Enable GPIO",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-motor-pwm-pins-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-32",
+                "title": "Motor PWM Pins",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_SHOULDER_LEFT",
+                        "name": "SARCUS_SERVO_SHOULDER_LEFT",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Shoulder Left Servo GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_SHOULDER_RIGHT",
+                        "name": "SARCUS_SERVO_SHOULDER_RIGHT",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Shoulder Right Servo GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_ELBOW_LEFT",
+                        "name": "SARCUS_SERVO_ELBOW_LEFT",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Elbow Left Servo GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_ELBOW_RIGHT",
+                        "name": "SARCUS_SERVO_ELBOW_RIGHT",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Elbow Right Servo GPIO",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-servo-pins-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-67",
+                "title": "Servo Pins",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_LEFT_STEP",
+                        "name": "SARCUS_STEPPER_LEFT_STEP",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Left Wrist STEP GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_LEFT_DIR",
+                        "name": "SARCUS_STEPPER_LEFT_DIR",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Left Wrist DIR GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_LEFT_EN",
+                        "name": "SARCUS_STEPPER_LEFT_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Left Wrist ENABLE GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_RIGHT_STEP",
+                        "name": "SARCUS_STEPPER_RIGHT_STEP",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Right Wrist STEP GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_RIGHT_DIR",
+                        "name": "SARCUS_STEPPER_RIGHT_DIR",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Right Wrist DIR GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_STEPPER_RIGHT_EN",
+                        "name": "SARCUS_STEPPER_RIGHT_EN",
+                        "range": [
+                            0,
+                            39
+                        ],
+                        "title": "Right Wrist ENABLE GPIO",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": "Total step pulses needed for one full shaft revolution.\nNEMA23 full step = 200. Multiply by TB6600 microstep\nsetting:                 1/8 \u2192 1600, 1/16 \u2192 3200, etc.",
+                        "id": "SARCUS_STEPPER_STEPS_PER_REV",
+                        "name": "SARCUS_STEPPER_STEPS_PER_REV",
+                        "range": [
+                            1,
+                            10000
+                        ],
+                        "title": "Steps per Revolution (incl. microstepping)",
+                        "type": "int"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-stepper-pins-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-86",
+                "title": "Stepper Pins",
+                "type": "menu"
+            },
+            {
+                "children": [
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_CTRL_PERIOD_MS",
+                        "name": "SARCUS_CTRL_PERIOD_MS",
+                        "range": [
+                            10,
+                            500
+                        ],
+                        "title": "Control Loop Period (ms)",
+                        "type": "int"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_MOTOR_SLEW_STEP",
+                        "name": "SARCUS_MOTOR_SLEW_STEP",
+                        "range": [
+                            0.1,
+                            100.0
+                        ],
+                        "title": "Motor Speed Slew Step (%/tick)",
+                        "type": "float"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_SLEW_STEP",
+                        "name": "SARCUS_SERVO_SLEW_STEP",
+                        "range": [
+                            0.1,
+                            90.0
+                        ],
+                        "title": "Servo Angle Slew Step (deg/tick)",
+                        "type": "float"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_FILTER_ALPHA",
+                        "name": "SARCUS_SERVO_FILTER_ALPHA",
+                        "range": [
+                            0.01,
+                            1.0
+                        ],
+                        "title": "Servo Low-Pass Filter Alpha",
+                        "type": "float"
+                    },
+                    {
+                        "children": [],
+                        "depends_on": null,
+                        "help": null,
+                        "id": "SARCUS_SERVO_DEFAULT_ANGLE",
+                        "name": "SARCUS_SERVO_DEFAULT_ANGLE",
+                        "range": [
+                            0.0,
+                            270.0
+                        ],
+                        "title": "Servo Default Angle (deg)",
+                        "type": "float"
+                    }
+                ],
+                "depends_on": null,
+                "id": "sarcus-robot-configuration-motion-control-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-121",
+                "title": "Motion Control",
+                "type": "menu"
+            }
+        ],
+        "depends_on": null,
+        "id": "sarcus-robot-configuration-D:-Ziad-sarcoos_project-code-esp32_control-main-Kconfig.projbuild-1",
+        "title": "SARCUS Robot Configuration",
+        "type": "menu"
+    },
+    {
+        "children": [
+            {
+                "children": [
+                    {
+                        "children": [],
                         "depends_on": "<choice COMPILER_OPTIMIZATION>",
                         "help": null,
                         "id": "COMPILER_OPTIMIZATION_DEBUG",

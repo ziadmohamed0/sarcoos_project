@@ -235,6 +235,49 @@ bool WifiManager::waitForIP(TickType_t timeout_ticks) {
     return ok;
 }
 
+// ─── startSTA_keepAP (AP+STA dual mode) ────────────────────────────────────────
+
+void WifiManager::startSTA_keepAP(const std::string& ssid, const std::string& password) {
+    ESP_LOGI(Tag, "[ENTRY] startSTA_keepAP() ssid='%s'", ssid.c_str());
+
+    m_retry_cnt = 0;
+    m_connected = false;
+    xEventGroupClearBits(m_ip_ready, kIpReadyBit);
+
+    // Switch to AP+STA mode WITHOUT stopping WiFi (keeps AP running)
+    ESP_ERROR_CHECK(esp_wifi_set_mode(WIFI_MODE_APSTA));
+
+    wifi_config_t sta_config = {};
+    strncpy((char*)sta_config.sta.ssid,     ssid.c_str(),     sizeof(sta_config.sta.ssid) - 1);
+    strncpy((char*)sta_config.sta.password, password.c_str(), sizeof(sta_config.sta.password) - 1);
+    sta_config.sta.threshold.authmode = WIFI_AUTH_WPA2_PSK;
+    sta_config.sta.pmf_cfg.capable    = true;
+    sta_config.sta.pmf_cfg.required   = false;
+
+    ESP_ERROR_CHECK(esp_wifi_set_config(WIFI_IF_STA, &sta_config));
+    ESP_ERROR_CHECK(esp_wifi_start());
+    esp_err_t connect_err = esp_wifi_connect();
+    if (connect_err != ESP_OK) {
+        ESP_LOGW(Tag, "esp_wifi_connect() returned %s", esp_err_to_name(connect_err));
+    }
+
+    ESP_LOGI(Tag, "AP+STA mode active — AP: SARCUS_SETUP, STA connecting to '%s'", ssid.c_str());
+    ESP_LOGI(Tag, "[EXIT]  startSTA_keepAP()");
+}
+
+// ─── getIP ─────────────────────────────────────────────────────────────────────
+
+std::string WifiManager::getIP() const {
+    if (!m_connected || !m_netif_sta) return "0.0.0.0";
+    esp_netif_ip_info_t ip;
+    if (esp_netif_get_ip_info(m_netif_sta, &ip) == ESP_OK) {
+        char buf[16];
+        snprintf(buf, sizeof(buf), IPSTR, IP2STR(&ip.ip));
+        return std::string(buf);
+    }
+    return "0.0.0.0";
+}
+
 // ─── stop ─────────────────────────────────────────────────────────────────────
 
 void WifiManager::stop() {

@@ -1,9 +1,9 @@
 #include "MPU6050.h"
 
-MPU6050::MPU6050(i2c_port_t port_i2c, gpio_num_t sda_, gpio_num_t scl_) : 
-                    port(port_i2c), 
-                    sda(sda_),
-                    scl(scl_) {
+MPU6050::MPU6050(i2c_port_t port_i2c, gpio_num_t sda_, gpio_num_t scl_,
+                float alpha_cf, float alpha_lp) :
+                port(port_i2c), sda(sda_), scl(scl_),
+                alpha(alpha_cf), m_accel_lp_alpha(alpha_lp) {
     this->init();
 }
 
@@ -19,8 +19,8 @@ esp_err_t MPU6050::init() {
     i2c_param_config(this->port, &cfg);
     i2c_driver_install(this->port, I2C_MODE_MASTER, 0, 0, 0);
     this->writeByte(0x6B, 0x00);
-    this->writeByte(0x1B, 0x00); 
-    this->writeByte(0x1C, 0x00); 
+    this->writeByte(0x1B, 0x00);
+    this->writeByte(0x1C, 0x00);
     return ESP_OK;
 }
 
@@ -95,13 +95,40 @@ void MPU6050::updateAngles(float dt) {
     readAccel(ax, ay, az);
     readGyro(gx, gy, gz);
 
-    float roll_acc = atan2(ay, az) * 180 / M_PI;
-    float pitch_acc = atan2(-ax, sqrt(ay*ay + az*az)) * 180 / M_PI;
+    gx -= m_gx_bias;
+    gy -= m_gy_bias;
+    gz -= m_gz_bias;
 
-    roll = alpha * (roll + gx * dt) + (1 - alpha) * roll_acc;
-    pitch = alpha * (pitch + gy * dt) + (1 - alpha) * pitch_acc;
+    m_ax_filt = m_accel_lp_alpha * ax + (1.0f - m_accel_lp_alpha) * m_ax_filt;
+    m_ay_filt = m_accel_lp_alpha * ay + (1.0f - m_accel_lp_alpha) * m_ay_filt;
+    m_az_filt = m_accel_lp_alpha * az + (1.0f - m_accel_lp_alpha) * m_az_filt;
 
-    yaw += gz * dt; 
+    float roll_acc  = atan2(m_ay_filt, m_az_filt) * 180.0f / M_PI;
+    float pitch_acc = atan2(-m_ax_filt, sqrt(m_ay_filt * m_ay_filt + m_az_filt * m_az_filt)) * 180.0f / M_PI;
+
+    roll  = alpha * (roll  + gx * dt) + (1.0f - alpha) * roll_acc;
+    pitch = alpha * (pitch + gy * dt) + (1.0f - alpha) * pitch_acc;
+
+    yaw += gz * dt;
+}
+
+void MPU6050::calibrateGyro(int samples) {
+    float sum_gx = 0, sum_gy = 0, sum_gz = 0;
+    float gx, gy, gz;
+
+    for (int i = 0; i < samples; i++) {
+        if (readGyro(gx, gy, gz) == ESP_OK) {
+            sum_gx += gx;
+            sum_gy += gy;
+            sum_gz += gz;
+        }
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+
+    m_gx_bias = sum_gx / samples;
+    m_gy_bias = sum_gy / samples;
+    m_gz_bias = sum_gz / samples;
+    m_bias_initialized = true;
 }
 
 float MPU6050::getRoll() {

@@ -59,11 +59,13 @@ private:
 
     // IMU (MPU6050 via I2C)
     bool     initMPU6050();
+    void     calibrateGyro();
     bool     readMPU6050(ImuData& out);
     static void imuTask(void* arg);
 
     // GPS (NEO-7M via UART)
     bool     parseNMEA(const char* sentence, GpsData& out);
+    double   applyMedianFilter(double val, double* buffer);
     static void gpsTask(void* arg);
 
     // Ultrasonic (HC-SR04 via GPIO)
@@ -99,6 +101,32 @@ private:
     // MPU6050 I2C address
     static constexpr uint8_t  MPU6050_ADDR   = 0x68;
     static constexpr uint32_t I2C_TIMEOUT_MS = 1000;
+
+    // ─── DSP Filter State ──────────────────────────────────────────────────────
+
+    // IMU complementary filter
+    float   m_imu_roll  = 0.0f;
+    float   m_imu_pitch = 0.0f;
+    float   m_imu_yaw   = 0.0f;
+    float   m_ax_filt   = 0.0f;
+    float   m_ay_filt   = 0.0f;
+    float   m_az_filt   = 0.0f;
+    float   m_gx_bias   = 0.0f;
+    float   m_gy_bias   = 0.0f;
+    float   m_gz_bias   = 0.0f;
+    bool    m_gyro_calibrated = false;
+    int64_t m_last_imu_ts     = 0;
+
+    // Filter coefficients
+    static constexpr float IMU_CF_ALPHA        = 0.98f;
+    static constexpr float IMU_ACCEL_LP_ALPHA  = 0.15f;
+    static constexpr int   IMU_GYRO_CALIB_SAMPLES = 200;
+
+    // GPS median filter
+    static constexpr int GPS_MEDIAN_WINDOW = 5;
+    double  m_gps_lat_buf[GPS_MEDIAN_WINDOW] = {};
+    double  m_gps_lon_buf[GPS_MEDIAN_WINDOW] = {};
+    int     m_gps_hist_idx = 0;
 };
 
 } // namespace SARCUS

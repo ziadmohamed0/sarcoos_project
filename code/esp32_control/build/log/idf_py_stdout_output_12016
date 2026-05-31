@@ -1,0 +1,2300 @@
+Command: C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Ziad\sarcoos_project\code\esp32_control\build\esp32_driver.elf D:\Ziad\sarcoos_project\code\esp32_control\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py' '-p' 'COM3'
+et�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 23:38:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=2231ch (140060) map[0m
+[0;32mI (136) esp_image: segment 1: paddr=00032344 vaddr=3ffb0000 size=04a1ch ( 18972) load[0m
+[0;32mI (144) esp_image: segment 2: paddr=00036d68 vaddr=40080000 size=092b0h ( 37552) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=a8140h (688448) map[0m
+[0;32mI (405) esp_image: segment 4: paddr=000e8168 vaddr=400892b0 size=0cab8h ( 51896) load[0m
+[0;32mI (426) esp_image: segment 5: paddr=000f4c28 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (437) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (438) boot: Disabling RNG early entropy source...[0m
+[0;32mI (448) cpu_start: Multicore app[0m
+[0;32mI (456) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (457) cpu_start: Pro cpu start user code[0m
+[0;32mI (457) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (458) app_init: Application information:[0m
+[0;32mI (462) app_init: Project name:     esp32_driver[0m
+[0;32mI (467) app_init: App version:      7d0aaaf-dirty[0m
+[0;32mI (471) app_init: Compile time:     May 31 2026 23:39:29[0m
+[0;32mI (476) app_init: ELF file SHA256:  a21b2f02d...[0m
+[0;32mI (480) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (484) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (488) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (492) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (496) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (502) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (507) heap_init: At 3FFB95D0 len 00026A30 (154 KiB): DRAM[0m
+[0;32mI (512) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (518) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (523) heap_init: At 40095D68 len 0000A298 (40 KiB): IRAM[0m
+[0;32mI (530) spi_flash: detected chip: generic[0m
+[0;32mI (532) spi_flash: flash io: dio[0m
+[0;32mI (537) main_task: Started on CPU0[0m
+[0;32mI (547) main_task: Calling app_main()[0m
+[0;32mI (587) MAIN: Using saved WiFi: Mohamed Fathy[0m
+[0;32mI (587) MAIN: MQTT broker: mqtt://192.168.100.110:1883[0m
+[0;32mI (587) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO19, LPWM: GPIO18[0m
+[0;32mI (587) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO17, LPWM: GPIO16[0m
+[0;32mI (597) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (597) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (607) SERVO_DRIVER: Standard 180° Servo configured on GPIO13[0m
+[0;32mI (627) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (627) SERVO_DRIVER: Standard 180° Servo configured on GPIO14[0m
+[0;32mI (667) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (667) SERVO_DRIVER: Standard 180° Servo configured on GPIO27[0m
+[0;32mI (687) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (687) SERVO_DRIVER: Standard 180° Servo configured on GPIO23[0m
+[0;32mI (727) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (727) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (727) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (767) MQTT_CLIENT: MQTT Client created[0m
+[0;32mI (777) WIFI_MANAGER: WiFi Manager initialized[0m
+[0;32mI (787) wifi:wifi driver task: 3ffc2554, prio:23, stack:6656, core=0[0m
+[0;32mI (807) wifi:wifi firmware version: b37c951[0m
+[0;32mI (807) wifi:wifi certification version: v7.0[0m
+[0;32mI (807) wifi:config NVS flash: enabled[0m
+[0;32mI (807) wifi:config nano formatting: disabled[0m
+[0;32mI (807) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (817) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (817) wifi:Init management short buffer num: 32[0m
+[0;32mI (827) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (827) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (827) wifi:Init static rx buffer num: 10[0m
+[0;32mI (837) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (837) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (847) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (847) wifi_init: rx ba win: 6[0m
+[0;32mI (847) wifi_init: accept mbox: 6[0m
+[0;32mI (847) wifi_init: tcpip mbox: 32[0m
+[0;32mI (857) wifi_init: udp mbox: 6[0m
+[0;32mI (857) wifi_init: tcp mbox: 6[0m
+[0;32mI (857) wifi_init: tcp tx win: 5760[0m
+[0;32mI (867) wifi_init: tcp rx win: 5760[0m
+[0;32mI (867) wifi_init: tcp mss: 1440[0m
+[0;32mI (867) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (877) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (877) WIFI_MANAGER: WiFi Station initialized with SSID: Mohamed Fathy[0m
+[0;32mI (887) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (967) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1007) wifi:mode : sta (44:1d:64:f5:4d:f0)[0m
+[0;32mI (1007) wifi:enable tsf[0m
+[0;32mI (1017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1017) WIFI_MANAGER: WiFi started, attempting connection...[0m
+[0;32mI (1017) WIFI_MANAGER: Connecting to WiFi...[0m
+[0;32mI (1027) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1027) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1037) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1047) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1067) wifi:<ba-add>idx:0 (ifx:0, dc:99:14:53:c3:04), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1087) wifi:connected with Mohamed Fathy, aid = 10, channel 2, BW20, bssid = dc:99:14:53:c3:04[0m
+[0;32mI (1087) wifi:security: WPA2-PSK, phy: bgn, rssi: -52, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (1097) wifi:pm start, type: 1[0m
+
+[0;32mI (1097) wifi:dp: 1, bi: 100352, li: 3, scale listen interval from 307200 us to 301056 us[0m
+[0;32mI (1117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1137) wifi:AP's beacon interval = 100352 us, DTIM period = 1[0m
+[0;32mI (1167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4257) esp_netif_handlers: sta ip: 192.168.100.136, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (4257) WIFI_MANAGER: Connected! IP Address: 192.168.100.136[0m
+[0;32mI (4257) MAIN: WiFi connected, IP=192.168.100.136[0m
+[0;32mI (4267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4537) MQTT_CLIENT: MQTT Client initialized with broker: mqtt://192.168.100.110:1883[0m
+[0;32mI (4547) MQTT_CLIENT: Connecting to MQTT broker...[0m
+[0;32mI (4567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4887) MQTT_CLIENT: Connected to MQTT broker[0m
+[0;32mI (4887) MAIN: MQTT connected[0m
+[0;32mI (4897) MQTT_CLIENT: Subscribed to 'sarcus/robot/movement' (msg_id=31845)[0m
+[0;32mI (4897) MQTT_CLIENT: Subscribed to 'sarcus/robot/estop' (msg_id=49853)[0m
+[0;32mI (4907) MQTT_CLIENT: Subscribed to 'sarcus/robot/joints/shoulder' (msg_id=58726)[0m
+[0;32mI (4907) MQTT_CLIENT: Subscribed to 'sarcus/robot/joints/elbow' (msg_id=21132)[0m
+[0;32mI (4917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4927) MQTT_CLIENT: Subscription successful (msg_id=31845)[0m
+[0;32mI (4927) MQTT_CLIENT: Subscription successful (msg_id=49853)[0m
+[0;32mI (4937) MQTT_CLIENT: Subscription successful (msg_id=58726)[0m
+[0;32mI (4937) MQTT_CLIENT: Subscription successful (msg_id=21132)[0m
+[0;32mI (4967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5047) MAIN: ESP32 ready — smoothed motion enabled[0m
+[0;32mI (5067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8777) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":29,"side":0}[0m
+[0;32mI (8777) MAIN: Shoulder side=0 angle=29[0m
+[0;32mI (8777) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":29,"side":0}[0m
+[0;32mI (8817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8867) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8917) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8967) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9017) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9067) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9117) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9167) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9217) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9267) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9277) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":33,"side":0}[0m
+[0;32mI (9277) MAIN: Shoulder side=0 angle=33[0m
+[0;32mI (9277) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":33,"side":0}[0m
+[0;32mI (9317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9317) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9367) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9377) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":46,"side":0}[0m
+[0;32mI (9377) MAIN: Shoulder side=0 angle=46[0m
+[0;32mI (9377) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":46,"side":0}[0m
+[0;32mI (9397) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":54,"side":0}[0m
+[0;32mI (9397) MAIN: Shoulder side=0 angle=54[0m
+[0;32mI (9397) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":54,"side":0}[0m
+[0;32mI (9417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9417) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9467) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9467) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":71,"side":0}[0m
+[0;32mI (9467) MAIN: Shoulder side=0 angle=71[0m
+[0;32mI (9477) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":71,"side":0}[0m
+[0;32mI (9487) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":88,"side":0}[0m
+[0;32mI (9487) MAIN: Shoulder side=0 angle=88[0m
+[0;32mI (9497) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":88,"side":0}[0m
+[0;32mI (9507) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":98,"side":0}[0m
+[0;32mI (9517) MAIN: Shoulder side=0 angle=98[0m
+[0;32mI (9517) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":98,"side":0}[0m
+[0;32mI (9517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9527) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9537) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":107,"side":0}[0m
+[0;32mI (9547) MAIN: Shoulder side=0 angle=107[0m
+[0;32mI (9547) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":107,"side":0}[0m
+[0;32mI (9567) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":117,"side":0}[0m
+[0;32mI (9567) MAIN: Shoulder side=0 angle=117[0m
+[0;32mI (9567) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":117,"side":0}[0m
+[0;32mI (9577) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-86,"servo":119,"side":0}[0m
+[0;32mI (9587) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (9587) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-86,"servo":119,"side":0}[0m
+[0;32mI (9597) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9597) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9657) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9657) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9707) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9707) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9757) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9757) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9807) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9807) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9857) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9857) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9907) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9907) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9957) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9957) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10007) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10007) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10057) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10057) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10107) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10107) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10157) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10157) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10207) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10207) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10257) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10257) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10307) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10307) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10357) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10357) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10407) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10407) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10457) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10457) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10507) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10507) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10557) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10557) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10607) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10607) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10657) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10657) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10707) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10707) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10757) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10757) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10807) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10807) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10857) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10857) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10907) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10907) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10957) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (10957) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11007) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11007) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11057) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11057) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11107) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11107) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11157) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11157) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11187) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-88,"servo":119,"side":0}[0m
+[0;32mI (11187) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11187) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-88,"servo":119,"side":0}[0m
+[0;32mI (11207) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11207) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11257) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11257) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11257) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-64,"servo":119,"side":0}[0m
+[0;32mI (11267) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11267) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-64,"servo":119,"side":0}[0m
+[0;32mI (11287) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-59,"servo":119,"side":0}[0m
+[0;32mI (11287) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11287) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-59,"servo":119,"side":0}[0m
+[0;32mI (11307) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11307) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11307) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-53,"servo":119,"side":0}[0m
+[0;32mI (11317) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11317) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-53,"servo":119,"side":0}[0m
+[0;32mI (11337) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-50,"servo":119,"side":0}[0m
+[0;32mI (11337) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11337) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-50,"servo":119,"side":0}[0m
+[0;32mI (11357) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11357) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11357) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-44,"servo":119,"side":0}[0m
+[0;32mI (11367) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11367) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-44,"servo":119,"side":0}[0m
+[0;32mI (11387) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-35,"servo":119,"side":0}[0m
+[0;32mI (11387) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11397) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-35,"servo":119,"side":0}[0m
+[0;32mI (11407) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11407) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11417) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-28,"servo":119,"side":0}[0m
+[0;32mI (11417) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11417) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-28,"servo":119,"side":0}[0m
+[0;32mI (11437) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-24,"servo":119,"side":0}[0m
+[0;32mI (11437) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11447) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-24,"servo":119,"side":0}[0m
+[0;32mI (11457) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11457) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11467) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-21,"servo":119,"side":0}[0m
+[0;32mI (11467) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11477) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-21,"servo":119,"side":0}[0m
+[0;32mI (11497) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-17,"servo":119,"side":0}[0m
+[0;32mI (11497) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11497) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-17,"servo":119,"side":0}[0m
+[0;32mI (11507) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11517) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11517) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-15,"servo":119,"side":0}[0m
+[0;32mI (11527) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11527) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-15,"servo":119,"side":0}[0m
+[0;32mI (11547) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-10,"servo":119,"side":0}[0m
+[0;32mI (11547) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11547) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-10,"servo":119,"side":0}[0m
+[0;32mI (11567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11567) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11567) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-8,"servo":119,"side":0}[0m
+[0;32mI (11577) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11577) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-8,"servo":119,"side":0}[0m
+[0;32mI (11617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11617) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11667) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11727) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-4,"servo":119,"side":0}[0m
+[0;32mI (11737) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11737) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-4,"servo":119,"side":0}[0m
+[0;32mI (11747) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-1,"servo":119,"side":0}[0m
+[0;32mI (11757) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11757) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-1,"servo":119,"side":0}[0m
+[0;32mI (11767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11767) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11807) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":5,"servo":119,"side":0}[0m
+[0;32mI (11807) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11807) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":5,"servo":119,"side":0}[0m
+[0;32mI (11817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11817) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11827) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":8,"servo":119,"side":0}[0m
+[0;32mI (11837) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11837) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":8,"servo":119,"side":0}[0m
+[0;32mI (11857) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":21,"servo":119,"side":0}[0m
+[0;32mI (11867) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11867) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":21,"servo":119,"side":0}[0m
+[0;32mI (11877) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11877) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11887) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":25,"servo":119,"side":0}[0m
+[0;32mI (11887) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (11897) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":25,"servo":119,"side":0}[0m
+[0;32mI (11927) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11927) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11977) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (11977) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12027) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12027) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12077) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12077) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12127) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12127) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12177) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12177) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12187) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":28,"servo":119,"side":0}[0m
+[0;32mI (12187) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12187) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":28,"servo":119,"side":0}[0m
+[0;32mI (12207) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":30,"servo":119,"side":0}[0m
+[0;32mI (12207) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12207) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":30,"servo":119,"side":0}[0m
+[0;32mI (12227) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12227) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12247) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":32,"servo":119,"side":0}[0m
+[0;32mI (12247) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12247) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":32,"servo":119,"side":0}[0m
+[0;32mI (12277) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12277) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12287) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":39,"servo":119,"side":0}[0m
+[0;32mI (12287) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12287) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":39,"servo":119,"side":0}[0m
+[0;32mI (12307) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":48,"servo":119,"side":0}[0m
+[0;32mI (12317) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12317) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":48,"servo":119,"side":0}[0m
+[0;32mI (12327) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12327) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12337) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":56,"servo":119,"side":0}[0m
+[0;32mI (12337) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12347) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":56,"servo":119,"side":0}[0m
+[0;32mI (12367) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":59,"servo":119,"side":0}[0m
+[0;32mI (12367) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12367) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":59,"servo":119,"side":0}[0m
+[0;32mI (12377) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12397) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":63,"servo":119,"side":0}[0m
+[0;32mI (12397) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12397) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":63,"servo":119,"side":0}[0m
+[0;32mI (12417) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":65,"servo":119,"side":0}[0m
+[0;32mI (12417) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (12417) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":65,"servo":119,"side":0}[0m
+[0;32mI (12437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12637) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12637) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12687) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12687) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12837) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12837) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12887) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12887) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12937) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12937) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13587) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (13587) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (13587) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (13637) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (13637) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (13687) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (13687) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (13727) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (13727) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (13727) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (13737) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (13737) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (13787) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (13787) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (13837) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (13837) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (13887) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (13887) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (13937) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (13937) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (13987) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (13987) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (13987) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (13987) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (13997) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (14037) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (14037) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (14087) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (14087) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (14137) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (14137) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (14187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14297) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (14297) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (14297) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (14337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14397) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (14397) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (14397) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (14437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14597) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (14597) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (14597) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (14637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14797) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (14797) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (14797) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (14837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (14987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (15987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (16397) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":0,"speed":0}[0m
+[0;32mI (16397) MAIN: Movement dir=0 speed=0[0m
+[0;32mI (16397) MAIN: MQTT recv sarcus/robot/movement -> {"dir":0,"speed":0}[0m
+[0;32mI (16437) BTS7960_DRIVER: Forward at 64.0% speed[0m
+[0;32mI (16437) BTS7960_DRIVER: Forward at 64.0% speed[0m
+[0;32mI (16487) BTS7960_DRIVER: Forward at 58.0% speed[0m
+[0;32mI (16487) BTS7960_DRIVER: Forward at 58.0% speed[0m
+[0;32mI (16537) BTS7960_DRIVER: Forward at 52.0% speed[0m
+[0;32mI (16537) BTS7960_DRIVER: Forward at 52.0% speed[0m
+[0;32mI (16587) BTS7960_DRIVER: Forward at 46.0% speed[0m
+[0;32mI (16587) BTS7960_DRIVER: Forward at 46.0% speed[0m
+[0;32mI (16637) BTS7960_DRIVER: Forward at 40.0% speed[0m
+[0;32mI (16637) BTS7960_DRIVER: Forward at 40.0% speed[0m
+[0;32mI (16687) BTS7960_DRIVER: Forward at 34.0% speed[0m
+[0;32mI (16687) BTS7960_DRIVER: Forward at 34.0% speed[0m
+[0;32mI (16737) BTS7960_DRIVER: Forward at 28.0% speed[0m
+[0;32mI (16737) BTS7960_DRIVER: Forward at 28.0% speed[0m
+[0;32mI (16787) BTS7960_DRIVER: Forward at 22.0% speed[0m
+[0;32mI (16787) BTS7960_DRIVER: Forward at 22.0% speed[0m
+[0;32mI (16837) BTS7960_DRIVER: Forward at 16.0% speed[0m
+[0;32mI (16837) BTS7960_DRIVER: Forward at 16.0% speed[0m
+[0;32mI (16887) BTS7960_DRIVER: Forward at 10.0% speed[0m
+[0;32mI (16887) BTS7960_DRIVER: Forward at 10.0% speed[0m
+[0;32mI (16937) BTS7960_DRIVER: Forward at 4.0% speed[0m
+[0;32mI (16937) BTS7960_DRIVER: Forward at 4.0% speed[0m
+[0;32mI (16987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17497) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":2,"speed":70}[0m
+[0;32mI (17507) MAIN: Movement dir=2 speed=70[0m
+[0;32mI (17507) MAIN: MQTT recv sarcus/robot/movement -> {"dir":2,"speed":70}[0m
+[0;32mI (17537) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (17537) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (17587) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (17587) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (17637) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (17637) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (17687) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (17687) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (17737) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (17737) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (17787) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (17787) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (17837) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (17837) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (17887) BTS7960_DRIVER: Backward at 48.0% speed[0m
+[0;32mI (17887) BTS7960_DRIVER: Backward at 48.0% speed[0m
+[0;32mI (17937) BTS7960_DRIVER: Backward at 54.0% speed[0m
+[0;32mI (17937) BTS7960_DRIVER: Backward at 54.0% speed[0m
+[0;32mI (17987) BTS7960_DRIVER: Backward at 60.0% speed[0m
+[0;32mI (17987) BTS7960_DRIVER: Backward at 60.0% speed[0m
+[0;32mI (18037) BTS7960_DRIVER: Backward at 66.0% speed[0m
+[0;32mI (18037) BTS7960_DRIVER: Backward at 66.0% speed[0m
+[0;32mI (18087) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18087) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18137) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18137) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18187) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18187) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (18207) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":4,"speed":70}[0m
+[0;32mI (18207) MAIN: Movement dir=4 speed=70[0m
+[0;32mI (18207) MAIN: MQTT recv sarcus/robot/movement -> {"dir":4,"speed":70}[0m
+[0;32mI (18237) BTS7960_DRIVER: Backward at 64.0% speed[0m
+[0;32mI (18237) BTS7960_DRIVER: Backward at 64.0% speed[0m
+[0;32mI (18287) BTS7960_DRIVER: Backward at 58.0% speed[0m
+[0;32mI (18287) BTS7960_DRIVER: Backward at 58.0% speed[0m
+[0;32mI (18337) BTS7960_DRIVER: Backward at 52.0% speed[0m
+[0;32mI (18337) BTS7960_DRIVER: Backward at 52.0% speed[0m
+[0;32mI (18387) BTS7960_DRIVER: Backward at 46.0% speed[0m
+[0;32mI (18387) BTS7960_DRIVER: Backward at 46.0% speed[0m
+[0;32mI (18437) BTS7960_DRIVER: Backward at 40.0% speed[0m
+[0;32mI (18437) BTS7960_DRIVER: Backward at 40.0% speed[0m
+[0;32mI (18487) BTS7960_DRIVER: Backward at 34.0% speed[0m
+[0;32mI (18487) BTS7960_DRIVER: Backward at 34.0% speed[0m
+[0;32mI (18537) BTS7960_DRIVER: Backward at 28.0% speed[0m
+[0;32mI (18537) BTS7960_DRIVER: Backward at 28.0% speed[0m
+[0;32mI (18587) BTS7960_DRIVER: Backward at 22.0% speed[0m
+[0;32mI (18587) BTS7960_DRIVER: Backward at 22.0% speed[0m
+[0;32mI (18637) BTS7960_DRIVER: Backward at 16.0% speed[0m
+[0;32mI (18637) BTS7960_DRIVER: Backward at 16.0% speed[0m
+[0;32mI (18687) BTS7960_DRIVER: Backward at 10.0% speed[0m
+[0;32mI (18687) BTS7960_DRIVER: Backward at 10.0% speed[0m
+[0;32mI (18737) BTS7960_DRIVER: Backward at 4.0% speed[0m
+[0;32mI (18737) BTS7960_DRIVER: Backward at 4.0% speed[0m
+[0;32mI (18787) BTS7960_DRIVER: Forward at 0.0% speed[0m
+[0;32mI (18787) BTS7960_DRIVER: Backward at 0.0% speed[0m
+[0;32mI (18837) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (18837) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (18887) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (18887) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (18937) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (18937) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (18987) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (18987) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (19007) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":3,"speed":70}[0m
+[0;32mI (19007) MAIN: Movement dir=3 speed=70[0m
+[0;32mI (19007) MAIN: MQTT recv sarcus/robot/movement -> {"dir":3,"speed":70}[0m
+[0;32mI (19037) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (19037) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (19087) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (19087) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (19137) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (19137) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (19187) BTS7960_DRIVER: Backward at 0.0% speed[0m
+[0;32mI (19187) BTS7960_DRIVER: Forward at 0.0% speed[0m
+[0;32mI (19237) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (19237) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (19287) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (19287) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (19337) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (19337) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (19387) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (19387) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (19437) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (19437) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (19487) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (19487) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (19537) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (19537) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (19587) BTS7960_DRIVER: Backward at 48.0% speed[0m
+[0;32mI (19587) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (19637) BTS7960_DRIVER: Backward at 54.0% speed[0m
+[0;32mI (19637) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (19687) BTS7960_DRIVER: Backward at 60.0% speed[0m
+[0;32mI (19687) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (19737) BTS7960_DRIVER: Backward at 66.0% speed[0m
+[0;32mI (19737) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (19787) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (19787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (19837) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (19837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (19887) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (19887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (19937) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (19937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (19987) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (19987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (20037) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (20037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (20087) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (20087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (20137) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (20137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (20187) BTS7960_DRIVER: Backward at 70.0% speed[0m
+[0;32mI (20187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (20217) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (20217) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (20217) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (20237) BTS7960_DRIVER: Backward at 64.0% speed[0m
+[0;32mI (20237) BTS7960_DRIVER: Forward at 64.0% speed[0m
+[0;32mI (20287) BTS7960_DRIVER: Backward at 58.0% speed[0m
+[0;32mI (20287) BTS7960_DRIVER: Forward at 58.0% speed[0m
+[0;32mI (20337) BTS7960_DRIVER: Backward at 52.0% speed[0m
+[0;32mI (20337) BTS7960_DRIVER: Forward at 52.0% speed[0m
+[0;32mI (20387) BTS7960_DRIVER: Backward at 46.0% speed[0m
+[0;32mI (20387) BTS7960_DRIVER: Forward at 46.0% speed[0m
+[0;32mI (20437) BTS7960_DRIVER: Backward at 40.0% speed[0m
+[0;32mI (20437) BTS7960_DRIVER: Forward at 40.0% speed[0m
+[0;32mI (20487) BTS7960_DRIVER: Backward at 34.0% speed[0m
+[0;32mI (20487) BTS7960_DRIVER: Forward at 34.0% speed[0m
+[0;32mI (20517) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":0,"speed":0}[0m
+[0;32mI (20517) MAIN: Movement dir=0 speed=0[0m
+[0;32mI (20517) MAIN: MQTT recv sarcus/robot/movement -> {"dir":0,"speed":0}[0m
+[0;32mI (20537) BTS7960_DRIVER: Backward at 28.0% speed[0m
+[0;32mI (20537) BTS7960_DRIVER: Forward at 28.0% speed[0m
+[0;32mI (20587) BTS7960_DRIVER: Backward at 22.0% speed[0m
+[0;32mI (20587) BTS7960_DRIVER: Forward at 22.0% speed[0m
+[0;32mI (20637) BTS7960_DRIVER: Backward at 16.0% speed[0m
+[0;32mI (20637) BTS7960_DRIVER: Forward at 16.0% speed[0m
+[0;32mI (20687) BTS7960_DRIVER: Backward at 10.0% speed[0m
+[0;32mI (20687) BTS7960_DRIVER: Forward at 10.0% speed[0m
+[0;32mI (20737) BTS7960_DRIVER: Backward at 4.0% speed[0m
+[0;32mI (20737) BTS7960_DRIVER: Forward at 4.0% speed[0m
+[0;32mI (20787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20817) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":2,"speed":70}[0m
+[0;32mI (20817) MAIN: Movement dir=2 speed=70[0m
+[0;32mI (20817) MAIN: MQTT recv sarcus/robot/movement -> {"dir":2,"speed":70}[0m
+[0;32mI (20837) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (20837) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (20887) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (20887) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (20937) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (20937) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (20987) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (20987) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (21037) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (21037) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (21087) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (21087) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (21137) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (21137) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (21187) BTS7960_DRIVER: Backward at 48.0% speed[0m
+[0;32mI (21187) BTS7960_DRIVER: Backward at 48.0% speed[0m
+[0;32mI (21217) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":4,"speed":70}[0m
+[0;32mI (21217) MAIN: Movement dir=4 speed=70[0m
+[0;32mI (21217) MAIN: MQTT recv sarcus/robot/movement -> {"dir":4,"speed":70}[0m
+[0;32mI (21237) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (21237) BTS7960_DRIVER: Backward at 42.0% speed[0m
+[0;32mI (21287) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (21287) BTS7960_DRIVER: Backward at 36.0% speed[0m
+[0;32mI (21337) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (21337) BTS7960_DRIVER: Backward at 30.0% speed[0m
+[0;32mI (21387) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (21387) BTS7960_DRIVER: Backward at 24.0% speed[0m
+[0;32mI (21437) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (21437) BTS7960_DRIVER: Backward at 18.0% speed[0m
+[0;32mI (21487) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (21487) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (21537) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (21537) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (21587) BTS7960_DRIVER: Forward at 0.0% speed[0m
+[0;32mI (21587) BTS7960_DRIVER: Backward at 0.0% speed[0m
+[0;32mI (21637) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (21637) BTS7960_DRIVER: Backward at 6.0% speed[0m
+[0;32mI (21687) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (21687) BTS7960_DRIVER: Backward at 12.0% speed[0m
+[0;32mI (21717) MQTT_CLIENT: Message received on 'sarcus/robot/estop': 1[0m
+[0;33mW (21717) MAIN: Emergency stop requested[0m
+[0;32mI (21717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21717) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21727) MAIN: MQTT recv sarcus/robot/estop -> 1[0m
+[0;32mI (21737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21837) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21837) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21887) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21887) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21937) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21937) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (21987) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22037) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22087) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22137) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22187) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22237) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22287) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22337) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22387) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22437) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22487) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22537) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22587) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22637) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22637) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22687) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22687) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22737) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22787) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (22817) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (22817) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (22817) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (22837) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (22837) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (22887) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (22887) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (22937) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (22937) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (22987) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (22987) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (23037) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (23037) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (23087) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (23087) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (23137) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (23137) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (23187) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (23187) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (23237) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (23237) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (23287) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (23287) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (23337) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (23337) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (23387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24737) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24787) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24837) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24887) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24937) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24987) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25037) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25087) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25137) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25187) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25437) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25487) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25537) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25587) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25637) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25687) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25727) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":2,"side":0}[0m
+[0;32mI (25737) MAIN: Elbow side=0 angle=2[0m
+[0;32mI (25737) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":2,"side":0}[0m
+[0;32mI (25747) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25747) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25757) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":19,"side":0}[0m
+[0;32mI (25757) MAIN: Elbow side=0 angle=19[0m
+[0;32mI (25757) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":19,"side":0}[0m
+[0;32mI (25777) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":25,"side":0}[0m
+[0;32mI (25777) MAIN: Elbow side=0 angle=25[0m
+[0;32mI (25777) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":25,"side":0}[0m
+[0;32mI (25797) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25797) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25807) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":29,"side":0}[0m
+[0;32mI (25807) MAIN: Elbow side=0 angle=29[0m
+[0;32mI (25807) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":29,"side":0}[0m
+[0;32mI (25837) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":40,"side":0}[0m
+[0;32mI (25837) MAIN: Elbow side=0 angle=40[0m
+[0;32mI (25837) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":40,"side":0}[0m
+[0;32mI (25847) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25847) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25867) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":54,"side":0}[0m
+[0;32mI (25867) MAIN: Elbow side=0 angle=54[0m
+[0;32mI (25867) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":54,"side":0}[0m
+[0;32mI (25897) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25897) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25897) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":60,"side":0}[0m
+[0;32mI (25897) MAIN: Elbow side=0 angle=60[0m
+[0;32mI (25907) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":60,"side":0}[0m
+[0;32mI (25927) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":62,"side":0}[0m
+[0;32mI (25927) MAIN: Elbow side=0 angle=62[0m
+[0;32mI (25927) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":62,"side":0}[0m
+[0;32mI (25947) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25947) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25957) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":67,"side":0}[0m
+[0;32mI (25957) MAIN: Elbow side=0 angle=67[0m
+[0;32mI (25957) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":67,"side":0}[0m
+[0;32mI (25987) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":72,"side":0}[0m
+[0;32mI (25987) MAIN: Elbow side=0 angle=72[0m
+[0;32mI (25987) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":72,"side":0}[0m
+[0;32mI (25997) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25997) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26017) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":78,"side":0}[0m
+[0;32mI (26017) MAIN: Elbow side=0 angle=78[0m
+[0;32mI (26017) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":78,"side":0}[0m
+[0;32mI (26047) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26047) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26047) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":88,"side":0}[0m
+[0;32mI (26047) MAIN: Elbow side=0 angle=88[0m
+[0;32mI (26057) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":88,"side":0}[0m
+[0;32mI (26077) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":100,"side":0}[0m
+[0;32mI (26077) MAIN: Elbow side=0 angle=100[0m
+[0;32mI (26077) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":100,"side":0}[0m
+[0;32mI (26097) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26097) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26107) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":105,"side":0}[0m
+[0;32mI (26107) MAIN: Elbow side=0 angle=105[0m
+[0;32mI (26107) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":105,"side":0}[0m
+[0;32mI (26127) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":112,"side":0}[0m
+[0;32mI (26137) MAIN: Elbow side=0 angle=112[0m
+[0;32mI (26137) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":112,"side":0}[0m
+[0;32mI (26147) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26147) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26157) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":113,"side":0}[0m
+[0;32mI (26157) MAIN: Elbow side=0 angle=113[0m
+[0;32mI (26157) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":113,"side":0}[0m
+[0;32mI (26177) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":115,"side":0}[0m
+[0;32mI (26177) MAIN: Elbow side=0 angle=115[0m
+[0;32mI (26177) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":115,"side":0}[0m
+[0;32mI (26197) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26197) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26197) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":117,"side":0}[0m
+[0;32mI (26207) MAIN: Elbow side=0 angle=117[0m
+[0;32mI (26207) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":117,"side":0}[0m
+[0;32mI (26237) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":118,"side":0}[0m
+[0;32mI (26237) MAIN: Elbow side=0 angle=118[0m
+[0;32mI (26237) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":118,"side":0}[0m
+[0;32mI (26247) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26247) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26257) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":120,"side":0}[0m
+[0;32mI (26257) MAIN: Elbow side=0 angle=120[0m
+[0;32mI (26267) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":120,"side":0}[0m
+[0;32mI (26287) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":123,"side":0}[0m
+[0;32mI (26287) MAIN: Elbow side=0 angle=123[0m
+[0;32mI (26287) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":123,"side":0}[0m
+[0;32mI (26307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26317) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":127,"side":0}[0m
+[0;32mI (26317) MAIN: Elbow side=0 angle=127[0m
+[0;32mI (26327) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":127,"side":0}[0m
+[0;32mI (26337) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":128,"side":0}[0m
+[0;32mI (26337) MAIN: Elbow side=0 angle=128[0m
+[0;32mI (26337) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":128,"side":0}[0m
+[0;32mI (26357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26357) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":132,"side":0}[0m
+[0;32mI (26367) MAIN: Elbow side=0 angle=132[0m
+[0;32mI (26367) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":132,"side":0}[0m
+[0;32mI (26387) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":133,"side":0}[0m
+[0;32mI (26387) MAIN: Elbow side=0 angle=133[0m
+[0;32mI (26387) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":133,"side":0}[0m
+[0;32mI (26407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26407) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":137,"side":0}[0m
+[0;32mI (26407) MAIN: Elbow side=0 angle=137[0m
+[0;32mI (26417) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":137,"side":0}[0m
+[0;32mI (26427) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":138,"side":0}[0m
+[0;32mI (26437) MAIN: Elbow side=0 angle=138[0m
+[0;32mI (26437) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":138,"side":0}[0m
+[0;32mI (26447) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":140,"side":0}[0m
+[0;32mI (26457) MAIN: Elbow side=0 angle=140[0m
+[0;32mI (26457) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":140,"side":0}[0m
+[0;32mI (26467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26477) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":143,"side":0}[0m
+[0;32mI (26477) MAIN: Elbow side=0 angle=143[0m
+[0;32mI (26477) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":143,"side":0}[0m
+[0;32mI (26497) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":148,"side":0}[0m
+[0;32mI (26497) MAIN: Elbow side=0 angle=148[0m
+[0;32mI (26497) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":148,"side":0}[0m
+[0;32mI (26517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26517) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":156,"side":0}[0m
+[0;32mI (26527) MAIN: Elbow side=0 angle=156[0m
+[0;32mI (26527) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":156,"side":0}[0m
+[0;32mI (26547) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":160,"side":0}[0m
+[0;32mI (26547) MAIN: Elbow side=0 angle=160[0m
+[0;32mI (26547) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":160,"side":0}[0m
+[0;32mI (26567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26607) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":161,"side":0}[0m
+[0;32mI (26607) MAIN: Elbow side=0 angle=161[0m
+[0;32mI (26607) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":161,"side":0}[0m
+[0;32mI (26617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26677) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26677) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26727) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26727) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26777) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26777) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26827) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26827) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26877) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26877) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26927) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26927) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26977) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26977) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27027) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27027) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27077) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27077) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27127) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27127) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27177) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27177) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27227) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27227) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27277) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27277) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27327) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27327) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27377) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27377) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27427) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27427) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27477) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27477) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27527) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27527) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27577) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27577) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27627) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27627) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27677) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27677) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27727) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27727) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27777) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27777) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27827) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27827) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27877) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27877) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27927) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27927) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27977) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27977) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28027) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28027) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28077) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28077) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28127) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28127) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28137) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":5,"side":1}[0m
+[0;32mI (28137) MAIN: Elbow side=1 angle=5[0m
+[0;32mI (28137) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":5,"side":1}[0m
+[0;32mI (28157) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":12,"side":1}[0m
+[0;32mI (28157) MAIN: Elbow side=1 angle=12[0m
+[0;32mI (28157) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":12,"side":1}[0m
+[0;32mI (28177) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28177) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28177) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":19,"side":1}[0m
+[0;32mI (28187) MAIN: Elbow side=1 angle=19[0m
+[0;32mI (28187) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":19,"side":1}[0m
+[0;32mI (28197) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":24,"side":1}[0m
+[0;32mI (28197) MAIN: Elbow side=1 angle=24[0m
+[0;32mI (28207) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":24,"side":1}[0m
+[0;32mI (28217) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":34,"side":1}[0m
+[0;32mI (28217) MAIN: Elbow side=1 angle=34[0m
+[0;32mI (28227) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":34,"side":1}[0m
+[0;32mI (28227) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28237) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28247) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":39,"side":1}[0m
+[0;32mI (28247) MAIN: Elbow side=1 angle=39[0m
+[0;32mI (28247) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":39,"side":1}[0m
+[0;32mI (28267) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":42,"side":1}[0m
+[0;32mI (28267) MAIN: Elbow side=1 angle=42[0m
+[0;32mI (28267) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":42,"side":1}[0m
+[0;32mI (28287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28287) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28287) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":46,"side":1}[0m
+[0;32mI (28287) MAIN: Elbow side=1 angle=46[0m
+[0;32mI (28297) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":46,"side":1}[0m
+[0;32mI (28307) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":49,"side":1}[0m
+[0;32mI (28307) MAIN: Elbow side=1 angle=49[0m
+[0;32mI (28317) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":49,"side":1}[0m
+[0;32mI (28337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28337) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28337) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":54,"side":1}[0m
+[0;32mI (28337) MAIN: Elbow side=1 angle=54[0m
+[0;32mI (28347) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":54,"side":1}[0m
+[0;32mI (28357) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":61,"side":1}[0m
+[0;32mI (28357) MAIN: Elbow side=1 angle=61[0m
+[0;32mI (28367) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":61,"side":1}[0m
+[0;32mI (28377) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":67,"side":1}[0m
+[0;32mI (28377) MAIN: Elbow side=1 angle=67[0m
+[0;32mI (28377) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":67,"side":1}[0m
+[0;32mI (28387) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28397) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28397) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":72,"side":1}[0m
+[0;32mI (28407) MAIN: Elbow side=1 angle=72[0m
+[0;32mI (28407) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":72,"side":1}[0m
+[0;32mI (28427) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":79,"side":1}[0m
+[0;32mI (28427) MAIN: Elbow side=1 angle=79[0m
+[0;32mI (28427) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":79,"side":1}[0m
+[0;32mI (28437) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":84,"side":1}[0m
+[0;32mI (28437) MAIN: Elbow side=1 angle=84[0m
+[0;32mI (28447) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":84,"side":1}[0m
+[0;32mI (28447) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28467) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":93,"side":1}[0m
+[0;32mI (28467) MAIN: Elbow side=1 angle=93[0m
+[0;32mI (28467) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":93,"side":1}[0m
+[0;32mI (28487) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":103,"side":1}[0m
+[0;32mI (28487) MAIN: Elbow side=1 angle=103[0m
+[0;32mI (28487) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":103,"side":1}[0m
+[0;32mI (28507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28507) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":108,"side":1}[0m
+[0;32mI (28517) MAIN: Elbow side=1 angle=108[0m
+[0;32mI (28517) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":108,"side":1}[0m
+[0;32mI (28557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (30957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (31957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (32957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (33957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (34957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (35957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (36957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (37957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (38957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (39957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (40957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (41957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (42957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43307) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43357) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43407) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43457) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43507) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43557) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43607) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43657) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43707) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43757) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43807) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43857) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43907) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (43957) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44007) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44057) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44107) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44157) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44207) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44257) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44297) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":66,"servo":119,"side":0}[0m
+[0;32mI (44297) MAIN: Shoulder side=0 angle=119[0m
+[0;32mI (44297) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":66,"servo":119,"side":0}[0m
+[0;32mI (44317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44797) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":109,"side":1}[0m
+[0;32mI (44797) MAIN: Elbow side=1 angle=109[0m
+[0;32mI (44797) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":109,"side":1}[0m
+[0;32mI (44817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44817) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":110,"side":1}[0m
+[0;32mI (44827) MAIN: Elbow side=1 angle=110[0m
+[0;32mI (44827) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":110,"side":1}[0m
+[0;32mI (44867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44967) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (44967) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45017) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45017) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45067) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45067) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45117) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45117) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45167) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45167) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45217) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45217) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45267) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45267) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45967) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (45967) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46017) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46017) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46067) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46067) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46117) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46117) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46167) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46167) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46217) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46217) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46267) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46267) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46317) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46367) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46417) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46467) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46517) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46567) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46617) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46667) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46717) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46767) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46817) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46867) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46917) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46967) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (46967) BTS7960_DRIVER: Forward at 70.0% speed[0m

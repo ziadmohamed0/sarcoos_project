@@ -108,11 +108,46 @@ bool SensorManager::initMPU6050() {
     i2c_master_stop(cmd);
     esp_err_t err = i2c_master_cmd_begin(m_i2c_port, cmd, pdMS_TO_TICKS(I2C_TIMEOUT_MS));
     i2c_cmd_link_delete(cmd);
+
+    if (err == ESP_OK) {
+        calibrateGyro();
+    }
     return (err == ESP_OK);
 }
 
+void SensorManager::calibrateGyro() {
+    float sum_gx = 0, sum_gy = 0, sum_gz = 0;
+    float gx, gy, gz;
+
+    for (int i = 0; i < IMU_GYRO_CALIB_SAMPLES; i++) {
+        uint8_t reg = 0x43;
+        uint8_t raw[6] = {};
+        i2c_cmd_handle_t cmd = i2c_cmd_link_create();
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | I2C_MASTER_WRITE, true);
+        i2c_master_write_byte(cmd, reg, true);
+        i2c_master_start(cmd);
+        i2c_master_write_byte(cmd, (MPU6050_ADDR << 1) | I2C_MASTER_READ, true);
+        i2c_master_read(cmd, raw, 6, I2C_MASTER_LAST_NACK);
+        i2c_master_stop(cmd);
+        if (i2c_master_cmd_begin(m_i2c_port, cmd, pdMS_TO_TICKS(I2C_TIMEOUT_MS)) == ESP_OK) {
+            gx = (int16_t)((raw[0] << 8) | raw[1]) / 131.0f;
+            gy = (int16_t)((raw[2] << 8) | raw[3]) / 131.0f;
+            gz = (int16_t)((raw[4] << 8) | raw[5]) / 131.0f;
+            sum_gx += gx; sum_gy += gy; sum_gz += gz;
+        }
+        i2c_cmd_link_delete(cmd);
+        vTaskDelay(pdMS_TO_TICKS(5));
+    }
+
+    m_gx_bias = sum_gx / IMU_GYRO_CALIB_SAMPLES;
+    m_gy_bias = sum_gy / IMU_GYRO_CALIB_SAMPLES;
+    m_gz_bias = sum_gz / IMU_GYRO_CALIB_SAMPLES;
+    m_gyro_calibrated = true;
+    ESP_LOGI(Tag, "Gyro bias: x=%.3f y=%.3f z=%.3f", m_gx_bias, m_gy_bias, m_gz_bias);
+}
+
 bool SensorManager::readMPU6050(ImuData& out) {
-    // Read 14 bytes starting from ACCEL_XOUT_H (0x3B)
     uint8_t reg = 0x3B;
     uint8_t raw[14] = {};
 
@@ -133,25 +168,55 @@ bool SensorManager::readMPU6050(ImuData& out) {
         return false;
     }
 
-    // Scale factors: ±2g → 16384 LSB/g, ±250°/s → 131 LSB/°/s
     auto to_int16 = [](uint8_t h, uint8_t l) -> int16_t {
         return (int16_t)((h << 8) | l);
     };
 
-    out.accel_x = to_int16(raw[0],  raw[1])  / 16384.0f;
-    out.accel_y = to_int16(raw[2],  raw[3])  / 16384.0f;
-    out.accel_z = to_int16(raw[4],  raw[5])  / 16384.0f;
-    // raw[6,7] = temp — skip
-    out.gyro_x  = to_int16(raw[8],  raw[9])  / 131.0f;
-    out.gyro_y  = to_int16(raw[10], raw[11]) / 131.0f;
-    out.gyro_z  = to_int16(raw[12], raw[13]) / 131.0f;
+    float ax_raw = to_int16(raw[0],  raw[1])  / 16384.0f;
+    float ay_raw = to_int16(raw[2],  raw[3])  / 16384.0f;
+    float az_raw = to_int16(raw[4],  raw[5])  / 16384.0f;
+    float gx_raw = to_int16(raw[8],  raw[9])  / 131.0f;
+    float gy_raw = to_int16(raw[10], raw[11]) / 131.0f;
+    float gz_raw = to_int16(raw[12], raw[13]) / 131.0f;
 
-    // Simple complementary filter for roll/pitch
-    out.roll  = atan2f(out.accel_y, out.accel_z) * 180.0f / M_PI;
-    out.pitch = atan2f(-out.accel_x,
-                       sqrtf(out.accel_y * out.accel_y + out.accel_z * out.accel_z)) * 180.0f / M_PI;
-    out.yaw   = 0.0f;  // requires magnetometer or integration over time
+    out.accel_x = ax_raw;
+    out.accel_y = ay_raw;
+    out.accel_z = az_raw;
 
+    // Gyro bias subtraction
+    if (m_gyro_calibrated) {
+        gx_raw -= m_gx_bias;
+        gy_raw -= m_gy_bias;
+        gz_raw -= m_gz_bias;
+    }
+    out.gyro_x = gx_raw;
+    out.gyro_y = gy_raw;
+    out.gyro_z = gz_raw;
+
+    // DT calculation
+    int64_t now = esp_timer_get_time();
+    float dt = (m_last_imu_ts == 0) ? 0.01f : (now - m_last_imu_ts) / 1000000.0f;
+    m_last_imu_ts = now;
+    if (dt > 0.5f) dt = 0.01f;
+
+    // EMA low-pass pre-filter on accelerometer (rejects motor vibration)
+    m_ax_filt = IMU_ACCEL_LP_ALPHA * ax_raw + (1.0f - IMU_ACCEL_LP_ALPHA) * m_ax_filt;
+    m_ay_filt = IMU_ACCEL_LP_ALPHA * ay_raw + (1.0f - IMU_ACCEL_LP_ALPHA) * m_ay_filt;
+    m_az_filt = IMU_ACCEL_LP_ALPHA * az_raw + (1.0f - IMU_ACCEL_LP_ALPHA) * m_az_filt;
+
+    // Accelerometer-based angles from filtered values
+    float roll_acc  = atan2f(m_ay_filt, m_az_filt) * 180.0f / M_PI;
+    float pitch_acc = atan2f(-m_ax_filt,
+                             sqrtf(m_ay_filt * m_ay_filt + m_az_filt * m_az_filt)) * 180.0f / M_PI;
+
+    // Complementary filter: blend gyro integration with accel reference
+    m_imu_roll  = IMU_CF_ALPHA * (m_imu_roll  + gx_raw * dt) + (1.0f - IMU_CF_ALPHA) * roll_acc;
+    m_imu_pitch = IMU_CF_ALPHA * (m_imu_pitch + gy_raw * dt) + (1.0f - IMU_CF_ALPHA) * pitch_acc;
+    m_imu_yaw  += gz_raw * dt;
+
+    out.roll  = m_imu_roll;
+    out.pitch = m_imu_pitch;
+    out.yaw   = m_imu_yaw;
     out.valid = true;
     return true;
 }
@@ -199,7 +264,29 @@ bool SensorManager::parseNMEA(const char* sentence, GpsData& out) {
 
     out.fix        = true;
     out.satellites = 4;   // RMC doesn't carry satellite count
+
+    // Moving median filter on coordinates to reject single-sample spikes
+    out.latitude  = applyMedianFilter(out.latitude,  m_gps_lat_buf);
+    out.longitude = applyMedianFilter(out.longitude, m_gps_lon_buf);
     return true;
+}
+
+double SensorManager::applyMedianFilter(double val, double* buffer) {
+    buffer[m_gps_hist_idx % GPS_MEDIAN_WINDOW] = val;
+    m_gps_hist_idx++;
+
+    double sorted[GPS_MEDIAN_WINDOW];
+    int count = (m_gps_hist_idx < GPS_MEDIAN_WINDOW) ? m_gps_hist_idx : GPS_MEDIAN_WINDOW;
+    for (int i = 0; i < count; i++) sorted[i] = buffer[i];
+
+    for (int i = 0; i < count - 1; i++) {
+        for (int j = i + 1; j < count; j++) {
+            if (sorted[i] > sorted[j]) {
+                double t = sorted[i]; sorted[i] = sorted[j]; sorted[j] = t;
+            }
+        }
+    }
+    return sorted[count / 2];
 }
 
 // ─── HC-SR04 Distance ─────────────────────────────────────────────────────────

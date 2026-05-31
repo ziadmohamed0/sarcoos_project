@@ -1,0 +1,41 @@
+Command: ninja all
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\kconfgen\__main__.py", line 18, in <module>
+    main()
+    ~~~~^^
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\kconfgen\core.py", line 462, in main
+    config = kconfiglib.Kconfig(
+        args.kconfig,
+    ...<7 lines>...
+        ),
+    )
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 1010, in __init__
+    self()
+    ~~~~^^
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 1024, in __call__
+    prev = self._parse_block(None, self.top_node, self.top_node)
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 3359, in _parse_block
+    prev = self._parse_block(None, parent, prev)
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 3359, in _parse_block
+    prev = self._parse_block(None, parent, prev)
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 3396, in _parse_block
+    self._parse_block(_T_ENDMENU, node, node)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Espressif\tools\python\v6.0.1\venv\Lib\site-packages\esp_kconfiglib\core.py", line 3468, in _parse_block
+    raise KconfigError(
+    ...<3 lines>...
+    )
+esp_kconfiglib.core.KconfigError: error: expected endmenu at end of D:/Ziad/sarcoos_project/code/esp32_control/main/Kconfig.projbuild
+CMake Error at C:/esp/v6.0.1/esp-idf/tools/cmake/kconfig.cmake:243 (message):
+  Failed to run kconfgen
+  (C:/Espressif/tools/python/v6.0.1/venv/Scripts/python.exe;-m;kconfgen;--list-separator=semicolon;--kconfig;C:/esp/v6.0.1/esp-idf/Kconfig;--sdkconfig-rename;C:/esp/v6.0.1/esp-idf/sdkconfig.rename;--config;D:/Ziad/sarcoos_project/code/esp32_control/sdkconfig;--env;IDF_MINIMAL_BUILD=n;--env-file;D:/Ziad/sarcoos_project/code/esp32_control/build/config.env).
+  Error 1
+Call Stack (most recent call first):
+  C:/esp/v6.0.1/esp-idf/tools/cmake/build.cmake:772 (__kconfig_generate_config)
+  C:/esp/v6.0.1/esp-idf/tools/cmake/project.cmake:773 (idf_build_process)
+  CMakeLists.txt:9 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

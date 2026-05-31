@@ -100,7 +100,16 @@ static std::string readDeviceId() {
     return std::string(buf);
 }
 
-// WiFi provisioning logic (AP → STA or cached STA)
+static std::string readNvsBroker() {
+    SARCUS::NVSHandle handle("wifi_config", NVS_READONLY);
+    std::string broker;
+    if (handle.isValid() && handle.getString("broker", broker) == ESP_OK && !broker.empty()) {
+        return broker;
+    }
+    return MQTT_BROKER_URI;
+}
+
+// WiFi provisioning logic (AP → AP+STA with web status)
 static bool connectWifi(SARCUS::WifiManager& wifi) {
     std::string nvs_ssid, nvs_pass;
 
@@ -111,41 +120,32 @@ static bool connectWifi(SARCUS::WifiManager& wifi) {
                   && !nvs_ssid.empty();
 
     if (!has_creds) {
-        // First boot or cleared credentials → AP provisioning
         ESP_LOGI(TAG, "No WiFi credentials → provisioning mode");
         ESP_LOGI(TAG, "Connect to: SARCUS_SETUP  Password: sarcus2024");
 
         wifi.startAP();
         SARCUS::WebServer::getInstance().start();
 
-        // Wait for user to submit credentials via web portal
-        std::string pending_ssid, pending_pass;
-        while (!SARCUS::WebServer::getInstance().getPendingWifiCredentials(pending_ssid, pending_pass)) {
-            // Keep checking for pending credentials
-            if (wifi.waitForIP(pdMS_TO_TICKS(500))) {
-                // IP is ready but no credentials yet — user is connected to AP
-                // Continue waiting for form submission
-            }
+        std::string pending_ssid, pending_pass, pending_broker;
+        while (!SARCUS::WebServer::getInstance().getPendingWifiCredentials(
+                   pending_ssid, pending_pass, pending_broker)) {
+            vTaskDelay(pdMS_TO_TICKS(200));
         }
-        
-        // User submitted credentials — apply them
-        SARCUS::WebServer::getInstance().stop();
+
         ESP_LOGI(TAG, "Provisioning complete — applying STA credentials");
-        
-        // Switch to STA mode with submitted credentials
-        wifi.startSTA(pending_ssid, pending_pass);
-        if (wifi.waitForIP(pdMS_TO_TICKS(15000))) {
+
+        // Start AP+STA dual mode — WebServer stays up on AP
+        wifi.startSTA_keepAP(pending_ssid, pending_pass);
+        if (wifi.waitForIP(pdMS_TO_TICKS(30000))) {
+            std::string ip = wifi.getIP();
+            ESP_LOGI(TAG, "Connected! IP: %s", ip.c_str());
+            SARCUS::WebServer::setStaConnectionInfo(ip);
             return true;
         }
-        
-        // STA connection failed — fallback to AP again
-        ESP_LOGW(TAG, "STA connect failed — AP fallback mode");
+
+        // STA failed → fallback to AP-only
+        ESP_LOGW(TAG, "STA connect failed — AP fallback");
         wifi.startAP();
-        SARCUS::WebServer::getInstance().start();
-        while (!wifi.waitForIP(pdMS_TO_TICKS(1000))) {
-            ESP_LOGD(TAG, "...waiting for fallback IP");
-        }
-        SARCUS::WebServer::getInstance().stop();
         return false;
     }
 
@@ -154,18 +154,15 @@ static bool connectWifi(SARCUS::WifiManager& wifi) {
     wifi.startSTA(nvs_ssid, nvs_pass);
 
     if (wifi.waitForIP(pdMS_TO_TICKS(15000))) {
+        std::string ip = wifi.getIP();
+        ESP_LOGI(TAG, "Connected! IP: %s", ip.c_str());
         return true;
     }
 
-    // Connection failed → AP fallback
-    ESP_LOGW(TAG, "STA connect failed — AP fallback mode");
+    ESP_LOGW(TAG, "STA connect failed — AP fallback");
     wifi.startAP();
     SARCUS::WebServer::getInstance().start();
-
-    while (!wifi.waitForIP(pdMS_TO_TICKS(1000))) {
-        ESP_LOGD(TAG, "...waiting for fallback IP");
-    }
-    SARCUS::WebServer::getInstance().stop();
+    wifi.waitForIP(pdMS_TO_TICKS(1000));
     return false;
 }
 
@@ -267,7 +264,11 @@ extern "C" void app_main(void) {
         motor.triggerEStop();
     });
 
-    mqtt.start(MQTT_BROKER_URI);
+    {
+        std::string broker_uri = readNvsBroker();
+        ESP_LOGI(TAG, "MQTT broker: %s", broker_uri.c_str());
+        mqtt.start(broker_uri.c_str());
+    }
     ESP_LOGI(TAG, "[4/8] MQTT connected ✓");
 
     // ══════════════════════════════════════════════════════════════════════════

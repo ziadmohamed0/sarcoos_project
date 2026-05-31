@@ -3,16 +3,23 @@ idf_component_register(
         "src/hal/dc_motor/dc_motor.cpp"
         "src/hal/bts7960/bts7960.cpp"
         "src/hal/bts7960/bts7960_position.cpp"
+        "src/hal/bts7960/bts7960_pot_position.cpp"
         "src/hal/servo/servo.cpp"
+        "src/hal/stepper/stepper.cpp"
         "src/mcal/wifi/WiFi.cpp"
         "src/mcal/mqtt/MQTT.cpp"
+        "src/mcal/nvs/NVS.cpp"
     INCLUDE_DIRS 
         "inc"
         "inc/hal/dc_motor"
         "inc/hal/bts7960"
+        "inc/hal/pot"
+        "inc/hal/pid"
         "inc/hal/servo"
+        "inc/hal/stepper"
         "inc/mcal/wifi"
         "inc/mcal/mqtt"
+        "inc/mcal/nvs"
     REQUIRES
         driver    
         freertos

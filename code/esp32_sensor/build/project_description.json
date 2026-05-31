@@ -1,7 +1,7 @@
 {
     "version":            "1.3",
     "project_name":       "SARCUS_Robot",
-    "project_version":    "7ac4f0f-dirty",
+    "project_version":    "7d0aaaf-dirty",
     "project_path":       "D:/Ziad/sarcoos_project/code/esp32_sensor",
     "idf_path":           "C:/esp/v6.0.1/esp-idf",
     "build_dir":          "D:/Ziad/sarcoos_project/code/esp32_sensor/build",

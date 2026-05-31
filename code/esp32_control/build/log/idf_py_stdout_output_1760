@@ -1,0 +1,2001 @@
+Command: C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe C:\esp\v6.0.1\esp-idf\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\Ziad\sarcoos_project\code\esp32_control\build\esp32_driver.elf D:\Ziad\sarcoos_project\code\esp32_control\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v6.0.1\venv\Scripts\python.exe' 'C:\esp\v6.0.1\esp-idf\tools\idf.py' '-p' 'COM3'
+et�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0040,len:6272
+load:0x40078000,len:15848
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v6.0.1 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time May 31 2026 23:38:37[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00200000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=24034h (147508) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0003405c vaddr=3ffb0000 size=04a5ch ( 19036) load[0m
+[0;32mI (146) esp_image: segment 2: paddr=00038ac0 vaddr=40080000 size=07558h ( 30040) load[0m
+[0;32mI (159) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=aef64h (716644) map[0m
+[0;32mI (414) esp_image: segment 4: paddr=000eef8c vaddr=40087558 size=0f95ch ( 63836) load[0m
+[0;32mI (441) esp_image: segment 5: paddr=000fe8f0 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (477) app_init: Project name:     esp32_driver[0m
+[0;32mI (481) app_init: App version:      7d0aaaf-dirty[0m
+[0;32mI (486) app_init: Compile time:     Jun  1 2026 00:25:30[0m
+[0;32mI (491) app_init: ELF file SHA256:  a8f582f53...[0m
+[0;32mI (495) app_init: ESP-IDF:          v6.0.1[0m
+[0;32mI (499) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (503) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (507) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (511) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB9640 len 000269C0 (154 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (533) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 40096EB4 len 0000914C (36 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (551) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (561) main_task: Started on CPU0[0m
+[0;32mI (571) main_task: Calling app_main()[0m
+[0;32mI (601) MAIN: Using saved WiFi: Mohamed Fathy[0m
+[0;32mI (611) MAIN: MQTT broker: mqtt://192.168.100.110:1883[0m
+[0;32mI (611) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO19, LPWM: GPIO18[0m
+[0;32mI (611) BTS7960_DRIVER: BTS7960 initialized on RPWM: GPIO17, LPWM: GPIO16[0m
+[0;32mI (621) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (621) BTS7960_DRIVER: Motor driver enabled[0m
+[0;32mI (621) SERVO_DRIVER: Standard 180° Servo configured on GPIO13[0m
+[0;32mI (651) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (651) SERVO_DRIVER: Standard 180° Servo configured on GPIO14[0m
+[0;32mI (691) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (691) SERVO_DRIVER: Standard 180° Servo configured on GPIO27[0m
+[0;32mI (711) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (711) SERVO_DRIVER: Standard 180° Servo configured on GPIO23[0m
+[0;32mI (751) SERVO_DRIVER: Servo angle set to 90.0 degrees[0m
+[0;32mI (801) MAIN: IMU initialized (SDA=GPIO0 SCL=GPIO12)[0m
+[0;32mI (811) GPS: GPS UART3 initialized, RX=GPIO3, baud=9600[0m
+[0;32mI (811) MAIN: GPS initialized (UART3 RX=GPIO3 baud=9600)[0m
+[0;32mI (811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (821) MQTT_CLIENT: MQTT Client created[0m
+[0;32mI (821) WIFI_MANAGER: WiFi Manager initialized[0m
+[0;32mI (831) wifi:wifi driver task: 3ffc5234, prio:23, stack:6656, core=0[0m
+[0;32mI (851) wifi:wifi firmware version: b37c951[0m
+[0;32mI (851) wifi:wifi certification version: v7.0[0m
+[0;32mI (851) wifi:config NVS flash: enabled[0m
+[0;32mI (851) wifi:config nano formatting: disabled[0m
+[0;32mI (851) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (861) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (861) wifi:Init management short buffer num: 32[0m
+[0;32mI (871) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (871) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (871) wifi:Init static rx buffer num: 10[0m
+[0;32mI (881) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (881) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (891) wifi_init: rx ba win: 6[0m
+[0;32mI (891) wifi_init: accept mbox: 6[0m
+[0;32mI (891) wifi_init: tcpip mbox: 32[0m
+[0;32mI (901) wifi_init: udp mbox: 6[0m
+[0;32mI (901) wifi_init: tcp mbox: 6[0m
+[0;32mI (901) wifi_init: tcp tx win: 5760[0m
+[0;32mI (911) wifi_init: tcp rx win: 5760[0m
+[0;32mI (911) wifi_init: tcp mss: 1440[0m
+[0;32mI (911) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (921) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (921) WIFI_MANAGER: WiFi Station initialized with SSID: Mohamed Fathy[0m
+[0;32mI (931) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (1011) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (1011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1041) wifi:mode : sta (44:1d:64:f5:4d:f0)[0m
+[0;32mI (1041) wifi:enable tsf[0m
+[0;32mI (1051) WIFI_MANAGER: WiFi started, attempting connection...[0m
+[0;32mI (1051) WIFI_MANAGER: Connecting to WiFi...[0m
+[0;32mI (1051) wifi:new:<2,0>, old:<1,0>, ap:<255,255>, sta:<2,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1061) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (1061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1061) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (1071) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (1091) wifi:<ba-add>idx:0 (ifx:0, dc:99:14:53:c3:04), tid:0, ssn:0, winSize:64[0m
+[0;32mI (1111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1111) wifi:connected with Mohamed Fathy, aid = 10, channel 2, BW20, bssid = dc:99:14:53:c3:04[0m
+[0;32mI (1111) wifi:security: WPA2-PSK, phy: bgn, rssi: -53, cipher(pairwise:0x3, group:0x1), pmf:0[0m
+[0;32mI (1131) wifi:pm start, type: 1[0m
+
+[0;32mI (1131) wifi:dp: 1, bi: 100352, li: 3, scale listen interval from 307200 us to 301056 us[0m
+[0;32mI (1141) wifi:AP's beacon interval = 100352 us, DTIM period = 1[0m
+[0;32mI (1191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (1991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (2991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (3991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4261) esp_netif_handlers: sta ip: 192.168.100.136, mask: 255.255.255.0, gw: 192.168.100.1[0m
+[0;32mI (4261) WIFI_MANAGER: Connected! IP Address: 192.168.100.136[0m
+[0;32mI (4261) MAIN: WiFi connected, IP=192.168.100.136[0m
+[0;32mI (4291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4551) MQTT_CLIENT: MQTT Client initialized with broker: mqtt://192.168.100.110:1883[0m
+[0;32mI (4561) MQTT_CLIENT: Connecting to MQTT broker...[0m
+[0;32mI (4591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4881) MQTT_CLIENT: Connected to MQTT broker[0m
+[0;32mI (4881) MAIN: MQTT connected[0m
+[0;32mI (4881) MQTT_CLIENT: Subscribed to 'sarcus/robot/movement' (msg_id=4416)[0m
+[0;32mI (4891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4891) MQTT_CLIENT: Subscribed to 'sarcus/robot/estop' (msg_id=47097)[0m
+[0;32mI (4891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4901) MQTT_CLIENT: Subscribed to 'sarcus/robot/joints/shoulder' (msg_id=15407)[0m
+[0;32mI (4911) MQTT_CLIENT: Subscribed to 'sarcus/robot/joints/elbow' (msg_id=62589)[0m
+[0;32mI (4921) MQTT_CLIENT: Subscribed to 'sarcus/robot/joints/wrist' (msg_id=39847)[0m
+[0;32mI (4931) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (4931) MQTT_CLIENT: Subscription successful (msg_id=4416)[0m
+[0;32mI (4931) MQTT_CLIENT: Subscription successful (msg_id=47097)[0m
+[0;32mI (4941) MQTT_CLIENT: Subscription successful (msg_id=15407)[0m
+[0;32mI (4941) MQTT_CLIENT: Subscription successful (msg_id=62589)[0m
+[0;32mI (4951) MQTT_CLIENT: Subscription successful (msg_id=39847)[0m
+[0;32mI (4961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (4961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5021) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":53,"servo":0,"side":1}[0m
+[0;32mI (5021) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5021) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":53,"servo":0,"side":1}[0m
+[0;32mI (5031) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5061) MAIN: ESP32 ready — smoothed motion enabled[0m
+[0;32mI (5111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5111) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":37,"servo":0,"side":1}[0m
+[0;32mI (5111) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5111) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":37,"servo":0,"side":1}[0m
+[0;32mI (5131) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5141) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":19,"servo":0,"side":1}[0m
+[0;32mI (5141) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5141) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":19,"servo":0,"side":1}[0m
+[0;32mI (5161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5161) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-13,"servo":0,"side":1}[0m
+[0;32mI (5171) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5171) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-13,"servo":0,"side":1}[0m
+[0;32mI (5191) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-31,"servo":0,"side":1}[0m
+[0;32mI (5191) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5191) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-31,"servo":0,"side":1}[0m
+[0;32mI (5211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5211) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-33,"servo":0,"side":1}[0m
+[0;32mI (5221) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5221) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-33,"servo":0,"side":1}[0m
+[0;32mI (5241) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5241) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5351) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-42,"servo":0,"side":1}[0m
+[0;32mI (5351) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5351) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-42,"servo":0,"side":1}[0m
+[0;32mI (5361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5371) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5391) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-130,"servo":0,"side":1}[0m
+[0;32mI (5391) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5391) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-130,"servo":0,"side":1}[0m
+[0;32mI (5411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5411) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-178,"servo":0,"side":1}[0m
+[0;32mI (5421) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5421) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-178,"servo":0,"side":1}[0m
+[0;32mI (5441) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-180,"servo":0,"side":1}[0m
+[0;32mI (5441) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5441) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-180,"servo":0,"side":1}[0m
+[0;32mI (5461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5461) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-180,"servo":0,"side":1}[0m
+[0;32mI (5471) MAIN: Shoulder side=1 angle=0[0m
+[0;32mI (5471) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-180,"servo":0,"side":1}[0m
+[0;32mI (5491) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5491) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5861) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5861) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5911) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5911) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (5961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (5971) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6741) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":151,"side":0}[0m
+[0;32mI (6741) MAIN: Elbow side=0 angle=151[0m
+[0;32mI (6741) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":151,"side":0}[0m
+[0;32mI (6761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6831) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":133,"side":0}[0m
+[0;32mI (6831) MAIN: Elbow side=0 angle=133[0m
+[0;32mI (6831) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":133,"side":0}[0m
+[0;32mI (6841) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":110,"side":0}[0m
+[0;32mI (6841) MAIN: Elbow side=0 angle=110[0m
+[0;32mI (6841) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":110,"side":0}[0m
+[0;32mI (6861) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6861) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (6881) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":35,"side":0}[0m
+[0;32mI (6881) MAIN: Elbow side=0 angle=35[0m
+[0;32mI (6881) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":35,"side":0}[0m
+[0;32mI (6891) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":0,"side":0}[0m
+[0;32mI (6891) MAIN: Elbow side=0 angle=0[0m
+[0;32mI (6901) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":0,"side":0}[0m
+[0;32mI (6911) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6911) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6961) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (6961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7011) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7061) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7111) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7171) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7261) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7371) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7471) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7511) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7561) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7611) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7661) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7761) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7811) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7851) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":109,"side":1}[0m
+[0;32mI (7851) MAIN: Elbow side=1 angle=109[0m
+[0;32mI (7851) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":109,"side":1}[0m
+[0;32mI (7861) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7871) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7871) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":89,"side":1}[0m
+[0;32mI (7871) MAIN: Elbow side=1 angle=89[0m
+[0;32mI (7881) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":89,"side":1}[0m
+[0;32mI (7891) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":42,"side":1}[0m
+[0;32mI (7891) MAIN: Elbow side=1 angle=42[0m
+[0;32mI (7901) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":42,"side":1}[0m
+[0;32mI (7911) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":22,"side":1}[0m
+[0;32mI (7911) MAIN: Elbow side=1 angle=22[0m
+[0;32mI (7911) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":22,"side":1}[0m
+[0;32mI (7921) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7921) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7931) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":0,"side":1}[0m
+[0;32mI (7941) MAIN: Elbow side=1 angle=0[0m
+[0;32mI (7941) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":0,"side":1}[0m
+[0;32mI (7951) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (7981) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (7981) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8031) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8031) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8081) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8081) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8131) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8131) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8181) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8181) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8231) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8231) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8281) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8281) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8331) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8331) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8381) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8381) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8431) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8431) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8481) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8481) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8531) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8531) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8581) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8581) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8631) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8631) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8681) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8681) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8731) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8731) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8781) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8781) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8831) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8831) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8881) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8881) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8931) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8931) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8971) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (8981) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (8981) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9031) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9031) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9081) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9081) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9131) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9131) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9181) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9181) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9231) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9231) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9281) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9281) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9331) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9331) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9381) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9381) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9431) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9431) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (9481) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9481) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (9481) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"steps":1000,"speed":90,"dir":1,"side":0}[0m
+[0;32mI (12831) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12841) MAIN: Wrist side=0 steps=-1000 speed=90[0m
+[0;32mI (12841) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"steps":1000,"speed":90,"dir":1,"side":0}[0m
+[0;32mI (12861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12871) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12871) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12881) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12881) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12891) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12901) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12921) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12921) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12931) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12941) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12951) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12951) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12971) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12971) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (12991) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (12991) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13001) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13021) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13021) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13031) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13041) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13051) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13071) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13071) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13081) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13091) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13101) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (13941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (13991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14221) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":1,"side":0}[0m
+[0;32mI (14231) MAIN: Elbow side=0 angle=1[0m
+[0;32mI (14231) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":1,"side":0}[0m
+[0;32mI (14241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14301) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":2,"side":0}[0m
+[0;32mI (14301) MAIN: Elbow side=0 angle=2[0m
+[0;32mI (14301) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":2,"side":0}[0m
+[0;32mI (14311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (14941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (14991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (15941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (15991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (16941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (16991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (17941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (17991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18191) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18241) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18291) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18341) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18391) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18441) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18491) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18541) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18591) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18691) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18741) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (18991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (18991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19131) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"steps":320,"speed":10,"dir":1,"side":0}[0m
+[0;32mI (19131) MAIN: Wrist side=0 steps=-320 speed=10[0m
+[0;32mI (19131) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"steps":320,"speed":10,"dir":1,"side":0}[0m
+[0;32mI (19141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19141) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19161) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19201) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19201) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19221) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":318,"total":320}[0m
+[0;33mW (19221) MAIN: Invalid wrist command[0m
+[0;32mI (19231) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":318,"total":320}[0m
+[0;32mI (19241) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19251) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19251) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19271) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":314,"total":320}[0m
+[0;33mW (19271) MAIN: Invalid wrist command[0m
+[0;32mI (19271) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":314,"total":320}[0m
+[0;32mI (19291) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":313,"total":320}[0m
+[0;33mW (19291) MAIN: Invalid wrist command[0m
+[0;32mI (19291) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":313,"total":320}[0m
+[0;32mI (19301) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19311) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19311) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19321) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19331) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19361) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19361) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19391) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":310,"total":320}[0m
+[0;33mW (19391) MAIN: Invalid wrist command[0m
+[0;32mI (19391) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":310,"total":320}[0m
+[0;32mI (19411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19411) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19421) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":308,"total":320}[0m
+[0;33mW (19421) MAIN: Invalid wrist command[0m
+[0;32mI (19431) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":308,"total":320}[0m
+[0;32mI (19441) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19451) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":306,"total":320}[0m
+[0;33mW (19451) MAIN: Invalid wrist command[0m
+[0;32mI (19451) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":306,"total":320}[0m
+[0;32mI (19461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19461) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19481) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19481) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19511) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19521) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19521) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19541) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":302,"total":320}[0m
+[0;33mW (19541) MAIN: Invalid wrist command[0m
+[0;32mI (19541) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":302,"total":320}[0m
+[0;32mI (19571) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19571) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19571) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":301,"total":320}[0m
+[0;33mW (19571) MAIN: Invalid wrist command[0m
+[0;32mI (19581) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":301,"total":320}[0m
+[0;32mI (19591) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19591) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19611) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19621) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19621) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19661) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19671) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19671) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19721) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19721) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19721) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":297,"total":320}[0m
+[0;33mW (19721) MAIN: Invalid wrist command[0m
+[0;32mI (19731) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":297,"total":320}[0m
+[0;32mI (19741) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19741) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":296,"total":320}[0m
+[0;33mW (19751) MAIN: Invalid wrist command[0m
+[0;32mI (19751) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":296,"total":320}[0m
+[0;32mI (19761) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":293,"total":320}[0m
+[0;33mW (19771) MAIN: Invalid wrist command[0m
+[0;32mI (19771) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":293,"total":320}[0m
+[0;32mI (19781) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19791) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19791) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19801) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":287,"total":320}[0m
+[0;33mW (19811) MAIN: Invalid wrist command[0m
+[0;32mI (19811) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":287,"total":320}[0m
+[0;32mI (19821) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19831) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19831) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19841) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19841) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19861) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (19891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19891) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (19921) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":285,"total":320}[0m
+[0;33mW (19921) MAIN: Invalid wrist command[0m
+[0;32mI (19931) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":285,"total":320}[0m
+[0;32mI (19941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19941) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19941) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":284,"total":320}[0m
+[0;33mW (19951) MAIN: Invalid wrist command[0m
+[0;32mI (19951) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":284,"total":320}[0m
+[0;32mI (19971) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":283,"total":320}[0m
+[0;33mW (19971) MAIN: Invalid wrist command[0m
+[0;32mI (19971) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":283,"total":320}[0m
+[0;32mI (19991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19991) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (19991) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20001) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":280,"total":320}[0m
+[0;33mW (20011) MAIN: Invalid wrist command[0m
+[0;32mI (20011) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":280,"total":320}[0m
+[0;32mI (20031) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20031) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20031) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20041) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20051) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20061) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20091) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20121) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":275,"total":320}[0m
+[0;33mW (20121) MAIN: Invalid wrist command[0m
+[0;32mI (20121) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":275,"total":320}[0m
+[0;32mI (20131) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":274,"total":320}[0m
+[0;33mW (20141) MAIN: Invalid wrist command[0m
+[0;32mI (20141) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":274,"total":320}[0m
+[0;32mI (20151) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20161) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20161) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":273,"total":320}[0m
+[0;33mW (20171) MAIN: Invalid wrist command[0m
+[0;32mI (20171) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":273,"total":320}[0m
+[0;32mI (20121) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20191) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20201) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":267,"total":320}[0m
+[0;33mW (20201) MAIN: Invalid wrist command[0m
+[0;32mI (20211) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":267,"total":320}[0m
+[0;32mI (20211) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20221) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20231) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20231) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20241) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20241) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20261) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20271) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20271) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20281) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":265,"total":320}[0m
+[0;33mW (20291) MAIN: Invalid wrist command[0m
+[0;32mI (20291) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":265,"total":320}[0m
+[0;32mI (20301) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":264,"total":320}[0m
+[0;33mW (20311) MAIN: Invalid wrist command[0m
+[0;32mI (20311) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":264,"total":320}[0m
+[0;32mI (20321) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20321) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20331) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":263,"total":320}[0m
+[0;33mW (20331) MAIN: Invalid wrist command[0m
+[0;32mI (20341) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":263,"total":320}[0m
+[0;32mI (20351) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20361) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20371) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20371) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20371) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20421) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20421) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20421) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":259,"total":320}[0m
+[0;33mW (20421) MAIN: Invalid wrist command[0m
+[0;32mI (20431) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":259,"total":320}[0m
+[0;32mI (20441) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":258,"total":320}[0m
+[0;33mW (20441) MAIN: Invalid wrist command[0m
+[0;32mI (20451) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":258,"total":320}[0m
+[0;32mI (20461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20461) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20471) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20471) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20481) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":253,"total":320}[0m
+[0;33mW (20481) MAIN: Invalid wrist command[0m
+[0;32mI (20491) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":253,"total":320}[0m
+[0;32mI (20501) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20511) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20521) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20521) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20521) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20571) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":251,"total":320}[0m
+[0;33mW (20571) MAIN: Invalid wrist command[0m
+[0;32mI (20571) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":251,"total":320}[0m
+[0;32mI (20571) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20581) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20591) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":251,"total":320}[0m
+[0;33mW (20591) MAIN: Invalid wrist command[0m
+[0;32mI (20601) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":251,"total":320}[0m
+[0;32mI (20611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20611) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20621) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":246,"total":320}[0m
+[0;33mW (20631) MAIN: Invalid wrist command[0m
+[0;32mI (20631) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":246,"total":320}[0m
+[0;32mI (20641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20641) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20651) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20651) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20671) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20701) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (20701) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (20701) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (20701) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20711) BTS7960_DRIVER: Motor stopped[0m
+[0;32mI (20721) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":244,"total":320}[0m
+[0;33mW (20721) MAIN: Invalid wrist command[0m
+[0;32mI (20721) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":244,"total":320}[0m
+[0;32mI (20731) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":243,"total":320}[0m
+[0;33mW (20741) MAIN: Invalid wrist command[0m
+[0;32mI (20741) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":243,"total":320}[0m
+[0;32mI (20761) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (20761) BTS7960_DRIVER: Forward at 6.0% speed[0m
+[0;32mI (20771) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20771) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20781) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20781) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20811) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (20811) BTS7960_DRIVER: Forward at 12.0% speed[0m
+[0;32mI (20811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20811) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20831) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":238,"total":320}[0m
+[0;33mW (20841) MAIN: Invalid wrist command[0m
+[0;32mI (20841) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":238,"total":320}[0m
+[0;32mI (20861) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (20861) BTS7960_DRIVER: Forward at 18.0% speed[0m
+[0;32mI (20861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20861) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20881) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":237,"total":320}[0m
+[0;33mW (20881) MAIN: Invalid wrist command[0m
+[0;32mI (20881) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":237,"total":320}[0m
+[0;32mI (20891) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":236,"total":320}[0m
+[0;33mW (20901) MAIN: Invalid wrist command[0m
+[0;32mI (20901) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":236,"total":320}[0m
+[0;32mI (20911) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (20921) BTS7960_DRIVER: Forward at 24.0% speed[0m
+[0;32mI (20921) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":233,"total":320}[0m
+[0;33mW (20931) MAIN: Invalid wrist command[0m
+[0;32mI (20931) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":233,"total":320}[0m
+[0;32mI (20951) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20951) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (20961) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (20971) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (20971) BTS7960_DRIVER: Forward at 30.0% speed[0m
+[0;32mI (21011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21011) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21031) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (21031) BTS7960_DRIVER: Forward at 36.0% speed[0m
+[0;32mI (21061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21061) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21081) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (21081) BTS7960_DRIVER: Forward at 42.0% speed[0m
+[0;32mI (21111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21121) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21121) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":229,"total":320}[0m
+[0;33mW (21121) MAIN: Invalid wrist command[0m
+[0;32mI (21131) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":229,"total":320}[0m
+[0;32mI (21131) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (21141) BTS7960_DRIVER: Forward at 48.0% speed[0m
+[0;32mI (21151) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":228,"total":320}[0m
+[0;33mW (21151) MAIN: Invalid wrist command[0m
+[0;32mI (21161) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":228,"total":320}[0m
+[0;32mI (21171) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":226,"total":320}[0m
+[0;33mW (21171) MAIN: Invalid wrist command[0m
+[0;32mI (21181) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":226,"total":320}[0m
+[0;32mI (21191) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (21191) BTS7960_DRIVER: Forward at 54.0% speed[0m
+[0;32mI (21201) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":223,"total":320}[0m
+[0;33mW (21211) MAIN: Invalid wrist command[0m
+[0;32mI (21211) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":223,"total":320}[0m
+[0;32mI (21221) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21231) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":221,"total":320}[0m
+[0;33mW (21231) MAIN: Invalid wrist command[0m
+[0;32mI (21241) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":221,"total":320}[0m
+[0;32mI (21251) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (21251) BTS7960_DRIVER: Forward at 60.0% speed[0m
+[0;32mI (21261) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21261) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":214,"total":320}[0m
+[0;33mW (21271) MAIN: Invalid wrist command[0m
+[0;32mI (21271) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":214,"total":320}[0m
+[0;32mI (21291) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21291) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21301) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (21301) BTS7960_DRIVER: Forward at 66.0% speed[0m
+[0;32mI (21311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21311) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21321) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21321) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21351) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21351) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21351) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":212,"total":320}[0m
+[0;33mW (21351) MAIN: Invalid wrist command[0m
+[0;32mI (21361) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":212,"total":320}[0m
+[0;32mI (21371) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":211,"total":320}[0m
+[0;33mW (21371) MAIN: Invalid wrist command[0m
+[0;32mI (21381) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":211,"total":320}[0m
+[0;32mI (21391) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":210,"total":320}[0m
+[0;33mW (21401) MAIN: Invalid wrist command[0m
+[0;32mI (21401) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":210,"total":320}[0m
+[0;32mI (21411) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21411) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21421) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21431) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (21431) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (21431) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (21451) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21451) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21451) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21471) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21471) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21481) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21501) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":205,"total":320}[0m
+[0;33mW (21501) MAIN: Invalid wrist command[0m
+[0;32mI (21501) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":205,"total":320}[0m
+[0;32mI (21521) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21521) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21521) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21531) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":204,"total":320}[0m
+[0;33mW (21531) MAIN: Invalid wrist command[0m
+[0;32mI (21541) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":204,"total":320}[0m
+[0;32mI (21551) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":203,"total":320}[0m
+[0;33mW (21561) MAIN: Invalid wrist command[0m
+[0;32mI (21561) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":203,"total":320}[0m
+[0;32mI (21571) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21571) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21581) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (21581) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (21591) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (21601) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21601) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21611) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21621) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21621) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21661) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":196,"total":320}[0m
+[0;33mW (21661) MAIN: Invalid wrist command[0m
+[0;32mI (21661) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":196,"total":320}[0m
+[0;32mI (21681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21681) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21691) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":196,"total":320}[0m
+[0;33mW (21701) MAIN: Invalid wrist command[0m
+[0;32mI (21701) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":196,"total":320}[0m
+[0;32mI (21711) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":195,"total":320}[0m
+[0;33mW (21721) MAIN: Invalid wrist command[0m
+[0;32mI (21721) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":195,"total":320}[0m
+[0;32mI (21731) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21731) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21741) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (21751) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (21751) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (21761) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":192,"total":320}[0m
+[0;33mW (21771) MAIN: Invalid wrist command[0m
+[0;32mI (21771) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":192,"total":320}[0m
+[0;32mI (21781) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21791) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21791) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21791) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21801) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21821) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21821) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21821) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21841) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21841) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21861) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21891) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21891) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21921) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (21921) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (21921) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (21921) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21941) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21941) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (21961) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (21981) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":186,"total":320}[0m
+[0;33mW (21981) MAIN: Invalid wrist command[0m
+[0;32mI (21981) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":186,"total":320}[0m
+[0;32mI (21991) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (21991) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22001) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":186,"total":320}[0m
+[0;33mW (22011) MAIN: Invalid wrist command[0m
+[0;32mI (22011) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":186,"total":320}[0m
+[0;32mI (22021) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":185,"total":320}[0m
+[0;33mW (22031) MAIN: Invalid wrist command[0m
+[0;32mI (22031) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":185,"total":320}[0m
+[0;32mI (22041) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":183,"total":320}[0m
+[0;33mW (22051) MAIN: Invalid wrist command[0m
+[0;32mI (22051) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":183,"total":320}[0m
+[0;32mI (22061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22071) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22071) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":181,"total":320}[0m
+[0;33mW (22081) MAIN: Invalid wrist command[0m
+[0;32mI (22081) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":181,"total":320}[0m
+[0;32mI (22091) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (22101) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (22101) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (22121) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22121) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22121) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":178,"total":320}[0m
+[0;33mW (22131) MAIN: Invalid wrist command[0m
+[0;32mI (22131) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":178,"total":320}[0m
+[0;32mI (22141) MQTT_CLIENT: Message received on 'sarcus/robot/movement': {"dir":1,"speed":70}[0m
+[0;32mI (22151) MAIN: Movement dir=1 speed=70[0m
+[0;32mI (22151) MAIN: MQTT recv sarcus/robot/movement -> {"dir":1,"speed":70}[0m
+[0;32mI (22171) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22171) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22171) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22171) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22181) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22191) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22191) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22201) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22211) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22221) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22221) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22231) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22231) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22261) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22271) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22271) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22311) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22321) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22321) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22321) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":168,"total":320}[0m
+[0;33mW (22331) MAIN: Invalid wrist command[0m
+[0;32mI (22331) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":168,"total":320}[0m
+[0;32mI (22361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22361) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22371) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22371) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22381) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":167,"total":320}[0m
+[0;33mW (22381) MAIN: Invalid wrist command[0m
+[0;32mI (22391) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":167,"total":320}[0m
+[0;32mI (22401) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":166,"total":320}[0m
+[0;33mW (22411) MAIN: Invalid wrist command[0m
+[0;32mI (22411) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":166,"total":320}[0m
+[0;32mI (22421) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":166,"total":320}[0m
+[0;33mW (22431) MAIN: Invalid wrist command[0m
+[0;32mI (22431) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":166,"total":320}[0m
+[0;32mI (22441) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22441) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22451) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":165,"total":320}[0m
+[0;33mW (22461) MAIN: Invalid wrist command[0m
+[0;32mI (22461) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":165,"total":320}[0m
+[0;32mI (22471) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":163,"total":320}[0m
+[0;33mW (22481) MAIN: Invalid wrist command[0m
+[0;32mI (22481) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":163,"total":320}[0m
+[0;32mI (22491) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":161,"total":320}[0m
+[0;33mW (22501) MAIN: Invalid wrist command[0m
+[0;32mI (22501) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":161,"total":320}[0m
+[0;32mI (22511) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22521) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22521) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":158,"total":320}[0m
+[0;33mW (22531) MAIN: Invalid wrist command[0m
+[0;32mI (22531) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":158,"total":320}[0m
+[0;32mI (22551) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22551) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22561) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22571) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22571) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22581) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22581) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22591) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22601) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22611) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":149,"total":320}[0m
+[0;33mW (22611) MAIN: Invalid wrist command[0m
+[0;32mI (22611) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":149,"total":320}[0m
+[0;32mI (22621) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22631) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":148,"total":320}[0m
+[0;33mW (22641) MAIN: Invalid wrist command[0m
+[0;32mI (22641) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":148,"total":320}[0m
+[0;32mI (22661) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":147,"total":320}[0m
+[0;33mW (22661) MAIN: Invalid wrist command[0m
+[0;32mI (22661) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":147,"total":320}[0m
+[0;32mI (22681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22691) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22691) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":147,"total":320}[0m
+[0;33mW (22701) MAIN: Invalid wrist command[0m
+[0;32mI (22701) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":147,"total":320}[0m
+[0;32mI (22711) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22721) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":141,"total":320}[0m
+[0;33mW (22721) MAIN: Invalid wrist command[0m
+[0;32mI (22731) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":141,"total":320}[0m
+[0;32mI (22741) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22741) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22751) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22751) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22771) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22771) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22781) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22801) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22801) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22811) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22841) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":139,"total":320}[0m
+[0;33mW (22841) MAIN: Invalid wrist command[0m
+[0;32mI (22841) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":139,"total":320}[0m
+[0;32mI (22851) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22851) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22871) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":139,"total":320}[0m
+[0;33mW (22871) MAIN: Invalid wrist command[0m
+[0;32mI (22881) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":139,"total":320}[0m
+[0;32mI (22891) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":138,"total":320}[0m
+[0;33mW (22901) MAIN: Invalid wrist command[0m
+[0;32mI (22901) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":138,"total":320}[0m
+[0;32mI (22911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22921) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":136,"total":320}[0m
+[0;33mW (22931) MAIN: Invalid wrist command[0m
+[0;32mI (22931) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":136,"total":320}[0m
+[0;32mI (22941) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22951) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":130,"total":320}[0m
+[0;33mW (22951) MAIN: Invalid wrist command[0m
+[0;32mI (22961) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":130,"total":320}[0m
+[0;32mI (22971) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22971) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (22981) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22981) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (22991) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (22991) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23011) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23021) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23021) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23061) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23071) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23071) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23111) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23121) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23121) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23131) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":128,"total":320}[0m
+[0;33mW (23131) MAIN: Invalid wrist command[0m
+[0;32mI (23131) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":128,"total":320}[0m
+[0;32mI (23161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23171) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23171) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23171) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":127,"total":320}[0m
+[0;33mW (23181) MAIN: Invalid wrist command[0m
+[0;32mI (23181) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":127,"total":320}[0m
+[0;32mI (23191) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":126,"total":320}[0m
+[0;33mW (23201) MAIN: Invalid wrist command[0m
+[0;32mI (23201) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":126,"total":320}[0m
+[0;32mI (23211) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":124,"total":320}[0m
+[0;33mW (23221) MAIN: Invalid wrist command[0m
+[0;32mI (23221) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":124,"total":320}[0m
+[0;32mI (23231) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23241) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23241) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":121,"total":320}[0m
+[0;33mW (23251) MAIN: Invalid wrist command[0m
+[0;32mI (23251) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":121,"total":320}[0m
+[0;32mI (23261) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":119,"total":320}[0m
+[0;33mW (23271) MAIN: Invalid wrist command[0m
+[0;32mI (23271) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":119,"total":320}[0m
+[0;32mI (23161) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23291) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23291) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23311) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23321) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23331) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23331) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23351) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23351) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23361) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":111,"total":320}[0m
+[0;33mW (23361) MAIN: Invalid wrist command[0m
+[0;32mI (23361) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":111,"total":320}[0m
+[0;32mI (23381) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":111,"total":320}[0m
+[0;33mW (23381) MAIN: Invalid wrist command[0m
+[0;32mI (23391) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":111,"total":320}[0m
+[0;32mI (23401) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23401) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23411) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":110,"total":320}[0m
+[0;33mW (23411) MAIN: Invalid wrist command[0m
+[0;32mI (23421) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":110,"total":320}[0m
+[0;32mI (23431) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23441) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23441) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23441) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23451) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23451) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23471) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23501) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":105,"total":320}[0m
+[0;33mW (23501) MAIN: Invalid wrist command[0m
+[0;32mI (23501) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":105,"total":320}[0m
+[0;32mI (23511) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23511) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23521) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23531) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23531) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":105,"total":320}[0m
+[0;33mW (23541) MAIN: Invalid wrist command[0m
+[0;32mI (23541) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":105,"total":320}[0m
+[0;32mI (23551) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":104,"total":320}[0m
+[0;33mW (23561) MAIN: Invalid wrist command[0m
+[0;32mI (23561) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":104,"total":320}[0m
+[0;32mI (23571) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23581) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23581) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":101,"total":320}[0m
+[0;33mW (23591) MAIN: Invalid wrist command[0m
+[0;32mI (23591) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":101,"total":320}[0m
+[0;32mI (23611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23611) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23621) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23621) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23671) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":96,"total":320}[0m
+[0;33mW (23671) MAIN: Invalid wrist command[0m
+[0;32mI (23681) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":96,"total":320}[0m
+[0;32mI (23691) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23691) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23691) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":96,"total":320}[0m
+[0;33mW (23701) MAIN: Invalid wrist command[0m
+[0;32mI (23711) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":96,"total":320}[0m
+[0;32mI (23721) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23731) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":91,"total":320}[0m
+[0;33mW (23731) MAIN: Invalid wrist command[0m
+[0;32mI (23731) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":91,"total":320}[0m
+[0;32mI (23741) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23751) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23761) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23771) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23771) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23801) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23801) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23811) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":89,"total":320}[0m
+[0;33mW (23811) MAIN: Invalid wrist command[0m
+[0;32mI (23811) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":89,"total":320}[0m
+[0;32mI (23831) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":88,"total":320}[0m
+[0;33mW (23831) MAIN: Invalid wrist command[0m
+[0;32mI (23831) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":88,"total":320}[0m
+[0;32mI (23851) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23851) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23861) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23871) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23871) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23901) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23901) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23911) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":84,"total":320}[0m
+[0;33mW (23911) MAIN: Invalid wrist command[0m
+[0;32mI (23911) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":84,"total":320}[0m
+[0;32mI (23931) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (23931) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (23951) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":83,"total":320}[0m
+[0;33mW (23951) MAIN: Invalid wrist command[0m
+[0;32mI (23951) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":83,"total":320}[0m
+[0;32mI (23951) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23961) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (23971) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":80,"total":320}[0m
+[0;33mW (23981) MAIN: Invalid wrist command[0m
+[0;32mI (23981) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":80,"total":320}[0m
+[0;32mI (23991) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24001) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24011) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24021) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24021) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24061) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":77,"total":320}[0m
+[0;33mW (24061) MAIN: Invalid wrist command[0m
+[0;32mI (24061) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":77,"total":320}[0m
+[0;32mI (24071) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24071) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24081) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":76,"total":320}[0m
+[0;33mW (24091) MAIN: Invalid wrist command[0m
+[0;32mI (24091) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":76,"total":320}[0m
+[0;32mI (24111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24111) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24121) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24121) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24131) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24131) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24161) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24171) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":71,"total":320}[0m
+[0;33mW (24171) MAIN: Invalid wrist command[0m
+[0;32mI (24181) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":71,"total":320}[0m
+[0;32mI (24191) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24191) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24201) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":71,"total":320}[0m
+[0;33mW (24201) MAIN: Invalid wrist command[0m
+[0;32mI (24211) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":71,"total":320}[0m
+[0;32mI (24221) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24241) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":69,"total":320}[0m
+[0;33mW (24241) MAIN: Invalid wrist command[0m
+[0;32mI (24241) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":69,"total":320}[0m
+[0;32mI (24251) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24251) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24261) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":65,"total":320}[0m
+[0;33mW (24271) MAIN: Invalid wrist command[0m
+[0;32mI (24271) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":65,"total":320}[0m
+[0;32mI (24281) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24291) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24291) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24311) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24351) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":62,"total":320}[0m
+[0;33mW (24351) MAIN: Invalid wrist command[0m
+[0;32mI (24351) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":62,"total":320}[0m
+[0;32mI (24361) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24371) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24381) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24381) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24391) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":61,"total":320}[0m
+[0;33mW (24391) MAIN: Invalid wrist command[0m
+[0;32mI (24401) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":61,"total":320}[0m
+[0;32mI (24411) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":58,"total":320}[0m
+[0;33mW (24411) MAIN: Invalid wrist command[0m
+[0;32mI (24421) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":58,"total":320}[0m
+[0;32mI (24421) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24431) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24441) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24441) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24461) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24481) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24481) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24511) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24531) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24531) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24531) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":55,"total":320}[0m
+[0;33mW (24531) MAIN: Invalid wrist command[0m
+[0;32mI (24541) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":55,"total":320}[0m
+[0;32mI (24561) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":54,"total":320}[0m
+[0;33mW (24561) MAIN: Invalid wrist command[0m
+[0;32mI (24561) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":54,"total":320}[0m
+[0;32mI (24581) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24581) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24581) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":51,"total":320}[0m
+[0;33mW (24591) MAIN: Invalid wrist command[0m
+[0;32mI (24591) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":51,"total":320}[0m
+[0;32mI (24611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24611) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24621) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24631) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24631) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24671) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":46,"total":320}[0m
+[0;33mW (24671) MAIN: Invalid wrist command[0m
+[0;32mI (24671) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":46,"total":320}[0m
+[0;32mI (24681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24681) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24691) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":46,"total":320}[0m
+[0;33mW (24701) MAIN: Invalid wrist command[0m
+[0;32mI (24701) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":46,"total":320}[0m
+[0;32mI (24711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24721) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24731) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24741) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24741) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24741) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":41,"total":320}[0m
+[0;33mW (24741) MAIN: Invalid wrist command[0m
+[0;32mI (24751) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":41,"total":320}[0m
+[0;32mI (24761) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":40,"total":320}[0m
+[0;33mW (24771) MAIN: Invalid wrist command[0m
+[0;32mI (24771) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":40,"total":320}[0m
+[0;32mI (24781) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24791) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24791) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24801) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24801) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24811) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24841) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24841) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24851) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":37,"total":320}[0m
+[0;33mW (24851) MAIN: Invalid wrist command[0m
+[0;32mI (24851) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":37,"total":320}[0m
+[0;32mI (24861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24871) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":36,"total":320}[0m
+[0;33mW (24871) MAIN: Invalid wrist command[0m
+[0;32mI (24881) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":36,"total":320}[0m
+[0;32mI (24891) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24891) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24901) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24911) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":32,"total":320}[0m
+[0;33mW (24911) MAIN: Invalid wrist command[0m
+[0;32mI (24911) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":32,"total":320}[0m
+[0;32mI (24931) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24931) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24941) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24941) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (24961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (24961) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (24981) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":30,"total":320}[0m
+[0;33mW (24991) MAIN: Invalid wrist command[0m
+[0;32mI (24991) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":30,"total":320}[0m
+[0;32mI (25001) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25001) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25021) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":29,"total":320}[0m
+[0;33mW (25021) MAIN: Invalid wrist command[0m
+[0;32mI (25031) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":29,"total":320}[0m
+[0;32mI (25041) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":26,"total":320}[0m
+[0;33mW (25041) MAIN: Invalid wrist command[0m
+[0;32mI (25051) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":26,"total":320}[0m
+[0;32mI (25061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25061) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25081) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25081) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25111) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25161) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25211) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25241) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":23,"total":320}[0m
+[0;33mW (25241) MAIN: Invalid wrist command[0m
+[0;32mI (25241) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":23,"total":320}[0m
+[0;32mI (25261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25261) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25271) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":21,"total":320}[0m
+[0;33mW (25281) MAIN: Invalid wrist command[0m
+[0;32mI (25281) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":21,"total":320}[0m
+[0;32mI (25291) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":19,"total":320}[0m
+[0;33mW (25301) MAIN: Invalid wrist command[0m
+[0;32mI (25301) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":19,"total":320}[0m
+[0;32mI (25311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25321) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":16,"total":320}[0m
+[0;33mW (25331) MAIN: Invalid wrist command[0m
+[0;32mI (25331) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":16,"total":320}[0m
+[0;32mI (25341) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":14,"total":320}[0m
+[0;33mW (25351) MAIN: Invalid wrist command[0m
+[0;32mI (25351) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":14,"total":320}[0m
+[0;32mI (25371) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25371) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25371) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25381) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25391) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25391) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25411) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25421) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25421) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25441) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":8,"total":320}[0m
+[0;33mW (25441) MAIN: Invalid wrist command[0m
+[0;32mI (25451) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":8,"total":320}[0m
+[0;32mI (25461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25461) MQTT_CLIENT: Published to 'sarcus/robot/joints/wrist' (msg_id=0)[0m
+[0;32mI (25471) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25471) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25481) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":7,"total":320}[0m
+[0;33mW (25491) MAIN: Invalid wrist command[0m
+[0;32mI (25491) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":7,"total":320}[0m
+[0;32mI (25501) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":6,"total":320}[0m
+[0;33mW (25511) MAIN: Invalid wrist command[0m
+[0;32mI (25511) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":6,"total":320}[0m
+[0;32mI (25521) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"side":0,"remaining":4,"total":320}[0m
+[0;33mW (25531) MAIN: Invalid wrist command[0m
+[0;32mI (25531) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"side":0,"remaining":4,"total":320}[0m
+[0;32mI (25541) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25541) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25551) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25601) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25601) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25641) MQTT_CLIENT: Message received on 'sarcus/robot/joints/shoulder': {"dc_angle":-180,"servo":1,"side":0}[0m
+[0;32mI (25651) MAIN: Shoulder side=0 angle=1[0m
+[0;32mI (25651) MAIN: MQTT recv sarcus/robot/joints/shoulder -> {"dc_angle":-180,"servo":1,"side":0}[0m
+[0;32mI (25661) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25661) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25671) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25681) MQTT_CLIENT: Message received on 'sarcus/robot/joints/elbow': {"angle":1,"side":1}[0m
+[0;32mI (25681) MAIN: Elbow side=1 angle=1[0m
+[0;32mI (25681) MAIN: MQTT recv sarcus/robot/joints/elbow -> {"angle":1,"side":1}[0m
+[0;32mI (25711) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25711) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25761) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25761) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25811) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25811) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25861) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25861) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (25961) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25961) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (25961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26011) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26011) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26261) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26311) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26311) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26361) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26361) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26361) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26411) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26411) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26411) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26461) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26461) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26461) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26511) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26511) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26511) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26561) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26561) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26561) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26611) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26611) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26611) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26661) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26661) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26661) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26711) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26711) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26711) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26761) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26761) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26761) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26811) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26811) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26811) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26861) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26861) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26861) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26911) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26911) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (26961) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26961) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (26961) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27011) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27011) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27011) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27061) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27111) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27161) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27211) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27211) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (27261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27261) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (27261) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"steps":360,"speed":90,"dir":0,"side":0}[0m
+[0;32mI (28481) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28481) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (28481) MAIN: Wrist side=0 steps=360 speed=90[0m
+[0;32mI (28481) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"steps":360,"speed":90,"dir":0,"side":0}[0m
+[0;32mI (28501) MQTT_CLIENT: Message received on 'sarcus/robot/joints/wrist': {"steps":160,"speed":90,"dir":0,"side":1}[0m
+[0;32mI (29031) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29041) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29041) MAIN: Wrist side=1 steps=160 speed=90[0m
+[0;32mI (29041) MAIN: MQTT recv sarcus/robot/joints/wrist -> {"steps":160,"speed":90,"dir":0,"side":1}[0m
+[0;32mI (29051) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29061) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29071) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29071) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29081) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29081) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29091) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29091) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29101) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29111) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29121) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29121) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29131) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29141) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29141) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29151) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29151) BTS7960_DRIVER: Forward at 70.0% speed[0m
+[0;32mI (29161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29161) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29171) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29171) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29181) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m
+[0;32mI (29191) MQTT_CLIENT: Published to 'sarcus/sensors/imu' (msg_id=0)[0m

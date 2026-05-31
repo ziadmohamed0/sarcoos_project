@@ -1,5 +1,6 @@
 idf_component_register(
     SRCS "src/main.cpp"
+         "src/ProvisioningServer.cpp"
     INCLUDE_DIRS "inc"
     REQUIRES 
             drivers

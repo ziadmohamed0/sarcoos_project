@@ -1,0 +1,144 @@
+menu "SARCUS Robot Configuration"
+
+    menu "WiFi Configuration"
+        config SARCUS_WIFI_SSID
+            string "WiFi SSID"
+            default "WE_BF1790"
+            help
+                Default WiFi network name. Can be overridden at runtime via NVS.
+
+        config SARCUS_WIFI_PASSWORD
+            string "WiFi Password"
+            default "n7j05024"
+            help
+                Default WiFi password. Can be overridden at runtime via NVS.
+    endmenu
+
+    menu "MQTT Configuration"
+        config SARCUS_MQTT_BROKER_URI
+            string "MQTT Broker URI"
+            default "mqtt://192.168.1.5"
+            help
+                MQTT broker URI (e.g. mqtt://192.168.1.5).
+
+        config SARCUS_MQTT_PORT
+            int "MQTT Broker Port"
+            default 1883
+            range 1 65535
+            help
+                MQTT broker TCP port.
+    endmenu
+
+    menu "Motor PWM Pins"
+        config SARCUS_MOTOR1_R_PWM
+            int "Motor 1 Right PWM GPIO"
+            default 32
+            range 0 39
+        config SARCUS_MOTOR1_L_PWM
+            int "Motor 1 Left PWM GPIO"
+            default 33
+            range 0 39
+        config SARCUS_MOTOR1_R_EN
+            int "Motor 1 Right Enable GPIO"
+            default 19
+            range 0 39
+        config SARCUS_MOTOR1_L_EN
+            int "Motor 1 Left Enable GPIO"
+            default 18
+            range 0 39
+        config SARCUS_MOTOR2_R_PWM
+            int "Motor 2 Right PWM GPIO"
+            default 26
+            range 0 39
+        config SARCUS_MOTOR2_L_PWM
+            int "Motor 2 Left PWM GPIO"
+            default 25
+            range 0 39
+        config SARCUS_MOTOR2_R_EN
+            int "Motor 2 Right Enable GPIO"
+            default 17
+            range 0 39
+        config SARCUS_MOTOR2_L_EN
+            int "Motor 2 Left Enable GPIO"
+            default 16
+            range 0 39
+    endmenu
+
+    menu "Servo Pins"
+        config SARCUS_SERVO_SHOULDER_LEFT
+            int "Shoulder Left Servo GPIO"
+            default 13
+            range 0 39
+        config SARCUS_SERVO_SHOULDER_RIGHT
+            int "Shoulder Right Servo GPIO"
+            default 14
+            range 0 39
+        config SARCUS_SERVO_ELBOW_LEFT
+            int "Elbow Left Servo GPIO"
+            default 27
+            range 0 39
+        config SARCUS_SERVO_ELBOW_RIGHT
+            int "Elbow Right Servo GPIO"
+            default 23
+            range 0 39
+    endmenu
+
+    menu "Stepper Pins"
+        config SARCUS_STEPPER_LEFT_STEP
+            int "Left Wrist STEP GPIO"
+            default 4
+            range 0 39
+        config SARCUS_STEPPER_LEFT_DIR
+            int "Left Wrist DIR GPIO"
+            default 21
+            range 0 39
+        config SARCUS_STEPPER_LEFT_EN
+            int "Left Wrist ENABLE GPIO"
+            default 22
+            range 0 39
+        config SARCUS_STEPPER_RIGHT_STEP
+            int "Right Wrist STEP GPIO"
+            default 15
+            range 0 39
+        config SARCUS_STEPPER_RIGHT_DIR
+            int "Right Wrist DIR GPIO"
+            default 2
+            range 0 39
+        config SARCUS_STEPPER_RIGHT_EN
+            int "Right Wrist ENABLE GPIO"
+            default 5
+            range 0 39
+        config SARCUS_STEPPER_STEPS_PER_REV
+            int "Steps per Revolution (incl. microstepping)"
+            default 200
+            range 1 10000
+            help
+                Total step pulses needed for one full shaft revolution.
+                NEMA23 full step = 200. Multiply by TB6600 microstep
+                setting:                 1/8 → 1600, 1/16 → 3200, etc.
+    endmenu
+
+    menu "Motion Control"
+        config SARCUS_CTRL_PERIOD_MS
+            int "Control Loop Period (ms)"
+            default 50
+            range 10 500
+        config SARCUS_MOTOR_SLEW_STEP
+            float "Motor Speed Slew Step (%/tick)"
+            default 6.0
+            range 0.1 100.0
+        config SARCUS_SERVO_SLEW_STEP
+            float "Servo Angle Slew Step (deg/tick)"
+            default 4.0
+            range 0.1 90.0
+        config SARCUS_SERVO_FILTER_ALPHA
+            float "Servo Low-Pass Filter Alpha"
+            default 0.7
+            range 0.01 1.0
+        config SARCUS_SERVO_DEFAULT_ANGLE
+            float "Servo Default Angle (deg)"
+            default 135.0
+            range 0.0 270.0
+    endmenu
+
+endmenu
